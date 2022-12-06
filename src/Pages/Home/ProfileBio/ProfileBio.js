@@ -1,14 +1,15 @@
 import React from 'react';
 import profiledp from '../../../assets/profiledp.jpg'
 import { FaFacebook, FaGithub, FaInfoCircle, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
-import { AiOutlineMail, AiTwotoneMail } from "react-icons/ai";
+import { AiTwotoneMail } from "react-icons/ai";
+import SideNav from '../../Shared/SideNav/SideNav';
 
 const ProfileBio = () => {
     return (
         <div className=''>
-            <div className='flex md:flex-row flex-col items-center py-40'>
+            <div className='flex md:flex-row flex-col items-center md:py-[140px] py-20'>
             {/* for left image */}
-            <div className='flex justify-center items-center px-20'>
+            <div className='flex justify-center items-center px-20 '>
             <div className="avatar">
                 <div className="w-80 rounded-full ring ring-success ring-offset-base-100 ring-offset-2">
                     <img src={profiledp} alt='' />
@@ -33,8 +34,12 @@ const ProfileBio = () => {
                 <a target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin className='mr-5'></FaLinkedin></a>
                 <a target='blank' href="tel:+8801859342364"><FaPhoneAlt className='mr-5'></FaPhoneAlt></a>
                 <a target='blank' href='https://twitter.com/spsujoy007'><FaTwitter className='mr-5'></FaTwitter></a>
-                <a target='blank' href='mailto:sujoypaul728@gmail.com'><AiTwotoneMail className='mr-5'></AiTwotoneMail></a>
+                <a target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail className='mr-5'></AiTwotoneMail></a>
             </div>
+        </div>
+
+        <div>
+            <SideNav></SideNav>
         </div>
 
         </div>

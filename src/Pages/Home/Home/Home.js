@@ -3,7 +3,7 @@ import ProfileBio from '../ProfileBio/ProfileBio';
 
 const Home = () => {
     return (
-        <div>
+        <div className='md:h-[100vh] h-[100%]'>
             <ProfileBio></ProfileBio>
         </div>
     );
