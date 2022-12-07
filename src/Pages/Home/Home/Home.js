@@ -4,7 +4,7 @@ import ProfileBio from '../ProfileBio/ProfileBio';
 
 const Home = () => {
     return (
-        <div >
+        <div id='homepage'>
                 <ProfileBio></ProfileBio>
                 <AboutSection></AboutSection>
         </div>

@@ -17,7 +17,7 @@ const ProfileBio = () => {
             </div>
             </div>
 
-        <div className='flex-1'>
+        <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0'>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! <br />
                 <span cls>I am <span className='text-info'>sujoy paul</span></span>
                 <br />
