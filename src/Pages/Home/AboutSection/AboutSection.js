@@ -2,6 +2,7 @@ import React from 'react';
 import { FaFileDownload } from 'react-icons/fa';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import './AboutSection.css'
+import resume from '../../../assets/Sujoy paul.pdf'
 
 const AboutSection = () => {
     return (
@@ -36,7 +37,11 @@ const AboutSection = () => {
                         <span className="text-gray-300">language:</span> bangla, english
                     </div>
                 </div>
+                
+                <a href={resume} download={resume}>
                 <button className='btn btn-info btn-outline mt-3 rounded-full w-full md:w-52 uppercase'><FaFileDownload className="mr-2 text-xl"></FaFileDownload> Downlod CV</button>
+                </a>
+
             </div>
 
             {/* right side items  */}
