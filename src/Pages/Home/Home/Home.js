@@ -1,10 +1,12 @@
 import React from 'react';
+import AboutSection from '../AboutSection/AboutSection';
 import ProfileBio from '../ProfileBio/ProfileBio';
 
 const Home = () => {
     return (
-        <div className='md:h-[100vh] h-[100%]'>
-            <ProfileBio></ProfileBio>
+        <div >
+                <ProfileBio></ProfileBio>
+                <AboutSection></AboutSection>
         </div>
     );
 };

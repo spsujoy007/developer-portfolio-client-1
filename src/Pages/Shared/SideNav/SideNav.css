@@ -1,0 +1,37 @@
+
+.btnCustom {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: var(--body-white-nt);
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease 0s;
+}
+
+.btnCustom h1{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    line-height: 41px;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding: 0px 28px 0px 8px;
+    font-size: 14px;
+    height: 39px;
+    margin: 0px;
+    background: var(--first-color);
+    transform: scaleX(0.4);
+    transform-origin: right center;
+  }
+ 

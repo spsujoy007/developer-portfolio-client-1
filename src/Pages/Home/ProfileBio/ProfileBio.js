@@ -7,7 +7,7 @@ import SideNav from '../../Shared/SideNav/SideNav';
 const ProfileBio = () => {
     return (
         <div className=''>
-            <div className='flex md:flex-row flex-col items-center md:py-[140px] py-20'>
+            <div className='flex md:flex-row flex-col items-center md:py-[160px] py-20'>
             {/* for left image */}
             <div className='flex justify-center items-center px-20 '>
             <div className="avatar">
@@ -17,13 +17,13 @@ const ProfileBio = () => {
             </div>
             </div>
 
-        <div className='flex-1 md:mr-20'>
+        <div className='flex-1'>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! <br />
                 <span cls>I am <span className='text-info'>sujoy paul</span></span>
                 <br />
                 <span cls>WEB-DEVELOPER</span>
             </h1>
-            <p className='text-gray-300 mt-3 text-lg'>
+            <p className='text-gray-300 mt-3 text-lg max-w-[80%]'>
                Hi! I am Sujoy paul. I am a passionate full stack Web Developer. I have already created many Project with 1+ years of experience with modern technologies like React, Tailwind CSS, Node js, Mongo DB, Express JS, Bootstrap etc..
             </p>
             <button className='btn btn-info btn-outline mt-3 rounded-full'><FaInfoCircle className='mr-2'></FaInfoCircle>  More about me</button>
@@ -36,11 +36,10 @@ const ProfileBio = () => {
                 <a target='blank' href='https://twitter.com/spsujoy007'><FaTwitter className='mr-5'></FaTwitter></a>
                 <a target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail className='mr-5'></AiTwotoneMail></a>
             </div>
+
         </div>
 
-        <div>
-            <SideNav></SideNav>
-        </div>
+        
 
         </div>
         </div>
