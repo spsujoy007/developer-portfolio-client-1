@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
     const menuItem =  <>
-        <li><Link className='rounded-xl mr-3' to='/'>Home</Link></li>
+        <li><a href='#home' className='rounded-xl mr-3'>Home</a></li>
         <li><a href='#aboutsection' className='rounded-xl mr-3' >About</a></li>
-        <li><a className='rounded-xl mr-3' to='/skills'>Skills</a></li>
-        <li><a className='rounded-xl mr-3' to='/projects'>Projects</a></li>
+        <li><a href='#skills' className='rounded-xl mr-3'>Skills</a></li>
+        <li><a href='#projects' className='rounded-xl mr-3'>Projects</a></li>
     </>
         
     
 
     return (
         <div style={{
-            backgroundColor: '#8f8f8f38',
+            // backgroundColor: '#8f8f8f38',
             backdropFilter: 'blur(8px)'
-        }} className="navbar fixed z-10 md:px-20 mx-auto">
+        }} className="navbar fixed z-10 md:px-20 mx-auto md:bg-[#8f8f8f38]">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">

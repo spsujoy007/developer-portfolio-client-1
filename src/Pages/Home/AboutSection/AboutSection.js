@@ -37,9 +37,9 @@ const AboutSection = () => {
                         <span className="text-gray-300">language:</span> bangla, english
                     </div>
                 </div>
-                
+
                 <a href={resume} download={resume}>
-                <button className='btn btn-info btn-outline mt-3 rounded-full w-full md:w-52 uppercase'><FaFileDownload className="mr-2 text-xl"></FaFileDownload> Downlod CV</button>
+                <button className='btn btn-info uppercase btn-outline mt-3 rounded-full w-full md:w-52 uppercase'><FaFileDownload className="mr-2 text-xl"></FaFileDownload> Download CV</button>
                 </a>
 
             </div>
