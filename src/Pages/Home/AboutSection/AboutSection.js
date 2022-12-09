@@ -6,7 +6,7 @@ import resume from '../../../assets/Sujoy paul.pdf'
 
 const AboutSection = () => {
     return (
-        <div id='aboutsection' className='md:mx-20 mx-6 pb-40'>
+        <div id='aboutsection' className='md:mx-20 mx-6 py-20'>
             <CommonHeading>About</CommonHeading>
 
             <div className='md:flex gap-10 text-lg'>
