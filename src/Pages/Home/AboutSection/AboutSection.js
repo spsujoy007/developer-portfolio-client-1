@@ -6,13 +6,13 @@ import resume from '../../../assets/Sujoy paul.pdf'
 
 const AboutSection = () => {
     return (
-        <div id='aboutsection' className='md:mx-20 mx-6 py-20'>
+        <div id='aboutsection' className='mx-6 py-20'>
             <CommonHeading>About</CommonHeading>
 
             <div className='md:flex gap-10 text-lg'>
                 <div className='flex-1'>
                     <p className='text-gray-400 flex text-justify'>
-                    Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone. Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone.
+                        Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone. Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone.
                     </p>
                 </div>
 
@@ -39,19 +39,19 @@ const AboutSection = () => {
                 </div>
 
                 <a href={resume} download={resume}>
-                <button className='btn btn-info uppercase btn-outline mt-3 rounded-full w-full md:w-52 uppercase'><FaFileDownload className="mr-2 text-xl"></FaFileDownload> Download CV</button>
+                <button className='btn btn-info uppercase btn-outline mt-3 rounded-full w-full md:w-56 uppercase'><FaFileDownload className="mr-2 text-xl"></FaFileDownload> Download Resume</button>
                 </a>
 
             </div>
 
             {/* right side items  */}
             <div className='grid md:grid-cols-2 grid-cols-1 gap-10 mt-10 md:mt-0'> 
-                <div className="card bg-[#8f8f8f38] text-white shadow-xl flex">
+                <div className="card bg-[#8f8f8f38] text-white shadow-xl flex cardShadow">
                     <div className="card-body">
                         <h2 className="card-title"><span className='text-5xl'>1+</span> </h2><h2 className='text-2xl'> years of experience</h2>
                     </div>
                 </div>
-                <div className="card bg-[#8f8f8f38] text-white shadow-xl">
+                <div className="card bg-[#8f8f8f38] text-white shadow-xl cardShadow">
                     <div className="card-body">
                         <h2 className="card-title"><span className='text-5xl'>20+</span> 
                         </h2><h2 className='text-2xl'>Completed Projects</h2>

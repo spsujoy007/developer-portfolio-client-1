@@ -35,7 +35,7 @@ const Skills = () => {
     ]
 
     return (
-        <div className='md:mx-20 mx-6 py-20' id='skills'>
+        <div className='mx-6 py-20' id='skills'>
             <CommonHeading>My Skills</CommonHeading>
             <p className='text-xl text-white py-5'>Languages, framework and tools:</p>
             

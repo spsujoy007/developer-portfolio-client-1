@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProjectCard = ({project}) => {
     const {image, title, tools, codelink, demolink} = project
     return (
-        <div className='p-3 bg-white rounded-xl shadow-lg'>
+        <div className='p-3 bg-base-100 rounded-xl shadow-lg'>
             <div className=''>
                 <img className='rounded-xl w-full shadow-lg' src={image} alt={title} />
             </div>
