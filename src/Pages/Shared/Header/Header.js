@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div style={{
             // backgroundColor: '#8f8f8f38',
-            backdropFilter: 'blur(8px)'
+            backdropFilter: 'blur(10px)'
         }} className="navbar fixed z-10 md:px-20 mx-auto md:bg-[#8f8f8f38]">
   <div className="navbar-start">
     <div className="dropdown">

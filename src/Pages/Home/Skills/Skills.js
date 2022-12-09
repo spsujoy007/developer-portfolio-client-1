@@ -39,7 +39,7 @@ const Skills = () => {
             <CommonHeading>My Skills</CommonHeading>
             <p className='text-xl text-white py-5'>Languages, framework and tools:</p>
             
-            <div className='grid grid-cols-1 md:grid-cols-4 md:gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
             {
                 myskills.map(skill => <SkillCard 
                     key={skill.id}
