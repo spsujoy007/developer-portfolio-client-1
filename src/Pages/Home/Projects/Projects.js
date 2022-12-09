@@ -33,6 +33,7 @@ const Projects = () => {
                 {img: Mongo, title: 'MongoDb'},
                 {img: firebase, title: 'Firebase'},
                 {img: Tailwind, title: 'Tailwind'},
+                {img: vercel, title: 'Vercel'},
             ],
             demolink: 'https://puran-bazar-resale.web.app/',
             codelink: 'https://github.com/spsujoy007/puran-bazar-client-12'
@@ -46,6 +47,7 @@ const Projects = () => {
                 {img: Mongo, title: 'MongoDb'},
                 {img: firebase, title: 'Firebase'},
                 {img: Tailwind, title: 'Tailwind'},
+                {img: vercel, title: 'Vercel'},
             ],
             demolink: 'https://travellian-client-007.web.app/',
             codelink: 'https://github.com/spsujoy007/Travellian-web-client-11'
