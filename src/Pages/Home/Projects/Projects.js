@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 //project images
 import img1 from '../../../assets/projectimg/puranbazar.png'
 import img2 from '../../../assets/projectimg/travellian.png'
@@ -20,8 +20,11 @@ import firebase from '../../../assets/tools/firebase.png'
 import vercel from '../../../assets/tools/vercel.png'
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import ProjectDetails from '../ProjectDetails/ProjectDetails';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+    const navigate = useNavigate();
 
     const projects = [
         {
@@ -36,7 +39,10 @@ const Projects = () => {
                 {img: vercel, title: 'Vercel'},
             ],
             demolink: 'https://puran-bazar-resale.web.app/',
-            codelink: 'https://github.com/spsujoy007/puran-bazar-client-12'
+            codelink: 'https://github.com/spsujoy007/puran-bazar-client-12',
+            details: `
+
+            `
         },
         {
             id: 2,
@@ -67,6 +73,13 @@ const Projects = () => {
         }
     ]
 
+    const [details, setDetails] = useState('');
+    const handleDetail = (id, detailproj) => {
+        navigate(`/project/${id}`)
+        console.log(detailproj);
+        return setDetails()
+    } 
+
     return (
         <div className='px-5 py-20' id='projects'>
             <CommonHeading>Projects</CommonHeading>
@@ -82,6 +95,9 @@ incorporates a superb understanding of the terribly latest <span className='text
                     ></ProjectCard>)
                 }
             </div>
+                <div>
+                    {/* <ProjectDetails project={project}></ProjectDetails> */}
+                </div>
         </div>
     );
 };

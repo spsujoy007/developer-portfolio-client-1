@@ -1,5 +1,5 @@
 .commonbtn:hover {
-    box-shadow: 0px 0px 15px rgb(102, 202, 241);
+    box-shadow: 0px 0px 15px #66caf1;
     transition: all 0.2s;
     animation: btnbg 1.2s ease-in infinite ;
 }
@@ -26,7 +26,7 @@
         box-shadow: none;
     }
     50%{
-        box-shadow: 0px 0px 100px  #33b4e7;
+        box-shadow: 0px 0px 20px  #0988d1;
     }
     100%{
         box-shadow: none;

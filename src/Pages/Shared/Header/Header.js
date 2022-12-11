@@ -29,7 +29,7 @@ const Header = () => {
         {menuItem}
       </ul>
     </div>
-    <Link className=" text-xl  text-white flex items-center">
+    <Link to='/' className=" text-xl  text-white flex items-center">
       <img src={logo} alt="sujoy paul" className='rounded-full w-12 mr-3'/> SUJOY PAUL
     </Link>
   </div>

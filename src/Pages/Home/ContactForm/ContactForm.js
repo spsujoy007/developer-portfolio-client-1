@@ -8,7 +8,7 @@ const ContactForm = () => {
             <div className="hero">
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left text-base-100">
-      <h1 className="text-5xl font-bold">Contact Me</h1>
+      <h1 className="text-5xl font-bold">Email Me</h1>
       <p className="py-6">Do you have any question to me? You can full free to message me. I will try to answer you. Thank you!</p>
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

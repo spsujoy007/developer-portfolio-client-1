@@ -4,6 +4,7 @@ import AboutSection from "../Pages/Home/AboutSection/AboutSection";
 import Blog from "../Pages/Home/Blog/Blog";
 import ContactForm from "../Pages/Home/ContactForm/ContactForm";
 import Home from "../Pages/Home/Home/Home";
+import ProjectDetails from "../Pages/Home/ProjectDetails/ProjectDetails";
 import Projects from "../Pages/Home/Projects/Projects";
 import Skills from "../Pages/Home/Skills/Skills";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
@@ -37,6 +38,10 @@ export const routes = createBrowserRouter([
                 path: "/contact",
                 element: <ContactForm></ContactForm>
             },
+            {
+                path: "/project/:id",
+                element: <ProjectDetails></ProjectDetails>
+            }
         ]
     },
     {
