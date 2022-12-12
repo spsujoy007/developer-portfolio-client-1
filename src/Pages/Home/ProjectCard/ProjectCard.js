@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCode, FaInfoCircle, FaLaptop } from 'react-icons/fa';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
@@ -6,11 +6,14 @@ import ProjectDetails from '../ProjectDetails/ProjectDetails';
 const ProjectCard = ({project, handleDetailpage}) => {
     const navigate = useNavigate();
     const {image, title, tools, codelink, demolink, id} = project
+    // const detailProject = {image, title, tools}
 
+    const [singleProject, setSingleProject] = useState('');
     const handleDetail = (id, detailproj) => {
         navigate(`/project/${id}`);
         console.log(detailproj);
-        return <ProjectDetails project={"detailproj"}></ProjectDetails>
+        setSingleProject(detailproj)
+        return <ProjectDetails>{detailproj}</ProjectDetails>
     } 
 
     return (
@@ -21,7 +24,9 @@ const ProjectCard = ({project, handleDetailpage}) => {
             <div>
                 <div className='flex justify-between items-center py-3'>
                     <h2 className='text-xl text-black mt-2 font-semibold uppercase py-2'>{title}</h2>
-                    <button onClick={() => handleDetail(id, project)} className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
+                    <button onClick={() => {
+                        handleDetail(id, project)
+                        }} className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
                 </div>
                 <div className='grid md:grid-cols-3 grid-cols-2 gap-x-2 gap-y-2'>
                     {
@@ -31,6 +36,7 @@ const ProjectCard = ({project, handleDetailpage}) => {
                         </div>)
                     }
                 </div>
+
 
                 <div className='flex justify-end gap-x-2 mt-6'>
                     <a target="blank" href={codelink}><button className='hover:bg-sky-600 px-4 py-2 bg-sky-500 text-semibold text-white rounded-md flex items-center'>CODE <FaCode className='ml-2'></FaCode></button></a>

@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
                 <div>
                 <h3 className='text-xl text-white mt-2'>Copyright © 2022 - All right reserved by <span className="text-sky-500 font-bold">SUJOY PAUL</span></h3>
-                <p className='text-base-300 mt-3'>Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone. Visit my <span className="text-sky-500"><a target='blank' href="https://github.com/spsujoy007">github profile</a></span></p>
+                <p className='text-base-300 mt-3'>Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone. Visit my <span className="text-sky-500 underline"><a target='blank' href="https://github.com/spsujoy007">github profile</a></span></p>
                 </div>
             </div>
 

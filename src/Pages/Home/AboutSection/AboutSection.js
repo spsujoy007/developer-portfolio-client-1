@@ -29,7 +29,7 @@ const AboutSection = () => {
                     <div>
                         <span className="text-gray-300">Name:</span> sujoy paul <br />
                         <span className="text-gray-300">address:</span> panchagarh, bangladesh <br />
-                        <span className="text-gray-300">email:</span> sujoypaul728@gmail.com
+                        <span className="text-gray-300">email:</span> <span className='lowercase'>sujoypaul728@gmail.com</span>
                     </div>
                     <div>
                         <span className="text-gray-300">phone:</span> (+88) 01859-342364 <br />

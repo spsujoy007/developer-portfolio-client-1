@@ -1,0 +1,15 @@
+.contactImg{
+    animation: myimg 3s ease-in infinite;
+}
+
+@keyframes myimg {
+    0%{
+        filter: opacity(100%);
+    }
+    50%{        
+        filter: opacity(20%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+}

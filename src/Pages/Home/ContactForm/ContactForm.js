@@ -1,17 +1,22 @@
 import React from 'react';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
+import emailimg from '../../../assets/senmail.png'
+import './ContactForm.css'
 
 const ContactForm = () => {
     return (
         <div className='py-20' id='contactform'>
-            <CommonHeading>Contact Form</CommonHeading> <hr />
+            <CommonHeading>Contact Form</CommonHeading>
             <div className="hero">
-  <div className="hero-content flex-col lg:flex-row">
-    <div className="text-center lg:text-left text-base-100">
-      <h1 className="text-5xl font-bold">Email Me</h1>
-      <p className="py-6">Do you have any question to me? You can full free to message me. I will try to answer you. Thank you!</p>
+  <div className="hero-content flex-col lg:flex-row bg-white  w-full gap-10">
+    <div className="text-center lg:text-left text-black">
+      <h1 className="text-5xl font-bold">Full free to message</h1>
+      <p className="py-6">Do you have any question to me? You can full free to message me. <br /> I will try to answer you. Thank you!</p>
+      <div className='flex items-center contactImg'>
+        <img className='w-96 ' src={emailimg} alt="email template" />
+      </div>
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-full max-w-sm ">
       <form action="https://formsubmit.co/54cffcd395c44072d62b9d1725fee82b" method="POST" className="card-body">
         <div className="form-control">
           <label className="label">
@@ -42,7 +47,7 @@ const ContactForm = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button type='submit' className="btn btn-primary">Submit</button>
+          <button type='submit' className="btn bg-sky-500 text-white border-none">Submit</button>
         </div>
       </form>
     </div>

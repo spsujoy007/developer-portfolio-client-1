@@ -12,8 +12,8 @@ const ProfileBio = () => {
             <div className='flex md:flex-row flex-col items-center md:py-[160px] py-20'>
             {/* for left image */}
             <div className='flex justify-center items-center md:px-20'>
-            <div className="avatar">
-                <div className="w-80 rounded-full ring-offset-2 dbimage">
+            <div className="avatar dbimageMain">
+                <div className="w-80 rounded-full ring-offset-2 dbimage ">
                     <img src={profiledp} alt='' />
                 </div>
             </div>
@@ -25,6 +25,7 @@ const ProfileBio = () => {
                 <br />
                 <span cls>A WEB-DEVELOPER</span>
             </h1>
+            
             <p className='text-gray-300 mt-3 text-lg max-w-[80%]'>
                I am a passionate full stack Web Developer. I have already created many Project with 1+ years of experience with modern technologies like React, Tailwind CSS, Node js, Mongo DB, Express JS, Bootstrap etc..
             </p>

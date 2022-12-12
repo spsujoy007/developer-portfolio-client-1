@@ -41,7 +41,7 @@ const Projects = () => {
             demolink: 'https://puran-bazar-resale.web.app/',
             codelink: 'https://github.com/spsujoy007/puran-bazar-client-12',
             details: `
-
+                
             `
         },
         {

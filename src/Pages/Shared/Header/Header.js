@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/splogo.jpg'
+import './Header.css'
 
 const Header = () => {
 
@@ -19,7 +20,7 @@ const Header = () => {
         <div style={{
             // backgroundColor: '#8f8f8f38',
             backdropFilter: 'blur(10px)'
-        }} className="navbar fixed z-10 md:px-6 glass max-w-[1240px] rounded-b-2xl">
+        }} className="navbar fixed z-10 md:px-6 glass max-w-[1240px] rounded-b-2xl myheading">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
