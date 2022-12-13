@@ -4,17 +4,8 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 
 const ProjectCard = ({project, handleDetailpage}) => {
-    const navigate = useNavigate();
     const {image, title, tools, codelink, demolink, id} = project
     // const detailProject = {image, title, tools}
-
-    const [singleProject, setSingleProject] = useState('');
-    const handleDetail = (id, detailproj) => {
-        navigate(`/project/${id}`);
-        console.log(detailproj);
-        setSingleProject(detailproj)
-        return <ProjectDetails>{detailproj}</ProjectDetails>
-    } 
 
     return (
         <div className='p-3 bg-white rounded-xl shadow-lg'>
@@ -24,9 +15,7 @@ const ProjectCard = ({project, handleDetailpage}) => {
             <div>
                 <div className='flex justify-between items-center py-3'>
                     <h2 className='text-xl text-black mt-2 font-semibold uppercase py-2'>{title}</h2>
-                    <button onClick={() => {
-                        handleDetail(id, project)
-                        }} className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
+                    <button className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
                 </div>
                 <div className='grid md:grid-cols-3 grid-cols-2 gap-x-2 gap-y-2'>
                     {

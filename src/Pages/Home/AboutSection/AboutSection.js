@@ -1,12 +1,13 @@
 import React from 'react';
-import { FaFileDownload, FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import './AboutSection.css'
-import resume from '../../../assets/Sujoy paul.pdf'
+import { Fade } from 'react-reveal';
 
 const AboutSection = () => {
-    return (
-        <div id='aboutsection' className='mx-6 py-20'>
+    return ( 
+        <Fade bottom>
+            <div id='aboutsection' className='mx-6 py-20'>
             <CommonHeading>About</CommonHeading>
 
             <div className='md:flex gap-10 text-lg'>
@@ -59,6 +60,7 @@ const AboutSection = () => {
         </div>
 
         </div>
+        </Fade>
     );
 };
 

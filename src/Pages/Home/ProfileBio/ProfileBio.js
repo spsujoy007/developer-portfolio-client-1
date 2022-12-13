@@ -11,7 +11,7 @@ const ProfileBio = () => {
         <div className=''>
             <div className='flex md:flex-row flex-col items-center md:py-[160px] py-20'>
             {/* for left image */}
-            <div className='flex justify-center items-center md:px-20'>
+            <div className='flex justify-center items-center md:px-20 px-5'>
             <div className="avatar dbimageMain">
                 <div className="w-80 rounded-full ring-offset-2 dbimage ">
                     <img src={profiledp} alt='' />
@@ -22,8 +22,8 @@ const ProfileBio = () => {
         <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0'>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! <br />
                 <span cls>I am <span className='text-info'>sujoy paul</span></span>
-                <br />
-                <span cls>A WEB-DEVELOPER</span>
+                {/* <br /> */}
+                <p>A WEB DEVELOPER</p>
             </h1>
             
             <p className='text-gray-300 mt-3 text-lg max-w-[80%]'>

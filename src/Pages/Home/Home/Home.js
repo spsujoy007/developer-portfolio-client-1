@@ -4,6 +4,7 @@ import ContactForm from '../ContactForm/ContactForm';
 import ProfileBio from '../ProfileBio/ProfileBio';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
+import { Fade } from 'react-reveal';
 
 const Home = () => {
     return (

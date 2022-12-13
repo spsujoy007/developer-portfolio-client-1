@@ -9,6 +9,23 @@
     animation: dbimage 6s ease-in-out infinite ;
 }
 
+.floatingText{
+    width: 300px;
+    animation: textanimation 1s steps(5) infinite;
+}
+
+@keyframes textanimation {
+	0%{
+		width: 0ch;
+	}
+	50%{
+		width: 15ch;
+	}
+	100%{
+		width: 0ch;
+	}
+}
+
 @keyframes btnbg {
     0%{
         box-shadow: none;
