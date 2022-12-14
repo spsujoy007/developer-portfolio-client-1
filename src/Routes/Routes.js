@@ -40,6 +40,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/project/:id",
+                loader: async ({params}) => await fetch(`http://localhost:5000/project/${params.id}`),
                 element: <ProjectDetails></ProjectDetails>
             }
         ]

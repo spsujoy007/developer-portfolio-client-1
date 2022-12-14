@@ -4,7 +4,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 
 const ProjectCard = ({project, handleDetailpage}) => {
-    const {image, title, tools, codelink, demolink, id} = project
+    const {image, title, tools, codelink, demolink, _id} = project
     // const detailProject = {image, title, tools}
 
     return (
@@ -15,7 +15,9 @@ const ProjectCard = ({project, handleDetailpage}) => {
             <div>
                 <div className='flex justify-between items-center py-3'>
                     <h2 className='text-xl text-black mt-2 font-semibold uppercase py-2'>{title}</h2>
-                    <button className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
+                    <Link to={`/project/${_id}`}>
+                        <button className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
+                    </Link>
                 </div>
                 <div className='grid md:grid-cols-3 grid-cols-2 gap-x-2 gap-y-2'>
                     {

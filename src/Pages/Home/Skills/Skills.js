@@ -14,6 +14,7 @@ import firebase from '../../../assets/tools/firebase.png'
 import vercel from '../../../assets/tools/vercel.png'
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import SkillCard from '../SkillCard/SkillCard';
+import { Fade } from 'react-reveal';
 
 
 const Skills = () => {
@@ -35,7 +36,8 @@ const Skills = () => {
     ]
 
     return (
-        <div className='mx-6 py-20' id='skills'>
+        <Fade bottom>
+            <div className='mx-6 py-20' id='skills'>
             <CommonHeading>My Skills</CommonHeading>
             <p className='text-xl text-white py-5'>Languages, framework and tools:</p>
             
@@ -48,6 +50,7 @@ const Skills = () => {
             }
             </div>
         </div>
+        </Fade>
     );
 };
 

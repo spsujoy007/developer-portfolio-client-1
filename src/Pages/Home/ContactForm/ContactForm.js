@@ -2,10 +2,12 @@ import React from 'react';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import emailimg from '../../../assets/senmail.png'
 import './ContactForm.css'
+import { Fade } from 'react-reveal';
 
 const ContactForm = () => {
     return (
-        <div className='py-20' id='contactform'>
+        <Fade bottom>
+          <div className='py-20' id='contactform'>
             <CommonHeading>Contact Form</CommonHeading>
             <div className="hero">
   <div className="hero-content flex-col lg:flex-row bg-white  w-full gap-10">
@@ -54,6 +56,7 @@ const ContactForm = () => {
   </div>
 </div>
         </div>
+        </Fade>
     );
 };
 
