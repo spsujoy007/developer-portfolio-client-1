@@ -23,7 +23,7 @@ const ProfileBio = () => {
             </Fade>
 
         <Fade right>
-        <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0'>
+        <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0 px-2'>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! <br />
                 <span cls>I am <span className='text-info'>sujoy paul</span></span>
                 {/* <br /> */}
@@ -39,12 +39,12 @@ const ProfileBio = () => {
                 </a>
 
             <div className='flex text-2xl text-white mt-7 justify-between md:justify-start'>
-                <a className='commonbtn p-2 mr-5 rounded-full hover:text-sky-500' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
-                <a className='commonbtn p-2 mr-5 rounded-full hover:text-sky-500' target='blank' href='https://www.facebook.com/spsujoy07'><FaFacebook></FaFacebook></a>
-                <a className='commonbtn p-2 mr-5 rounded-full hover:text-sky-500' target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin></FaLinkedin></a>
-                <a className='commonbtn p-2 mr-5 rounded-full hover:text-sky-500' target='blank' href="tel:+8801859342364"><FaPhoneAlt></FaPhoneAlt></a>
-                <a className='commonbtn p-2 mr-5 rounded-full hover:text-sky-500' target='blank' href='https://twitter.com/spsujoy007'><FaTwitter></FaTwitter></a>
-                <a className='commonbtn p-2 mr-5 rounded-full hover:text-sky-500' target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail></AiTwotoneMail></a>
+                <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
+                <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.facebook.com/spsujoy07'><FaFacebook></FaFacebook></a>
+                <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin></FaLinkedin></a>
+                <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href="tel:+8801859342364"><FaPhoneAlt></FaPhoneAlt></a>
+                <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://twitter.com/spsujoy007'><FaTwitter></FaTwitter></a>
+                <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail></AiTwotoneMail></a>
             </div>
 
         </div>
