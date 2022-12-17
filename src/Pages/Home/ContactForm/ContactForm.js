@@ -31,7 +31,7 @@ const ContactForm = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name='Email' placeholder="Email" className="input input-bordered" />
+          <input required type="email" name='Email' placeholder="Email" className="input input-bordered" />
         </div>
 
         <div className="form-control">
@@ -45,7 +45,7 @@ const ContactForm = () => {
           <label className="label">
             <span className="label-text">Message</span>
           </label>
-          <textarea  type="text" name='Message' placeholder="type your message here..." className="min-h-[100px] input input-bordered" />
+          <textarea required type="text" name='Message' placeholder="type your message here..." className="min-h-[100px] input input-bordered" />
         </div>
 
         <div className="form-control mt-6">

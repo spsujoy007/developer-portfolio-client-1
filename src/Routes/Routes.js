@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardLayout from "../Layout/DashboardLayout";
 import Main from "../Layout/Main";
+import AddSkills from "../Pages/Dashboard/AddSkills/AddSkills";
+import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import AboutSection from "../Pages/Home/AboutSection/AboutSection";
 import Blog from "../Pages/Home/Blog/Blog";
 import ContactForm from "../Pages/Home/ContactForm/ContactForm";
@@ -13,6 +16,7 @@ export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -46,7 +50,17 @@ export const routes = createBrowserRouter([
         ]
     },
     {
-        path: '*',
-        element: <ErrorPage></ErrorPage>
+        path: '/dashboard',
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/dashboard/addskill',
+                element: <AddSkills></AddSkills>
+            }
+        ]
     }
 ])
