@@ -3,8 +3,8 @@ import Typewriter from 'typewriter-effect';
 
 const Dashboard = () => {
     return (
-        <div className=''>
-            <h2 className='text-error text-5xl'>
+        <div className='py-48 '>
+            <h2 className='text-error text-5xl text-center'>
             <Typewriter
   onInit={(typewriter) => {
       typewriter.typeString('Welcome to Admin Dashboard!')

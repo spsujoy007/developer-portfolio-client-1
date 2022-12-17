@@ -9,13 +9,14 @@ const DashboardLayout = () => {
         <div className='pt-20'>
         <div className="drawer drawer-mobile rounded-t-xl">
   <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
-  <div className="drawer-content flex flex-col items-center justify-center">
+  <div className="drawer-content flex flex-col ">
     <Outlet></Outlet>
   </div> 
   <div className="drawer-side">
     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-64 bg-sky-200 text-base-content">
-      <li className='bg-sky-500 text-white rounded-xl'><Link to='/dashboard/addskill'>Add New Skill</Link></li>
+    <ul className="menu p-4 w-64 bg-sky-100 text-base-content">
+      <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/addskill'>Add Skill</Link></li>
+      <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/addblog'>Add Blog</Link></li>
     </ul>
   
   </div>

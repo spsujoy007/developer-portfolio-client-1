@@ -20,10 +20,9 @@ import React, { useState } from 'react';
 // import vercel from '../../../assets/tools/vercel.png'
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import ProjectCard from '../ProjectCard/ProjectCard';
-import ProjectDetails from '../ProjectDetails/ProjectDetails';
-import { useNavigate } from 'react-router-dom';
 import { Fade } from 'react-reveal';
 import { useQuery } from '@tanstack/react-query';
+import Loader from '../../../Components/Loader/Loader';
 
 const Projects = () => {
 
@@ -83,6 +82,10 @@ const Projects = () => {
         }
     })
     refetch()
+
+    if(isLoading){
+        <Loader></Loader>
+    }
 
     return (
         <Fade bottom>

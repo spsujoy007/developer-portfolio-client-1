@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Main from "../Layout/Main";
+import AddBlog from "../Pages/Dashboard/AddBlog/AddBlog";
 import AddSkills from "../Pages/Dashboard/AddSkills/AddSkills";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 import AboutSection from "../Pages/Home/AboutSection/AboutSection";
@@ -60,7 +61,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/dashboard/addskill',
                 element: <AddSkills></AddSkills>
-            }
+            },
+            {
+                path: '/dashboard/addblog',
+                element: <AddBlog></AddBlog>
+            },
         ]
     }
 ])
