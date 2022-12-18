@@ -8,6 +8,7 @@ import MyBlogs from "../Pages/Dashboard/MyBlogs/MyBlogs";
 import AboutSection from "../Pages/Home/AboutSection/AboutSection";
 import Blog from "../Pages/Home/Blog/Blog";
 import ContactForm from "../Pages/Home/ContactForm/ContactForm";
+import DetailBlog from "../Pages/Home/DetailBlog/DetailBlog";
 import Home from "../Pages/Home/Home/Home";
 import ProjectDetails from "../Pages/Home/ProjectDetails/ProjectDetails";
 import Projects from "../Pages/Home/Projects/Projects";
@@ -39,6 +40,11 @@ export const routes = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog></Blog>
+            },
+            {
+                path: "/blog/:id",
+                loader: async ({params}) => await fetch(`http://localhost:5000/blogs/${params.id}`),
+                element: <DetailBlog></DetailBlog>
             },
             {
                 path: "/contact",

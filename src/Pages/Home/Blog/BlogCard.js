@@ -1,13 +1,15 @@
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './BlogCard.css'
+import { BiTimeFive } from "react-icons/bi";
 
 const BlogCard = ({blog}) => {
 
-    const {title, _id, adminimg, adminName, blogimg, description} = blog;
+    const {title, _id, adminimg, adminName, blogimg, description, date} = blog;
 
     return (
-        <div className="card card-compact bg-base-100 shadow-xl rounded-b-none  rounded-t-2xl">
+        <div className="card card-compact bg-white shadow-xl rounded-b-none  rounded-t-2xl">
     <figure>
         <div className='imgEffect'>
             <img className='image' src={blogimg} alt="Shoes" />
@@ -28,9 +30,17 @@ const BlogCard = ({blog}) => {
         </div>
 
     <h2 className="card-title">{title}</h2>
-    <p>{description.slice(0, 100)}...</p>
-    <div className="card-actions justify-end mt-2">
-      <button className="px-10 py-2 bg-sky-600 rounded-full transition-all ease-in text-white text-lg hover:bg-black">More details</button>
+    <p className='p-2 bg-gray-100 rounded-xl text-gray-800'>{description.length > 100 ? <span>{description.slice(0, 100)}...
+    <Link to={`/blog/${_id}`} className="text-blue-500 font-semibold">See more</Link> </span> :
+    <span>{description}</span>}
+    </p>
+    
+    <div className="card-actions justify-between items-center mt-2">
+    <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2>
+    
+      <Link to={`/blog/${_id}`}>
+        <button className="px-10 py-2 bg-sky-600 rounded-full transition-all ease-in text-white text-lg hover:bg-black">More details</button>
+      </Link>
     </div>
   </div>
 </div>
