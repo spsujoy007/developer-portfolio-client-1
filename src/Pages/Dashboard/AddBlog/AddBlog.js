@@ -1,7 +1,10 @@
 import React from 'react';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const AddBlog = () => {
     const imageHostKey = process.env.REACT_APP_imgbb_key;
+    const navigate = useNavigate();
 
     const handlePostBlog = (event) => {
         event.preventDefault();
@@ -22,14 +25,31 @@ const AddBlog = () => {
         .then(res => res.json())
         .then(pictureData => {
             console.log(pictureData);
-            const blogcontent = {
-                title,
-                blogimg: pictureData.data.url,
-                adminimg: 'https://i.ibb.co/Y39y0Zz/6b0-MATk-Q-400x400.jpg',
-                adminName: name,
-                description
-            }
+            // if(pictureData.success){
+                const blogcontent = {
+                    title,
+                    blogimg: pictureData.data.url,
+                    adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
+                    adminName: name,
+                    description
+                }
+
+                fetch(`http://localhost:5000/blogs`, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(blogcontent)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    toast.success('Blog added. Keep rock!')
+                    form.reset()
+                    navigate('/blog')
+                })
+            // }
         })
+        .catch(err => console.error(err))
     }
 
     return (
