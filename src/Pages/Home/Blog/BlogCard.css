@@ -8,6 +8,6 @@
     transition: all 0.3s;
 }
 
-.imgEffect:hover img{
+.card:hover .image{
     transform: scale(1.2);
 }

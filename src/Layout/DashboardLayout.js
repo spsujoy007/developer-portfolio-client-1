@@ -12,11 +12,12 @@ const DashboardLayout = () => {
   <div className="drawer-content flex flex-col ">
     <Outlet></Outlet>
   </div> 
-  <div className="drawer-side">
+  <div className="drawer-side ">
     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-64 bg-sky-100 text-base-content">
+    <ul className="menu p-4 w-64 bg-sky-100 text-base-content uppercase">
       <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/addskill'>Add Skill</Link></li>
       <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/addblog'>Add Blog</Link></li>
+      <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/myblogs'>MY Blogs</Link></li>
     </ul>
   
   </div>

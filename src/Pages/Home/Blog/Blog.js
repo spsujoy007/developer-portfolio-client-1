@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import RubberBand from 'react-reveal/RubberBand';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import Loader from '../../../Components/Loader/Loader';
 import BlogCard from './BlogCard';
@@ -14,16 +15,19 @@ const Blog = () => {
             return data;
         }
     });
+
     refetch();
 
     if(isLoading){
         return <Loader></Loader>
     }
+    
 
     return (
-        <div className='pt-16'>
-            <CommonHeading>Total Blog: {blogs.length}</CommonHeading>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        
+        <div className='py-16'>
+            <RubberBand ><CommonHeading>Blog</CommonHeading></RubberBand>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     blogs.map(blog => <BlogCard
                         key={blog._id}
@@ -32,6 +36,7 @@ const Blog = () => {
                 }
             </div>
         </div>
+        
     );
 };
 

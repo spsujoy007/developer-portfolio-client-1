@@ -6,6 +6,12 @@ const AddBlog = () => {
     const imageHostKey = process.env.REACT_APP_imgbb_key;
     const navigate = useNavigate();
 
+    const currentdate = new Date();
+    const date = currentdate.toLocaleDateString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
     const handlePostBlog = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -31,7 +37,8 @@ const AddBlog = () => {
                     blogimg: pictureData.data.url,
                     adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
                     adminName: name,
-                    description
+                    description,
+                    date
                 }
 
                 fetch(`http://localhost:5000/blogs`, {
@@ -45,7 +52,7 @@ const AddBlog = () => {
                 .then(data => {
                     toast.success('Blog added. Keep rock!')
                     form.reset()
-                    navigate('/blog')
+                    navigate('/dashboard/myblogs')
                 })
             // }
         })

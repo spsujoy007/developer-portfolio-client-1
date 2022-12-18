@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import AddBlog from "../Pages/Dashboard/AddBlog/AddBlog";
 import AddSkills from "../Pages/Dashboard/AddSkills/AddSkills";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
+import MyBlogs from "../Pages/Dashboard/MyBlogs/MyBlogs";
 import AboutSection from "../Pages/Home/AboutSection/AboutSection";
 import Blog from "../Pages/Home/Blog/Blog";
 import ContactForm from "../Pages/Home/ContactForm/ContactForm";
@@ -65,6 +66,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/dashboard/addblog',
                 element: <AddBlog></AddBlog>
+            },
+            {
+                path: '/dashboard/myblogs',
+                element: <MyBlogs></MyBlogs>
             },
         ]
     }
