@@ -43,7 +43,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/blog/:id",
-                loader: async ({params}) => await fetch(`http://localhost:5000/blogs/${params.id}`),
+                loader: async ({params}) => await fetch(`https://developer-portfolio-server.vercel.app/blogs/${params.id}`),
                 element: <DetailBlog></DetailBlog>
             },
             {
@@ -52,29 +52,29 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/project/:id",
-                loader: async ({params}) => await fetch(`http://localhost:5000/project/${params.id}`),
+                loader: async ({params}) => await fetch(`https://developer-portfolio-server.vercel.app/project/${params.id}`),
                 element: <ProjectDetails></ProjectDetails>
             }
         ]
     },
     {
-        path: '/dashboard',
+        path: '/dashboard-6a4588sgww52',
         element: <DashboardLayout></DashboardLayout>,
         children: [
             {
-                path: '/dashboard',
+                path: '/dashboard-6a4588sgww52',
                 element: <Dashboard></Dashboard>
             },
             {
-                path: '/dashboard/addskill',
+                path: '/dashboard-6a4588sgww52/addskill',
                 element: <AddSkills></AddSkills>
             },
             {
-                path: '/dashboard/addblog',
+                path: '/dashboard-6a4588sgww52/addblog',
                 element: <AddBlog></AddBlog>
             },
             {
-                path: '/dashboard/myblogs',
+                path: '/dashboard-6a4588sgww52/myblogs',
                 element: <MyBlogs></MyBlogs>
             },
         ]

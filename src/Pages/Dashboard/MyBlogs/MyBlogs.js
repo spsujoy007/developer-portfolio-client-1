@@ -9,7 +9,7 @@ const MyBlogs = () => {
     const {data: myblogs = [], refetch, isLoading} = useQuery({
         queryKey: ['myblogs'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/blogs`);
+            const res = await fetch(`https://developer-portfolio-server.vercel.app/blogs`);
             const data = await res.json();
             return data
         }
@@ -21,7 +21,7 @@ const MyBlogs = () => {
     const handleDeleteBlog = (id) => {
         const confirmation = window.confirm('Note: Once you have delete, its cant be undone!')
         if(confirmation){
-            fetch(`http://localhost:5000/blogs?id=${id}`, {
+            fetch(`https://developer-portfolio-server.vercel.app/blogs?id=${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
