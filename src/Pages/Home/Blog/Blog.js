@@ -4,14 +4,16 @@ import RubberBand from 'react-reveal/RubberBand';
 import { Link } from 'react-router-dom';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import Loader from '../../../Components/Loader/Loader';
+import useTitle from '../../../MyHooks/useTitle';
 import BlogCard from './BlogCard';
 
 const Blog = () => {
+    useTitle('Blog')
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],
         queryFn: async() => {
-            const res = await fetch(`https://developer-portfolio-server.vercel.app/blogs`);
+            const res = await fetch(`http://localhost:5000/blogs`);
             const data = await res.json();
             return data;
         }

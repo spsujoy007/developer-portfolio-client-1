@@ -1,18 +1,17 @@
-import React from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaCheckCircle, FaRegThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './BlogCard.css'
 import { BiTimeFive } from "react-icons/bi";
 
 const BlogCard = ({blog}) => {
-
+    // const [like, setLike] = useState(0);
     const {title, _id, adminimg, adminName, blogimg, description, date} = blog;
 
+
     return (
-        <Link to={`/blog/${_id}`}>
         <div className="card card-compact bg-white shadow-xl rounded-none">
   <div className="card-body">
-
         <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
             <div className="avatar relative">
                 <div className="w-10 rounded-full">
@@ -27,19 +26,20 @@ const BlogCard = ({blog}) => {
 
     <div className='p-2 rounded-xl'>
     <h2 className="card-title">{title}</h2>
-    <p className=' text-gray-800'>{description.length > 100 ? <span>{description.slice(0, 100)}...
+    <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
     <Link to={`/blog/${_id}`} className="text-blue-500 font-semibold">See more</Link> </span> :
     <span>{description}</span>}
     </p>
     </div>
     
     <div className="card-actions justify-between items-center mt-2">
-    <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2>
-    
-      {/* <Link to={`/blog/${_id}`}>
-        <button className="px-6 py-1 bg-sky-600 rounded-full transition-all ease-in text-white text-lg hover:bg-black uppercase">see post</button>
-      </Link> */}
-    </div>
+        <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2>
+    <Link to={`/blog/${_id}`}>
+        <button className="px-2 py-px bg-sky-600 rounded-full transition-all ease-in text-white text-lg hover:bg-black uppercase">see post</button>
+      </Link>
+        
+        </div>
+
   </div>
 
   <figure>
@@ -48,7 +48,6 @@ const BlogCard = ({blog}) => {
         </div>
     </figure>
 </div>
-        </Link>
     );
 };
 
