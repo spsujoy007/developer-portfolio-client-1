@@ -23,9 +23,10 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import { Fade } from 'react-reveal';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../../Components/Loader/Loader';
+import useTitle from '../../../MyHooks/useTitle';
 
 const Projects = () => {
-
+    useTitle('PROJECTS OF')
     // const projects = [
     //     {
     //         id: 1,
@@ -76,7 +77,7 @@ const Projects = () => {
     const {data: projects = [], refetch, isLoading } = useQuery({
         queryKey: ['projects'],
         queryFn: async() => {
-            const res = await fetch(`http://localhost:5000/projects`);
+            const res = await fetch(`https://developer-portfolio-server.vercel.app/projects`);
             const data = await res.json()
             return data
         }
@@ -88,7 +89,8 @@ const Projects = () => {
     }
 
     return (
-        <Fade bottom>
+        <div data-aos="fade-up"
+        data-aos-duration="3000">
             <div className='px-5 py-20' id='projects'>
             <CommonHeading>Projects</CommonHeading>
             <p className='text-center mb-10 text-base-100'>An accomplished individual with a powerful background in <span className='text-sky-500'>React, JavaScript, HTML and CSS, Express JS, Node
@@ -107,7 +109,7 @@ incorporates a superb understanding of the terribly latest <span>Programming tri
                     {/* <ProjectDetails project={project}></ProjectDetails> */}
                 </div>
         </div>
-        </Fade>
+        </div>
     );
 };
 

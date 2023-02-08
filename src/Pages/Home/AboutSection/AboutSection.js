@@ -3,11 +3,22 @@ import { FaGithub } from 'react-icons/fa';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import './AboutSection.css'
 import { Fade } from 'react-reveal';
+import useTitle from '../../../MyHooks/useTitle';
 
 const AboutSection = () => {
+    useTitle('ABOUT')
     return ( 
-        <Fade bottom>
+        <div data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="2000">
             <div id='aboutsection' className='mx-6 py-20'>
+                <div>
+                    <marquee behavior="smooth" direction="left">
+                     <p className="text-sky-500">
+                        Call: +8801859342364 or +8801751292251
+                     </p>
+                    </marquee>
+                </div>
             <CommonHeading>About</CommonHeading>
 
             <div className='md:flex gap-10 text-lg'>
@@ -60,7 +71,7 @@ const AboutSection = () => {
         </div>
 
         </div>
-        </Fade>
+        </div>
     );
 };
 

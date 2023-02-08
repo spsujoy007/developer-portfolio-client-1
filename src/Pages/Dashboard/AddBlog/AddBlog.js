@@ -41,7 +41,7 @@ const AddBlog = () => {
                     date
                 }
 
-                fetch(`http://localhost:5000/blogs`, {
+                fetch(`https://developer-portfolio-server.vercel.app/blogs`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -52,7 +52,7 @@ const AddBlog = () => {
                 .then(data => {
                     toast.success('Blog added. Keep rock!')
                     form.reset()
-                    navigate('/dashboard/myblogs')
+                    navigate('/dashboard-6a4588sgww52')
                 })
             // }
         })
@@ -74,6 +74,10 @@ const AddBlog = () => {
                 <div className="form-control mt-5">
                     <label className="label"><span className="label-text text-white">Author name</span></label>
                     <input required name="name" type="text" className="input input-bordered w-full" disabled defaultValue='Sujoy Paul'/>
+                </div>
+
+                <div className='flex items-center justify-center md:py-20 py-6'>
+                    <h1 className='uppercase text-3xl text-error font-bold'>Keep rock</h1>
                 </div>
                 </div>
 

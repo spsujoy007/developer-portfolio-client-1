@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import RubberBand from 'react-reveal/RubberBand';
+import { Fade } from 'react-reveal';
 import { Link } from 'react-router-dom';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import Loader from '../../../Components/Loader/Loader';
@@ -8,12 +8,12 @@ import useTitle from '../../../MyHooks/useTitle';
 import BlogCard from './BlogCard';
 
 const Blog = () => {
-    useTitle('Blog')
+    useTitle('BLOG')
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],
         queryFn: async() => {
-            const res = await fetch(`http://localhost:5000/blogs`);
+            const res = await fetch(`https://developer-portfolio-server.vercel.app/blogs`);
             const data = await res.json();
             return data;
         }
@@ -25,10 +25,10 @@ const Blog = () => {
         return <Loader></Loader>
     }
     
-
     return (
         
-        <div className='py-16'>
+        <div data-aos="fade-up" data-aos-duration="3000" className='py-16'>
+            <div >
             <CommonHeading>Blog<Link to='/dashboard-6a4588sgww52' className='text-gray-900 text-xs'>.</Link></CommonHeading>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
@@ -37,6 +37,7 @@ const Blog = () => {
                         blog={blog}
                     ></BlogCard>)
                 }
+            </div>
             </div>
         </div>
         

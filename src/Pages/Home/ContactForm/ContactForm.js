@@ -3,8 +3,10 @@ import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import emailimg from '../../../assets/senmail.png'
 import './ContactForm.css'
 import { Fade } from 'react-reveal';
+import useTitle from '../../../MyHooks/useTitle';
 
 const ContactForm = () => {
+  useTitle('CONTACT')
     return (
         <Fade bottom>
           <div className='py-20' id='contactform'>
@@ -12,8 +14,8 @@ const ContactForm = () => {
             <div className="hero">
   <div className="hero-content flex-col lg:flex-row bg-white  w-full gap-10">
     <div className="text-center lg:text-left text-black">
-      <h1 className="text-5xl font-bold">Full free to message</h1>
-      <p className="py-6">Do you have any question to me? You can full free to message me. <br /> I will try to answer you. Thank you!</p>
+      <h1 className="text-5xl font-bold text-sky-500">Feel free to message</h1>
+      <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
       <div className='flex items-center contactImg'>
         <img className='w-96 ' src={emailimg} alt="email template" />
       </div>

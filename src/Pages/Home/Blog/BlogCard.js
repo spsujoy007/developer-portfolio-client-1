@@ -6,11 +6,12 @@ import { BiTimeFive } from "react-icons/bi";
 
 const BlogCard = ({blog}) => {
     // const [like, setLike] = useState(0);
+    const [showDetail, setShowDetail] = useState(false)
     const {title, _id, adminimg, adminName, blogimg, description, date} = blog;
 
 
     return (
-        <div className="card card-compact bg-white shadow-xl rounded-none">
+        <div className="card card-compact bg-white shadow-xl rounded-xl">
   <div className="card-body">
         <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
             <div className="avatar relative">
@@ -18,18 +19,25 @@ const BlogCard = ({blog}) => {
                     <img src={adminimg} alt={adminName}/>
                 </div>
                  <div className='absolute ml-7 rounded-full p-px bg-white'>
-                    <FaCheckCircle className=' text-sky-600'></FaCheckCircle>
+                    <FaCheckCircle className='animate-pulse text-sky-600'></FaCheckCircle>
                  </div>
             </div>
             <h2 className='text-lg uppercase'>{adminName}</h2>
         </div>
 
-    <div className='p-2 rounded-xl'>
+    <div className='p-2 rounded-xl min-h-[120px]'>
     <h2 className="card-title">{title}</h2>
-    <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
-    <Link to={`/blog/${_id}`} className="text-blue-500 font-semibold">See more</Link> </span> :
+    {
+        showDetail ? <>
+        <button className='text-left hover:bg-slate-200 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
+            <p>{description}</p>
+        </button></>
+        :
+        <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
+    <button onClick={() => setShowDetail(!showDetail)} className="text-blue-500 font-semibold">See more</button> </span> :
     <span>{description}</span>}
     </p>
+    }
     </div>
     
     <div className="card-actions justify-between items-center mt-2">

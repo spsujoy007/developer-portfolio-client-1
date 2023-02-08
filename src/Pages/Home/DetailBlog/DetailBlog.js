@@ -1,9 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../../MyHooks/useTitle';
 
 const DetailBlog = () => {
     const blog = useLoaderData();
     const {title, description, adminName, adminimg, blogimg, date} = blog
+    useTitle(title.slice(0, 15))
 
     return (
         <div className='py-20 mb-36'>

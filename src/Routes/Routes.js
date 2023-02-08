@@ -43,7 +43,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/blog/:id",
-                loader: async ({params}) => await fetch(`http://localhost:5000/blogs/${params.id}`),
+                loader: async ({params}) => await fetch(`https://developer-portfolio-server.vercel.app/blogs/${params.id}`),
                 element: <DetailBlog></DetailBlog>
             },
             {
@@ -52,7 +52,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/project/:id",
-                loader: async ({params}) => await fetch(`http://localhost:5000/project/${params.id}`),
+                loader: async ({params}) => await fetch(`https://developer-portfolio-server.vercel.app/project/${params.id}`),
                 element: <ProjectDetails></ProjectDetails>
             }
         ]
