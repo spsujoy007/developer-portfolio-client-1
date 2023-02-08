@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCheckCircle, FaRegThumbsUp } from 'react-icons/fa';
+import { FaCheckCircle, FaRegThumbsUp, FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './BlogCard.css'
 import { BiTimeFive } from "react-icons/bi";
@@ -8,6 +8,21 @@ const BlogCard = ({blog}) => {
     // const [like, setLike] = useState(0);
     const [showDetail, setShowDetail] = useState(false)
     const {title, _id, adminimg, adminName, blogimg, description, date} = blog;
+    const likevalue = localStorage.getItem(`${_id}`)
+    const [ifLiked, setIfLiked] = useState(likevalue)
+    // console.log(_id, getlikevalue)
+
+    const handleLike = () => {
+        localStorage.setItem(`${_id}`, 'liked')
+        const getlikevalue = localStorage.getItem(`${_id}`)
+        setIfLiked(getlikevalue)
+    }
+
+    const handleDeleteLike = () => {
+        localStorage.removeItem(`${_id}`)
+        const getlikevalue = localStorage.getItem(`${_id}`)
+        setIfLiked(getlikevalue)
+    }
 
 
     return (
@@ -29,7 +44,7 @@ const BlogCard = ({blog}) => {
     <h2 className="card-title">{title}</h2>
     {
         showDetail ? <>
-        <button className='text-left hover:bg-slate-200 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
+        <button className='text-left hover:bg-slate-50 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
             <p>{description}</p>
         </button></>
         :
@@ -41,7 +56,15 @@ const BlogCard = ({blog}) => {
     </div>
     
     <div className="card-actions justify-between items-center mt-2">
-        <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2>
+        {/* <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2> */}
+        <div>
+            {
+                ifLiked === 'liked' ?
+                <button onClick={handleDeleteLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-sky-500 outline-none '><FaThumbsUp></FaThumbsUp> Liked</button>
+                :
+                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-black outline-none '><FaThumbsUp></FaThumbsUp> Like</button>
+            }
+        </div>
     <Link to={`/blog/${_id}`}>
         <button className="px-2 py-px bg-sky-600 rounded-full transition-all ease-in text-white text-lg hover:bg-black uppercase">see post</button>
       </Link>
