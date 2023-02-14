@@ -11,6 +11,9 @@ import ClockTime from '../../../Components/ClockTime/ClockTime';
 
 const ProfileBio = () => {
 
+    const texts1 = 'sujoy'
+    const texts2 = 'paul'
+    const name = texts1.split('')
 
     return (
         <div className=''>
@@ -31,9 +34,16 @@ const ProfileBio = () => {
             <div className='flex justify-end'>
                 <AutoMessage></AutoMessage>
             </div>
-            <h1 className='text-4xl font-semibold uppercase text-white'>Hi! <br />
-                <span data-aos="fade-right" data-aos-duration="3000">I am <span className='text-info'>sujoy paul</span></span>
-                <p>A WEB DEVELOPER</p>
+            <h1 className='text-4xl font-semibold uppercase text-white'>Hi! I am<br />
+            <span className='text-info text-6xl'>
+                <span className='animate-pulse delay-100 duration-500'>s</span>
+                <span className='animate-pulse delay-150 duration-350'>u</span>
+                <span className='animate-pulse delay-200 duration-200'>j</span>
+                <span className='animate-pulse delay-300 duration-150'>o</span>
+                <span className='animate-pulse delay-500 duration-100'>y</span>
+
+                <span className=''> p</span>aul</span>
+                <p className='text-2xl'>A WEB DEVELOPER</p>
             </h1>
             
             <p className='text-gray-300 mt-3 text-lg md:max-w-[80%]'>

@@ -6,7 +6,6 @@ import img3 from '../../../../assets/graphicsimg/Free_Business_Cards_Mockup_4.jp
 import img4 from '../../../../assets/graphicsimg/GGGA.gif'
 import img5 from '../../../../assets/graphicsimg/Movie poster design2.jpg'
 import img6 from '../../../../assets/graphicsimg/Ocean logo.jpg'
-import img7 from '../../../../assets/graphicsimg/Play music logo.png'
 import img8 from '../../../../assets/graphicsimg/sp logo 4.jpg'
 import img9 from '../../../../assets/graphicsimg/SPLOGOYTUBE.jpg'
 

@@ -9,6 +9,9 @@ import BlogCard from './BlogCard';
 
 const Blog = () => {
     useTitle('BLOG')
+    const userName = process.env.REACT_ADMIN_USERNAME;
+  const userPass = process.env.REACT_ADMIN_PASS;
+  console.log("ADMIN: ", userName, userPass)
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],
@@ -29,7 +32,7 @@ const Blog = () => {
         
         <div data-aos="fade-up" data-aos-duration="3000" className='py-16'>
             <div >
-            <CommonHeading>Blog<Link to='/dashboard-6a4588sgww52' className='text-gray-900 text-xs'>.</Link></CommonHeading>
+            <CommonHeading>Blog<Link to='/dashboard' className='text-gray-900 text-xs'>.</Link></CommonHeading>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     blogs.map(blog => <BlogCard

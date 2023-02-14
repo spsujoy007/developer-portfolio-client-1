@@ -26,7 +26,7 @@ const AutoMessage = () => {
     return (
         <div className='p-2 bg-[#35c3e30f] rounded-r-xl border-l-4 border-sky-500 mb-5 md:mb-0'>
             <h2 className='text-sky-500'>{mymessage}</h2>
-            <ClockTime></ClockTime>
+            {/* <ClockTime></ClockTime> */}
         </div>
     );
 };

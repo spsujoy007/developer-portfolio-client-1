@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { AiFillDelete } from 'react-icons/ai';
 import Loader from '../../../Components/Loader/Loader';
 
 const MyBlogs = () => {
-
+    const [loading, setLoading] = useState(false)
     const {data: myblogs = [], refetch, isLoading} = useQuery({
         queryKey: ['myblogs'],
         queryFn: async () => {
@@ -19,6 +19,7 @@ const MyBlogs = () => {
     if(isLoading){return <Loader></Loader>}
 
     const handleDeleteBlog = (id) => {
+        setLoading(true)
         const confirmation = window.prompt('Please enter password to delete.')
 
         if(confirmation === 'sp007'){
@@ -29,6 +30,7 @@ const MyBlogs = () => {
         .then(data => {
             if(data.deletedCount > 0){
                 toast.success('Blog deleted successful')
+                setLoading(false)
                 refetch();
             }
             console.log(data);
@@ -67,7 +69,12 @@ const MyBlogs = () => {
         <td>{myblog.title.length > 20 ? <p>{myblog.title.slice(0, 20)}...</p> : <p>{myblog.title}</p> }</td>
         <td>{myblog.description.slice(0, 30)}...</td>
         <td>
-            <button onClick={() => handleDeleteBlog(myblog._id)} className='btn btn-sm btn-info hover:btn-error'><AiFillDelete className='mr-2'></AiFillDelete> Delete</button>
+            {
+                loading ? 
+                <button className='btn btn-sm btn-info hover:btn-error loading'>Deleting</button>
+                :
+                <button onClick={() => handleDeleteBlog(myblog._id)} className='btn btn-sm btn-info hover:btn-error'><AiFillDelete className='mr-2'></AiFillDelete> Delete</button>
+            }
         </td>
       </tr> )
       }     

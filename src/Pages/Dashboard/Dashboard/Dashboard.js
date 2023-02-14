@@ -2,6 +2,9 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 
 const Dashboard = () => {
+
+  
+
     return (
         <div className='py-48 '>
             <h2 className='text-error text-5xl text-center'>

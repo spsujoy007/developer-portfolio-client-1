@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { FaCheckCircle, FaRegThumbsUp, FaThumbsUp } from 'react-icons/fa';
+import { FaCheckCircle, FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './BlogCard.css'
-import { BiTimeFive } from "react-icons/bi";
 
 const BlogCard = ({blog}) => {
     // const [like, setLike] = useState(0);
     const [showDetail, setShowDetail] = useState(false)
-    const {title, _id, adminimg, adminName, blogimg, description, date} = blog;
+    const {title, _id, adminimg, adminName, blogimg, description} = blog;
     const likevalue = localStorage.getItem(`${_id}`)
     const [ifLiked, setIfLiked] = useState(likevalue)
     // console.log(_id, getlikevalue)

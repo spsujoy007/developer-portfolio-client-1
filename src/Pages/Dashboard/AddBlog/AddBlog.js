@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const AddBlog = () => {
+    const [loading, setLoading] = useState(false)
+
     const imageHostKey = process.env.REACT_APP_imgbb_key;
     const navigate = useNavigate();
 
@@ -30,6 +32,7 @@ const AddBlog = () => {
         })
         .then(res => res.json())
         .then(pictureData => {
+            setLoading(true)
             console.log(pictureData);
             // if(pictureData.success){
                 const blogcontent = {
@@ -51,8 +54,9 @@ const AddBlog = () => {
                 .then(res => res.json())
                 .then(data => {
                     toast.success('Blog added. Keep rock!')
+                    setLoading(false)
                     form.reset()
-                    navigate('/dashboard-6a4588sgww52')
+                    navigate('/dashboard')
                 })
             // }
         })
@@ -94,7 +98,12 @@ const AddBlog = () => {
                 </div>
 
                 <div className='py-3 flex justify-end'>
-                    <button type='submit' className='btn btn-info w-full'>Post</button>
+                    {
+                        loading ? 
+                        <button className='btn btn-info w-full laoding'>Posting</button>
+                        :
+                        <button type='submit' className='btn btn-info w-full'>Post</button>
+                    }
                 </div>
                 </div>
 

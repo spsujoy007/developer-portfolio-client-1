@@ -58,23 +58,23 @@ export const routes = createBrowserRouter([
         ]
     },
     {
-        path: '/dashboard-6a4588sgww52',
+        path: '/dashboard',
         element: <DashboardLayout></DashboardLayout>,
         children: [
             {
-                path: '/dashboard-6a4588sgww52',
+                path: '/dashboard',
                 element: <Dashboard></Dashboard>
             },
             {
-                path: '/dashboard-6a4588sgww52/addskill',
+                path: '/dashboard/addskill',
                 element: <AddSkills></AddSkills>
             },
             {
-                path: '/dashboard-6a4588sgww52/addblog',
+                path: '/dashboard/addblog',
                 element: <AddBlog></AddBlog>
             },
             {
-                path: '/dashboard-6a4588sgww52/myblogs',
+                path: '/dashboard/myblogs',
                 element: <MyBlogs></MyBlogs>
             },
         ]
