@@ -11,7 +11,7 @@ const AboutSection = () => {
         <div data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="2000">
-            <div id='aboutsection' className='mx-6 py-20'>
+            <div id='aboutsection' className='mx-6 py-20 min-h-screen'>
                 <div>
                     <marquee behavior="smooth" direction="left">
                      <p className="text-sky-500">

@@ -8,7 +8,6 @@ import { Fade } from 'react-reveal';
 import AutoMessage from '../AutoMessage/AutoMessage';
 import ClockTime from '../../../Components/ClockTime/ClockTime';
 
-
 const ProfileBio = () => {
 
     const texts1 = 'sujoy'
@@ -16,8 +15,8 @@ const ProfileBio = () => {
     const name = texts1.split('')
 
     return (
-        <div className=''>
-            <div className='flex md:flex-row flex-col items-center md:py-[150px] py-20'>
+        <div >
+            <div className='flex min-h-screen md:flex-row flex-col items-center md:py-[150px] py-20'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
             {/* for left image */}
             <div data-aos="fade-right" data-aos-duration="1500">
                 <div className='flex justify-center items-center md:px-20 px-5'>

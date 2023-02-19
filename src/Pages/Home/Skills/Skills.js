@@ -38,7 +38,7 @@ const Skills = () => {
     return (
         <div data-aos="fade-up"
         data-aos-duration="3000">
-            <div className='mx-6 py-20' id='skills'>
+            <div className='mx-6 py-20 min-h-screen' id='skills'>
             <CommonHeading>My Skills</CommonHeading>
             <p className='text-xl text-white py-5'>Languages, framework and tools:</p>
             

@@ -9,8 +9,8 @@ import BlogCard from './BlogCard';
 
 const Blog = () => {
     useTitle('BLOG')
-    const userName = process.env.REACT_ADMIN_USERNAME;
-  const userPass = process.env.REACT_ADMIN_PASS;
+    const userName = process.env.REACT_APP_username;
+  const userPass = process.env.REACT_APP_ADMIN_pass;
   console.log("ADMIN: ", userName, userPass)
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
@@ -30,7 +30,7 @@ const Blog = () => {
     
     return (
         
-        <div data-aos="fade-up" data-aos-duration="3000" className='py-16'>
+        <div data-aos="fade-up" data-aos-duration="3000" className='py-16 min-h-screen'>
             <div >
             <CommonHeading>Blog<Link to='/dashboard' className='text-gray-900 text-xs'>.</Link></CommonHeading>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>

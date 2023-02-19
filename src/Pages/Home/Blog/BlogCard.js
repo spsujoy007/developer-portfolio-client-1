@@ -15,14 +15,25 @@ const BlogCard = ({blog}) => {
         localStorage.setItem(`${_id}`, 'liked')
         const getlikevalue = localStorage.getItem(`${_id}`)
         setIfLiked(getlikevalue)
+
+        fetch(`http://localhost:5000/likeblog?id=${_id}&value=true`, {
+            method: "PUT"
+        })
+        .then(res => res.json())
+        .then(data => {console.log(data)})
     }
 
     const handleDeleteLike = () => {
         localStorage.removeItem(`${_id}`)
         const getlikevalue = localStorage.getItem(`${_id}`)
         setIfLiked(getlikevalue)
-    }
 
+        fetch(`http://localhost:5000/likeblog?id=${_id}&value=false`, {
+            method: "PUT"
+        })
+        .then(res => res.json())
+        .then(data => {console.log(data)})
+    }
 
     return (
         <div className="card card-compact bg-white shadow-xl rounded-xl">

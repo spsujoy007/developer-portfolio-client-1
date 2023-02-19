@@ -9,7 +9,7 @@ const ContactForm = () => {
   useTitle('CONTACT')
     return (
         <Fade bottom>
-          <div className='py-20' id='contactform'>
+          <div className='py-20 min-h-screen' id='contactform'>
             <CommonHeading>Contact Form</CommonHeading>
             <div className="hero">
   <div className="hero-content flex-col lg:flex-row bg-white  w-full gap-10">
