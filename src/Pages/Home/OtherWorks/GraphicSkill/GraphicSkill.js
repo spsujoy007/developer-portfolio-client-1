@@ -17,14 +17,14 @@ const GraphicSkill = () => {
             <section className="py-6">
 	<div className="container flex flex-col justify-center p-4 mx-auto">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img1} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img2} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img3} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img4} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img5} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img6} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img8} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img9} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img1} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img2} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img3} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img4} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img5} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img6} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img8} />
+			<img loading='lazy' alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img9} />
 		</div>
 	</div>
 </section>

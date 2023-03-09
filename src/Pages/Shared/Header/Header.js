@@ -23,7 +23,17 @@ const Header = () => {
             zIndex: '100'
         }} className="navbar  fixed z-10 md:px-6 glass md:rounded-b-2xl myheading">
   <div className="navbar-start w-full md:w-[50%]">
-    <div className="dropdown">
+    
+    <Link to='/' className="text-xl  text-white flex items-center">
+        <img src={logo} alt="sujoy paul" className='rounded-full w-12  mr-3 relative'/>SUJOY PAUL
+    </Link>
+  </div>
+  <div className=" navbar-end">
+    <ul className="hidden lg:flex menu menu-horizontal p-0 text-white uppercase font-semibold">
+      {menuItem}
+    </ul>
+
+    <div className="dropdown dropdown-bottom dropdown-end">
       <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
@@ -31,20 +41,8 @@ const Header = () => {
         {menuItem}
       </ul>
     </div>
-    <Link to='/' className="text-xl  text-white flex items-center">
-        <img src={logo} alt="sujoy paul" className='rounded-full w-12  mr-3 relative'/>SUJOY PAUL
-        {/* <div className='ml-3 flex gap-x-2'>
-          <div className='w-5 h-5 shadow-2xl shadow-sky-500 border-2 border-dashed rounded-full animate-spin'></div>
-          <div className='w-5 h-5  border-2 border-dashed rounded-full animate-spin'></div>
-        </div> */}
-    </Link>
   </div>
-  <div className="hidden lg:flex navbar-end">
-    <ul className="menu menu-horizontal p-0 text-white uppercase font-semibold">
-      {menuItem}
-    </ul>
-  </div>
-  <label  htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden text-white">
+  <label  htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost hidden text-white">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
 </div>

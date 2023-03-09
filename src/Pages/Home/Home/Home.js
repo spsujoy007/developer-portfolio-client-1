@@ -7,7 +7,7 @@ import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 
 const Home = () => {
-    useTitle('HOME')
+    useTitle('Portfolio')
     return (
         <div id='home'>
                 <ProfileBio></ProfileBio>

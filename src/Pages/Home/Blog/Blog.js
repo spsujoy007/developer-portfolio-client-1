@@ -11,7 +11,6 @@ const Blog = () => {
     useTitle('BLOG')
     const userName = process.env.REACT_APP_username;
   const userPass = process.env.REACT_APP_ADMIN_pass;
-  console.log("ADMIN: ", userName, userPass)
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],
@@ -22,11 +21,11 @@ const Blog = () => {
         }
     });
 
-    refetch();
-
+    
     if(isLoading){
         return <Loader></Loader>
     }
+    refetch();
     
     return (
         
@@ -38,6 +37,7 @@ const Blog = () => {
                     blogs.map(blog => <BlogCard
                         key={blog._id}
                         blog={blog}
+                        refetch={refetch}
                     ></BlogCard>)
                 }
             </div>

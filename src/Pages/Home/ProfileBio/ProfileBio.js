@@ -1,6 +1,6 @@
 import React from 'react';
 import profiledp from '../../../assets/profiledp.jpg'
-import { FaFacebook, FaFileDownload, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
+import { FaEye, FaFacebook, FaFileDownload, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
 import { AiTwotoneMail } from "react-icons/ai";
 import './ProfileBio.css'
 import resume from '../../../assets/Sujoy paul.pdf'
@@ -22,7 +22,8 @@ const ProfileBio = () => {
                 <div className='flex justify-center items-center md:px-20 px-5'>
             <div className="avatar dbimageMain">
                 <div className="w-80 rounded-full ring-offset-2 dbimage ">
-                    <img src={profiledp} alt='' />
+                    {/* <img src={profiledp} alt='' /> */}
+                    <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' />
                 </div>
             </div>
             </div>
@@ -34,14 +35,15 @@ const ProfileBio = () => {
                 <AutoMessage></AutoMessage>
             </div>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! I am<br />
-            <span className='text-info text-6xl'>
+            <span className='text-info md:text-6xl text-5xl'>
                 <span className='animate-pulse delay-100 duration-500'>s</span>
                 <span className='animate-pulse delay-150 duration-350'>u</span>
                 <span className='animate-pulse delay-200 duration-200'>j</span>
                 <span className='animate-pulse delay-300 duration-150'>o</span>
                 <span className='animate-pulse delay-500 duration-100'>y</span>
 
-                <span className=''> p</span>aul</span>
+                <span className=''> kumar paul</span>
+                </span>
                 <p className='text-2xl'>A WEB DEVELOPER</p>
             </h1>
             
@@ -51,7 +53,7 @@ const ProfileBio = () => {
             
             {/* <a href={resume} download={resume}> */}
             <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link">
-                <button className='btn btn-info btnanim hover:btn-outline mt-3 rounded-full w-full md:w-56 uppercase'><FaFileDownload className="mr-2 text-xl"></FaFileDownload> Download Resume</button>
+                <button className='btn gap-x-2 btn-info btnanim hover:btn-outline mt-3 rounded-full w-full md:w-56 uppercase'><FaEye className="mr-2 text-xl"></FaEye> view Resume</button>
             </a>
 
             <div className='flex text-2xl text-white mt-7 justify-between md:justify-start'>

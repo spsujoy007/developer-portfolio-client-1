@@ -33,7 +33,6 @@ const MyBlogs = () => {
                 setLoading(false)
                 refetch();
             }
-            console.log(data);
         })
 
         }

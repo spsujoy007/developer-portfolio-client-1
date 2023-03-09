@@ -6,6 +6,7 @@
 .cardShadow{
     transition: all 0.4s;
     cursor: pointer;
+    box-shadow: 3px 3px 5px #00000059, -3px -3px 5px #f8f8f841;
 }
 
 .cardShadow:hover {

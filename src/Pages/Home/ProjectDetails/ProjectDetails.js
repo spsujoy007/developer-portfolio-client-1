@@ -6,7 +6,6 @@ import { useNotification } from '../../../Components/Notification/useNotificatio
 
 const ProjectDetails = () => {
     const project = useLoaderData();
-    // console.log(project);
     const { id, image, title, tools, codelink, demolink, details } = project;
     const alldetails = details.split('. ');
 
@@ -30,7 +29,7 @@ const ProjectDetails = () => {
     <h2 className='text-xl text-sky-500 font-semibold mt-6 uppercase'>Language, tools & other:</h2>
     <div className='grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-x-2 gap-y-2'>
                 {
-                    tools.map((tool, i) => <div key={i} title={tool.title} className='cursor-pointer hover:bg-sky-200 flex items-center px-5 py-2 rounded-lg bg-sky-100 text-white'>
+                    tools.map((tool, i) => <div key={i} title={tool.title} className='cursor-pointer hover:bg-sky-200 flex items-center md:px-3 px-1 py-2 rounded-lg bg-sky-100 text-white'>
                         <img className='w-5 h-5 mx-2' src={tool.img} alt={tool.title} />
                         <p className='text-sky-500 font-semibold '>{tool.title}</p>
                     </div>)

@@ -1,38 +1,62 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { FaCheckCircle, FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './BlogCard.css'
 
-const BlogCard = ({blog}) => {
+const BlogCard = ({blog, refetch}) => {
     // const [like, setLike] = useState(0);
     const [showDetail, setShowDetail] = useState(false)
-    const {title, _id, adminimg, adminName, blogimg, description} = blog;
+    const {title, _id, adminimg, adminName, blogimg, description, likes} = blog;
     const likevalue = localStorage.getItem(`${_id}`)
     const [ifLiked, setIfLiked] = useState(likevalue)
-    // console.log(_id, getlikevalue)
+
+    // get the likes of blog
+    // const {} = useQuery({
+    //     queryKey: 'bloglikes',
+    //     queryFn: async() => {
+    //         const res = await fetch('')
+    //     }
+    // })
 
     const handleLike = () => {
+        refetch()
         localStorage.setItem(`${_id}`, 'liked')
         const getlikevalue = localStorage.getItem(`${_id}`)
         setIfLiked(getlikevalue)
-
-        fetch(`http://localhost:5000/likeblog?id=${_id}&value=true`, {
-            method: "PUT"
+        
+        fetch(`https://developer-portfolio-server.vercel.app/likeblog?id=${_id}`, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({'condition': true})
         })
         .then(res => res.json())
-        .then(data => {console.log(data)})
+        .then(data => {
+            refetch()
+        })
+        refetch()
     }
 
     const handleDeleteLike = () => {
+        refetch()
         localStorage.removeItem(`${_id}`)
         const getlikevalue = localStorage.getItem(`${_id}`)
         setIfLiked(getlikevalue)
 
-        fetch(`http://localhost:5000/likeblog?id=${_id}&value=false`, {
-            method: "PUT"
+        fetch(`https://developer-portfolio-server.vercel.app/likeblog?id=${_id}`, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({'condition': false})
         })
         .then(res => res.json())
-        .then(data => {console.log(data)})
+        .then(data => {
+            refetch()
+        })
+        refetch()
     }
 
     return (
@@ -70,9 +94,9 @@ const BlogCard = ({blog}) => {
         <div>
             {
                 ifLiked === 'liked' ?
-                <button onClick={handleDeleteLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-sky-500 outline-none '><FaThumbsUp></FaThumbsUp> Liked</button>
+                <button onClick={handleDeleteLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-sky-500 outline-none '><FaThumbsUp></FaThumbsUp> Liked {likes}</button>
                 :
-                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-black outline-none '><FaThumbsUp></FaThumbsUp> Like</button>
+                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-black outline-none '><FaThumbsUp></FaThumbsUp> Like {likes}</button>
             }
         </div>
     <Link to={`/blog/${_id}`}>

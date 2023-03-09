@@ -21,7 +21,6 @@ const AddBlog = () => {
         const name = form.name.value;
         const title = form.title.value;
         const description = form.description.value;
-        console.log(picture, name, title, description)
 
         const formData = new FormData()
         formData.append('image', picture);
@@ -33,7 +32,6 @@ const AddBlog = () => {
         .then(res => res.json())
         .then(pictureData => {
             setLoading(true)
-            console.log(pictureData);
             // if(pictureData.success){
                 const blogcontent = {
                     title,
