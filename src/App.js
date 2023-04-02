@@ -6,7 +6,6 @@ import { routes } from './Routes/Routes';
 function App() {
   return (
     <div  className=" h-[100%]">
-
       <RouterProvider router={routes}></RouterProvider>
         <Toaster></Toaster>
     </div>

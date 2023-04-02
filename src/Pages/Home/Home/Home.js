@@ -4,6 +4,7 @@ import AboutSection from '../AboutSection/AboutSection';
 import GraphicSkill from '../OtherWorks/GraphicSkill/GraphicSkill';
 import ProfileBio from '../ProfileBio/ProfileBio';
 import Projects from '../Projects/Projects';
+import ReviewSection from '../ReviewSection/ReviewSection';
 import Skills from '../Skills/Skills';
 
 const Home = () => {

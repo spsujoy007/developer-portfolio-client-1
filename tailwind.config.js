@@ -6,7 +6,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
+        sptheme: {
         
 "primary": "#025ae8",
         

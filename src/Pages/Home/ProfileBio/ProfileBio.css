@@ -52,9 +52,46 @@
         box-shadow: none;
     }
     50%{
-        box-shadow: 0px 0px 20px  #0988d1;
+        box-shadow: 0px 0px 100px #0988d166;
+    }
+    75%{
+        box-shadow: 0px 0px 50px #feffff66;
     }
     100%{
         box-shadow: none;
+    }
+}
+
+.nameAnim_1{
+    animation: textOpacity 4s ease-in-out infinite;
+}
+.nameAnim_2{
+    animation: textOpacity 5s ease-in-out infinite;
+}
+.nameAnim_3{
+    animation: textOpacity 6s ease-in-out infinite;
+}
+.nameAnim_4{
+    animation: textOpacity 7s ease-in-out infinite;
+}
+.nameAnim_5{
+    animation: textOpacity 8s ease-in-out infinite;
+}
+
+@keyframes textOpacity {
+    0%{
+        opacity: 80%;
+    }
+    25%{
+        opacity: 80%;
+    }
+    50%{
+        opacity: 80%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100%{
+        opacity: 0%;
     }
 }

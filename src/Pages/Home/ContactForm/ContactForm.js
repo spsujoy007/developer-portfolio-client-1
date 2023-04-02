@@ -9,11 +9,11 @@ const ContactForm = () => {
   useTitle('CONTACT')
     return (
         <Fade bottom>
-          <div className='py-20 min-h-screen' id='contactform'>
-            <CommonHeading>Contact Form</CommonHeading>
+          <div className='py-20 min-h-screen rounded-xl' id='contactform'>
+            {/* <CommonHeading>Contact Form</CommonHeading> */}
             <div className="hero">
-  <div className="hero-content flex-col lg:flex-row bg-white  w-full gap-10">
-    <div className="text-center lg:text-left text-black">
+  <div className="hero-content flex-col lg:flex-row bg-white rounded-xl w-full gap-10">
+    <div className="text-center lg:text-left text-black rounded-xl">
       <h1 className="text-5xl font-bold text-sky-500">Feel free to message</h1>
       <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
       <div className='flex items-center contactImg'>

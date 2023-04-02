@@ -1,0 +1,12 @@
+.selectedDiv{
+    animation: lightJump 3s ease-in-out infinite;
+}
+
+@keyframes lightJump {
+    0%{
+        box-shadow: 0 0 30px blue;
+    }
+    100%{
+        box-shadow: 0 0 0px blue;
+    }
+}

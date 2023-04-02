@@ -14,6 +14,7 @@ import ProjectDetails from "../Pages/Home/ProjectDetails/ProjectDetails";
 import Projects from "../Pages/Home/Projects/Projects";
 import Skills from "../Pages/Home/Skills/Skills";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import AddProject from "../Pages/Dashboard/AddProject/AddProject";
 
 export const routes = createBrowserRouter([
     {
@@ -68,6 +69,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/dashboard/addskill',
                 element: <AddSkills></AddSkills>
+            },
+            {
+                path: '/dashboard/addProject',
+                element: <AddProject></AddProject>
             },
             {
                 path: '/dashboard/addblog',

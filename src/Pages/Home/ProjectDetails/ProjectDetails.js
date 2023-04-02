@@ -3,6 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { Fade } from 'react-reveal';
 import { FaCode, FaDotCircle, FaLaptop, FaUndoAlt } from 'react-icons/fa';
 import { useNotification } from '../../../Components/Notification/useNotification';
+import ReviewSection from '../ReviewSection/ReviewSection';
 
 const ProjectDetails = () => {
     const project = useLoaderData();
@@ -14,7 +15,7 @@ const ProjectDetails = () => {
     return (
         <div className="py-20 px-2 ">
             <Fade bottom>
-            <div className="card bg-white shadow-xl md:max-w-[800px] mx-auto">
+            <div className="card bg-white shadow-xl rounded-xl">
   <figure><img className='md:w-full' src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
@@ -47,8 +48,15 @@ const ProjectDetails = () => {
     </Link>
     </div>
   </div>
+
+        {/* <div>
+                <ReviewSection
+                    project={project}
+                ></ReviewSection>
+        </div> */}
 </div>
         </Fade>
+
         </div>
     );
 };

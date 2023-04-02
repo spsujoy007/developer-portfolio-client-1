@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AddBlog = () => {
     const [loading, setLoading] = useState(false)
+    
 
     const imageHostKey = process.env.REACT_APP_imgbb_key;
     const navigate = useNavigate();
@@ -39,7 +40,8 @@ const AddBlog = () => {
                     adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
                     adminName: name,
                     description,
-                    date
+                    date,
+                    likes: 0
                 }
 
                 fetch(`https://developer-portfolio-server.vercel.app/blogs`, {
@@ -55,6 +57,7 @@ const AddBlog = () => {
                     setLoading(false)
                     form.reset()
                     navigate('/dashboard')
+                    
                 })
             // }
         })
@@ -64,7 +67,7 @@ const AddBlog = () => {
     return (
         <div className='px-5'>
             <form onSubmit={handlePostBlog}>
-                <div className='p-5 border border-dashed border-sky-500 border-2 grid md:grid-cols-2 grid-cols-1 rounded-xl gap-10'>
+                <div className='p-5 border-dashed border-sky-500 border-2 grid md:grid-cols-2 grid-cols-1 rounded-xl gap-10'>
                 
                 {/* left side input */}
                 <div>

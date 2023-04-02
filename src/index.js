@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {QueryClient, QueryClientProvider, useQuery} from '@tanstack/react-query'
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import ContentProvider from './context/ContentProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const queryClient = new QueryClient()
@@ -11,7 +12,9 @@ const queryClient = new QueryClient()
 root.render(
   <React.StrictMode>
      <QueryClientProvider client={queryClient}>
-        <App />
+        <ContentProvider>
+          <App />
+        </ContentProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

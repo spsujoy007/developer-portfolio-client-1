@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import profiledp from '../../../assets/profiledp.jpg'
 import { FaEye, FaFacebook, FaFileDownload, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
 import { AiTwotoneMail } from "react-icons/ai";
@@ -7,9 +7,11 @@ import resume from '../../../assets/Sujoy paul.pdf'
 import { Fade } from 'react-reveal';
 import AutoMessage from '../AutoMessage/AutoMessage';
 import ClockTime from '../../../Components/ClockTime/ClockTime';
+import { ContentContext } from '../../../context/ContentProvider';
 
 const ProfileBio = () => {
-
+    const {adminName } = useContext(ContentContext)
+    console.log(adminName)
     const texts1 = 'sujoy'
     const texts2 = 'paul'
     const name = texts1.split('')
@@ -36,11 +38,11 @@ const ProfileBio = () => {
             </div>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! I am<br />
             <span className='text-info md:text-6xl text-5xl'>
-                <span className='animate-pulse delay-100 duration-500'>s</span>
-                <span className='animate-pulse delay-150 duration-350'>u</span>
-                <span className='animate-pulse delay-200 duration-200'>j</span>
-                <span className='animate-pulse delay-300 duration-150'>o</span>
-                <span className='animate-pulse delay-500 duration-100'>y</span>
+                <span className='nameAnim_1'>s</span>
+                <span className='nameAnim_2'>u</span>
+                <span className='nameAnim_3'>j</span>
+                <span className='nameAnim_4'>o</span>
+                <span className='nameAnim_5'>y</span>
 
                 <span className=''> kumar paul</span>
                 </span>

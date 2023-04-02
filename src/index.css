@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600,700;800&display=swap');
 
 body {
@@ -8,8 +9,9 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: linear-gradient(80deg, #362d42, #4f7468, #362d42); */
-  background-color: #221f1f;
+  /* background-image: linear-gradient(90deg, #EBE40A, #F049A1, #AC32EE);
+  background-image: linear-gradient(90deg, tomato, crimson); */
+  background-color: #0e2025;
 }
 
 /* width */

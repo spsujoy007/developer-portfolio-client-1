@@ -5,7 +5,6 @@ import ClockTime from '../../../Components/ClockTime/ClockTime';
 
 const AutoMessage = () => {
     const [mymessage, setMymessage] = useState('')
-    console.log('number: ', mymessage)
 
     const messages = [
         {
