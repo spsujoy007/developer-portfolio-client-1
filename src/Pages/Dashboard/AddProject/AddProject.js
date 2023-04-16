@@ -68,9 +68,26 @@ const AddProject = () => {
                             <label className="label"><span className="label-text text-white">Code link</span></label>
                             <input required name="codelink" type="text" className="input input-bordered w-full"  placeholder="https://github.com/spsujoy007/spsujoy007" />
                     </div> 
-                    <div>
-                        <div>
-                            <input type="checkbox" className="checkbox checkbox-primary checkbox-md" />
+                    <div className='bg-white p-5 mt-5 rounded-xl flex items-center gap-5'>
+                        <div className='flex items-center gap-3'>
+                            <input name="html" id='html' type="checkbox" className="checkbox checkbox-primary checkbox-md" />
+                            <label className='text-gray-800 font-semibold' htmlFor="html">HTML 5</label>
+                        </div>
+                        <div className='flex items-center gap-3'>
+                            <input name="css" id='css' type="checkbox" className="checkbox checkbox-primary checkbox-md" />
+                            <label className='text-gray-800 font-semibold' htmlFor="css">CSS 3</label>
+                        </div>
+                        <div className='flex items-center gap-3'>
+                            <input name="javascript" id='javascript' type="checkbox" className="checkbox checkbox-primary checkbox-md" />
+                            <label className='text-gray-800 font-semibold' htmlFor="javascript">Javascript</label>
+                        </div>
+                        <div className='flex items-center gap-3'>
+                            <input name="react" id='react' type="checkbox" className="checkbox checkbox-primary checkbox-md" />
+                            <label className='text-gray-800 font-semibold' htmlFor="react">React Js</label>
+                        </div>
+                        <div className='flex items-center gap-3'>
+                            <input name="bootstrap" id='Bootstrap' type="checkbox" className="checkbox checkbox-primary checkbox-md" />
+                            <label className='text-gray-800 font-semibold' htmlFor="Bootstrap">Bootstrap</label>
                         </div>
                     </div>
                 </div>

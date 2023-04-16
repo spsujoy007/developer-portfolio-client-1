@@ -1,19 +1,31 @@
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const AdminProtect = ({children}) => {
-    // const navigate = useNavigate()
-    // // const permituser = window.prompt('Enter admin username')
-    // // const permitpass = window.prompt('Enter admin password')
-    // const userName = process.env.ADMIN_USERNAME;
-    // const userPass = process.env.ADMIN_PASS;
-    // // if(permituser === userName && permitpass === userPass){
-    // //     // navigate('/')
-    // //     // toast.error('Wrong user')
-    // //     console.log('successs')
-    // // }
-    return {children}
+    const navigate = useNavigate()
+    
+    // const [time, setTime] = useState(new Date());
+    // const security = prompt("Enter Password")
+    // const getT = time.toString().split(' ')[4].split(':')
+    const getGrandP = localStorage.getItem('getPass')
+
+    if(getGrandP){
+        return children
+    }
+    // else if(security === getT + 110){
+    //     localStorage.setItem('getPass', {security: security, 'grandPass:': 110})
+    //     return children
+    // }
+    else{
+        return navigate('/')
+    }
+
+    // return (
+    //     <div></div>
+    // )
 };
 
 export default AdminProtect;

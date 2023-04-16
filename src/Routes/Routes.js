@@ -15,6 +15,7 @@ import Projects from "../Pages/Home/Projects/Projects";
 import Skills from "../Pages/Home/Skills/Skills";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import AddProject from "../Pages/Dashboard/AddProject/AddProject";
+import AdminProtect from "../Components/PrivetRoute/AdminProtect";
 
 export const routes = createBrowserRouter([
     {
@@ -64,23 +65,23 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <AdminProtect><Dashboard></Dashboard></AdminProtect>
             },
             {
                 path: '/dashboard/addskill',
-                element: <AddSkills></AddSkills>
+                element: <AdminProtect><AddSkills></AddSkills></AdminProtect>
             },
             {
                 path: '/dashboard/addProject',
-                element: <AddProject></AddProject>
+                element: <AdminProtect><AddProject></AddProject></AdminProtect>
             },
             {
                 path: '/dashboard/addblog',
-                element: <AddBlog></AddBlog>
+                element: <AdminProtect><AddBlog></AddBlog></AdminProtect>
             },
             {
                 path: '/dashboard/myblogs',
-                element: <MyBlogs></MyBlogs>
+                element: <AdminProtect><MyBlogs></MyBlogs></AdminProtect>
             },
         ]
     }
