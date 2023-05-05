@@ -18,7 +18,7 @@ const ReviewSection = ({project}) => {
         event.preventDefault();
         const form = event.target;
         const describe = form.describe.value;
-        const projectName = form.projectName.value;
+        const projectDoc = project;
         const viewerName = form.viewerName.value;
         const url = `http://localhost:5000/makereview`
         fetch(url, {
@@ -26,12 +26,12 @@ const ReviewSection = ({project}) => {
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify({describe, date, projectName, viewerName})
+            body: JSON.stringify({describe, date, projectDoc, viewerName})
         })
         .then(res => res.json)
         .then(data => {
             toast.success('Review submited')
-            localStorage.setItem("review", [describe, projectName])
+            localStorage.setItem("review", [describe, title])
             localStorage.setItem("name", viewerName);
             setShowPostedMsg(true)
             form.reset()

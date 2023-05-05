@@ -49,11 +49,11 @@ const ProjectDetails = () => {
     </div>
   </div>
 
-        {/* <div>
+        <div>
                 <ReviewSection
                     project={project}
                 ></ReviewSection>
-        </div> */}
+        </div>
 </div>
         </Fade>
 
