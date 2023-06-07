@@ -1,24 +1,23 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
+import ContainItem from '../../../Components/Container/ContainItem';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import './AboutSection.css'
 import { Fade } from 'react-reveal';
 import useTitle from '../../../MyHooks/useTitle';
+import { useLocation } from 'react-router-dom';
 
 const AboutSection = () => {
     useTitle('ABOUT')
+    const getPath = useLocation().pathname;
+    console.log(getPath)
+
     return ( 
         <div data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="2000">
-            <div id='aboutsection' className='mx-6 py-20 min-h-screen'>
-                {/* <div>
-                    <marquee behavior="smooth" direction="left">
-                     <p className="text-sky-500">
-                        Call: +8801859342364 or +8801751292251
-                     </p>
-                    </marquee>
-                </div> */}
+        <ContainItem> 
+        <div id='aboutsection' className={`mx-6 ${getPath === '/about' && 'min-h-screen py-10'}`}>
             <CommonHeading>About</CommonHeading>
 
             <div className='md:flex gap-10 text-lg'>
@@ -71,6 +70,7 @@ const AboutSection = () => {
         </div>
 
         </div>
+        </ContainItem>
         </div>
     );
 };

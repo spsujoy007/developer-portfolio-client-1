@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import profiledp from '../../../assets/profiledp.jpg'
-import { FaEye, FaFacebook, FaFileDownload, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
+import { FaEye, FaFacebook, FaFileDownload, FaReadme, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
+import { HiDocumentText } from "react-icons/hi";
 import { AiTwotoneMail } from "react-icons/ai";
 import './ProfileBio.css'
 import resume from '../../../assets/Sujoy paul.pdf'
@@ -8,22 +9,26 @@ import { Fade } from 'react-reveal';
 import AutoMessage from '../AutoMessage/AutoMessage';
 import ClockTime from '../../../Components/ClockTime/ClockTime';
 import { ContentContext } from '../../../context/ContentProvider';
+import { useState } from 'react';
 
 const ProfileBio = () => {
     const {adminName } = useContext(ContentContext)
-    console.log(adminName)
+    const [onMouse, setOnMouse] = useState(false)
     const texts1 = 'sujoy'
     const texts2 = 'paul'
     const name = texts1.split('')
 
     return (
         <div >
-            <div className='flex min-h-screen md:flex-row flex-col items-center md:py-[150px] py-20'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
+            <div className='flex min-h-screen md:flex-row flex-col items-center md:py-[150px]'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
             {/* for left image */}
             <div data-aos="fade-right" data-aos-duration="1500">
                 <div className='flex justify-center items-center md:px-20 px-5'>
             <div className="avatar dbimageMain">
-                <div className="w-80 rounded-full ring-offset-2 dbimage ">
+                <div 
+                onMouseEnter={() => {setOnMouse(true)}}
+                onMouseLeave={() => setOnMouse(false)}
+                className={`w-80 ring-offset-2 dbimage duration-500 ${onMouse ? "hoverProfile" : "rounded-full"}`}>
                     {/* <img src={profiledp} alt='' /> */}
                     <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' />
                 </div>
@@ -55,7 +60,7 @@ const ProfileBio = () => {
             
             {/* <a href={resume} download={resume}> */}
             <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link">
-                <button className='btn gap-x-2 btn-info btnanim hover:btn-outline mt-3 rounded-full w-full md:w-56 uppercase'><FaEye className="mr-2 text-xl"></FaEye> view Resume</button>
+                <button className='btn gap-x-1 btn-info btnanim hover:btn-outline mt-3 rounded-r-full w-full md:w-44 capitalize'><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
             </a>
 
             <div className='flex text-2xl text-white mt-7 justify-between md:justify-start'>

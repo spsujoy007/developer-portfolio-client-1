@@ -40,7 +40,7 @@ const Header = () => {
     </Link>
   </div>
   <div className="hidden lg:flex navbar-end">
-    <ul className="menu menu-horizontal p-0 text-white uppercase font-semibold">
+    <ul className="menu menu-horizontal p-0 text-white uppercase">
       {menuItem}
     </ul>
   </div>

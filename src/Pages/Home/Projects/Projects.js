@@ -1,4 +1,5 @@
 import React from 'react';
+import ContainItem from '../../../Components/Container/ContainItem';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import { useQuery } from '@tanstack/react-query';
@@ -27,7 +28,8 @@ const Projects = () => {
     return (
         <div data-aos="fade-up"
         data-aos-duration="3000">
-            <div className='px-5 py-20 min-h-screen' id='projects'>
+            <ContainItem>
+            <div className='px-5' id='projects'>
             <CommonHeading>Projects</CommonHeading>
             <p className='text-center mb-10 text-base-100'>An accomplished individual with a powerful background in <span className='text-sky-500'>React, JavaScript, HTML and CSS, Express JS, Node
 JS, Tailwind CSS, and MongoDB,</span> I feel within the power of the web and have an intense want to be told the way
@@ -42,6 +44,7 @@ incorporates a superb understanding of the terribly latest <span>Programming tri
                 }
             </div>
         </div>
+            </ContainItem>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import ContainItem from '../../../Components/Container/ContainItem';
 import html from '../../../assets/tools/html.png'
 import CSS from '../../../assets/tools/css.png'
 import Bootstrap from '../../../assets/tools/bootstrap.png'
@@ -38,7 +39,8 @@ const Skills = () => {
     return (
         <div data-aos="fade-up"
         data-aos-duration="3000">
-            <div className='mx-6 py-20 min-h-screen' id='skills'>
+            <ContainItem>
+            <div className='mx-6 ' id='skills'>
             <CommonHeading>My Skills</CommonHeading>
             <p className='text-xl text-white py-5'>Languages, framework and tools:</p>
             
@@ -51,6 +53,7 @@ const Skills = () => {
             }
             </div>
         </div>
+            </ContainItem>
         </div>
     );
 };
