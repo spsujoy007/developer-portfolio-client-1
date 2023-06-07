@@ -38,7 +38,7 @@ const Skills = () => {
 
     return (
         <div data-aos="fade-up"
-        data-aos-duration="3000">
+        data-aos-duration="1500">
             <ContainItem>
             <div className='mx-6 ' id='skills'>
             <CommonHeading>My Skills</CommonHeading>

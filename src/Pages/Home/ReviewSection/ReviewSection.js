@@ -20,7 +20,7 @@ const ReviewSection = ({project}) => {
         const describe = form.describe.value;
         const projectDoc = project;
         const viewerName = form.viewerName.value;
-        const url = `http://localhost:5000/makereview`
+        const url = `https://developer-portfolio-server.vercel.app/makereview`
         fetch(url, {
             method: 'POST',
             headers: {

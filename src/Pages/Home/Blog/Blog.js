@@ -29,7 +29,7 @@ const Blog = () => {
     
     return (
         
-        <div data-aos="fade-up" data-aos-duration="3000" className='py-16 min-h-screen'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='py-16 min-h-screen'>
             <div >
             <CommonHeading>Blog<Link to='/dashboard' className='text-gray-900 text-xs'>.</Link></CommonHeading>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>

@@ -5,10 +5,14 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../../Components/Loader/Loader';
 import useTitle from '../../../MyHooks/useTitle';
+import { useLocation } from 'react-router-dom';
 
 const Projects = () => {
     useTitle('PROJECTS OF')
     // console.log('url: ',url)
+
+    const Ptitle = useLocation()
+    console.log(Ptitle)
 
     const {data: projects = [], refetch, isLoading } = useQuery({
         queryKey: ['projects'],
@@ -27,9 +31,9 @@ const Projects = () => {
 
     return (
         <div data-aos="fade-up"
-        data-aos-duration="3000">
+        data-aos-duration="1500">
             <ContainItem>
-            <div className='px-5' id='projects'>
+            <div className={`px-5 ${Ptitle.pathname === '/projects' && "py-16"}`} id='projects'>
             <CommonHeading>Projects</CommonHeading>
             <p className='text-center mb-10 text-base-100'>An accomplished individual with a powerful background in <span className='text-sky-500'>React, JavaScript, HTML and CSS, Express JS, Node
 JS, Tailwind CSS, and MongoDB,</span> I feel within the power of the web and have an intense want to be told the way
