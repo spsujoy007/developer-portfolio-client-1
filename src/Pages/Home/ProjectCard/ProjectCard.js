@@ -23,7 +23,7 @@ const ProjectCard = ({project, handleDetailpage}) => {
                     {
                         tools.map((tool, i) => <div className='cursor-pointer hover:bg-sky-200 flex items-center px-2 py-2 rounded-full bg-sky-100 text-white' key={i}>
                             <img className='w-5 h-5 mr-2' src={tool.img} alt={tool.title} />
-                            <p className='text-sky-500 font-semibold '>{tool.title}</p>
+                            <p className='text-sky-500 text-sm font-semibold '>{tool.title}</p>
                         </div>)
                     }
                 </div>
