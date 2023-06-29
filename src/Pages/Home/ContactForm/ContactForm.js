@@ -35,7 +35,7 @@ const ContactForm = () => {
           <div className='py-20 min-h-screen rounded-xl' id='contactform'>
             {/* <CommonHeading>Contact Form</CommonHeading> */}
             <div className="hero mt-6">
-  <div className="hero-content flex-col lg:flex-row bg-white rounded-xl w-full gap-10">
+  <div className="hero-content flex-col py-[100px] lg:flex-row bg-white rounded-xl w-full gap-10">
     <div className="text-center lg:text-left text-black rounded-xl">
       <h1 className="text-5xl font-bold text-sky-500 capitalize">Feel free to message</h1>
       <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
@@ -57,7 +57,7 @@ const ContactForm = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input required type="email" name='user_email' placeholder="Email" className="input input-bordered" />
+          <input required type="email" name='user_email' placeholder="john@gmail.com" className="input input-bordered" />
         </div>
 
         {/* <div className="form-control">

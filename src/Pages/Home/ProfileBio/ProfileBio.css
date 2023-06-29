@@ -3,10 +3,13 @@
     transition: all 0.2s;
     animation: btnbg 1.0s ease-in infinite ;
 }
-.commonbtn:hover {
-    box-shadow: 0px 0px 15px #66caf1;
+.commonbtn{
     transition: all 0.2s;
+    
+}
+.commonbtn:hover {
     animation: btnbg 1.0s ease-in infinite ;
+    box-shadow: 0px 0px 15px #66caf1;
 }
 
 .dbimage{

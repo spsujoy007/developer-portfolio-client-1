@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { toast } from 'react-hot-toast';
+// import React from 'react';
+// import { useState } from 'react';
+// import { useEffect } from 'react';
+// import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const AdminProtect = ({children}) => {
@@ -15,17 +15,9 @@ const AdminProtect = ({children}) => {
     if(getGrandP){
         return children
     }
-    // else if(security === getT + 110){
-    //     localStorage.setItem('getPass', {security: security, 'grandPass:': 110})
-    //     return children
-    // }
     else{
         return navigate('/')
     }
-
-    // return (
-    //     <div></div>
-    // )
 };
 
 export default AdminProtect;

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AddBlog = () => {
     const [loading, setLoading] = useState(false)
+    const [checkImage, setCheckImage] = useState('')
     
 
     const imageHostKey = process.env.REACT_APP_imgbb_key;
@@ -73,7 +74,7 @@ const AddBlog = () => {
                 <div>
                 <div className="form-control">
                     <label className="label"><span className="label-text text-white">Blog Image</span></label>
-                    <input name="image" type="file" className="file-input file-input-bordered w-full" />
+                    <input onChange={(e) => setCheckImage(e.target.value)} name="image" type="file" className="file-input file-input-bordered w-full" />
                 </div>
 
                 <div className="form-control mt-5">
