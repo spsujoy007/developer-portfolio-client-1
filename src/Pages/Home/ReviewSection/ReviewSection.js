@@ -5,44 +5,49 @@ import { FaCheckCircle } from 'react-icons/fa';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 
 const ReviewSection = ({project}) => {
-    const { id, image, title, tools, codelink, demolink, details } = project;
+    const { _id, id, image, title, tools, codelink, demolink, details } = project;
     const [rating, setRating] = useState(3);
     const [describe, setDescribe] = useState('');
     const [dark, setDark] = useState(false)
-    const getReview = localStorage.getItem("review")
-    const getName = localStorage.getItem("name")
+    const getReview = localStorage.getItem("review_id")
+
+    console.log(getReview, "hello")
+
+    const getName = localStorage.getItem("username")
     const [showPostedMsg, setShowPostedMsg] = useState(false)  
     const date = new Date();
 
     const handlePostReview = (event) => {
         event.preventDefault();
+        localStorage.setItem("review_id", JSON.stringify([]))
         const form = event.target;
         const describe = form.describe.value;
         const projectDoc = project;
         const viewerName = form.viewerName.value;
-        const url = `https://developer-portfolio-server.vercel.app/makereview`
-        fetch(url, {
+
+        fetch(`https://developer-portfolio-server.vercel.app/makereview`, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'content-type': 'application/json'
             },
-            body: JSON.stringify({describe, date, projectDoc, viewerName})
+            body: JSON.stringify({describe, date, projectDoc, viewerName, rating})
         })
-        .then(res => res.json)
+        .then(res => res.json())
         .then(data => {
+            console.log(data)
             toast.success('Review submited')
-            localStorage.setItem("review", [describe, title])
-            localStorage.setItem("name", viewerName);
+            localStorage.setItem("review_id", [JSON.parse(...getReview), {id: _id}])
+            localStorage.setItem("username", viewerName);
             setShowPostedMsg(true)
             form.reset()
         })
     }
 
     return (
-        <div className='mt-20 border-t-2 border-sky-500 pt-10 border-dashed'>
+        <div className='mt-20 '>
             {/* <CommonHeading>Review Section</CommonHeading> */}
             {
-                getReview ?
+                getReview === _id ?
                 <div className=''>
                     {showPostedMsg ? 
                     <h3 className='text-xl bg-sky-100 text-sky-500 p-3 border-l-4 border-sky-500'>Review submited dear {getName}</h3>
@@ -51,7 +56,7 @@ const ReviewSection = ({project}) => {
                     }
                 </div>
                 :
-                <form onSubmit={handlePostReview}>
+                <form onSubmit={handlePostReview} className='border-t-2 border-sky-500 pt-10 border-dashed'>
             <div className={dark ? 'bg-black p-5  text-white': 'bg-white p-5 text-black'}>
             <div className='flex justify-between items-center'>
             <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin sp sujoy`}>
@@ -100,12 +105,12 @@ const ReviewSection = ({project}) => {
                 </div> */}
 
                 <div className='mt-4'>
-                    <textarea required name='describe' onChange={(e) => setDescribe(e.target.value)} maxLength={200} type="text" className='text-black input w-full h-[120px]' placeholder={`describe something about my project ${title}`}/>
-                    <p className='text-sm mt-2'>{describe.length >= 200  && '200 characters limited'}</p>
+                    <textarea required name='describe' onChange={(e) => setDescribe(e.target.value)} maxLength={200} type="text" className='text-black pt-2 input w-full h-[120px]' placeholder={`Describe something about my project ${title}`}/> 
+                    <p className='text-sm mt-0 mb-2 text-red-400'>{describe.length >= 200  && '200 characters limited'}</p>
 
                     <div className='flex justify-between'>
                         <div>
-                            <input name='viewerName' type="text" className='input' placeholder='your name' required />
+                            <input name='viewerName' type="text" className='input' placeholder='Enter your name' required />
                         </div>
                     <button type='submit' className='bg-sky-500 btn btn-md text-white border-none px-10 '>
                         Post
