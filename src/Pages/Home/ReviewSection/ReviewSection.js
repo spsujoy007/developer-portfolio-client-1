@@ -37,18 +37,20 @@ const ReviewSection = ({project}) => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify({describe, date, projectDoc, viewerName, rating})
+            body: JSON.stringify({describe, date, projectDoc, viewerName, rating, review_status: 'pending'})
         })
         .then(res => res.json())
         .then(data => {
-            toast.success(`Thanks for your feed back dear ${viewerName.length > 15 ? viewerName.slice(' ')[0] : viewerName}`)
+            if(data.acknowledged){
+                toast.success(`Thanks for your feed back dear ${viewerName.length > 15 ? viewerName.slice(' ')[0] : viewerName}`)
+                const getReviews = JSON.parse(localStorage.getItem("review_id"))
+                const newReview = [...getReviews, {id: _id}]
+                localStorage.setItem("review_id", JSON.stringify(newReview))
+                localStorage.setItem("username", viewerName);
+                setShowPostedMsg(true)
+                form.reset()
 
-            const getReviews = JSON.parse(localStorage.getItem("review_id"))
-            const newReview = [...getReviews, {id: _id}]
-            localStorage.setItem("review_id", JSON.stringify(newReview))
-            localStorage.setItem("username", viewerName);
-            setShowPostedMsg(true)
-            form.reset()
+            }
         })
     }
 
@@ -98,7 +100,7 @@ const ReviewSection = ({project}) => {
                 <div className="rating">
                     <input onClick={() => setRating(1)} type="radio" name="rating-2" className={!dark ? 'mask mask-star-2 bg-yellow-400': 'mask mask-star-2 bg-sky-500'} />
                     <input onClick={() => setRating(2)} type="radio" name="rating-2" className={!dark ? 'mask mask-star-2 bg-yellow-400': 'mask mask-star-2 bg-sky-500'}  />
-                    <input onClick={() => setRating(3)} type="radio" name="rating-2" className={!dark ? 'mask mask-star-2 bg-yellow-400': 'mask mask-star-2 bg-sky-500'} checked/>
+                    <input onClick={() => setRating(3)} type="radio" name="rating-2" className={!dark ? 'mask mask-star-2 bg-yellow-400': 'mask mask-star-2 bg-sky-500'} />
                     <input onClick={() => setRating(4)} type="radio" name="rating-2" className={!dark ? 'mask mask-star-2 bg-yellow-400': 'mask mask-star-2 bg-sky-500'} />
                     <input onClick={() => setRating(5)} type="radio" name="rating-2" className={!dark ? 'mask mask-star-2 bg-yellow-400': 'mask mask-star-2 bg-sky-500'} />
                 </div>
