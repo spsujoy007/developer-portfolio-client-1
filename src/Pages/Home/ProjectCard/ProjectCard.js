@@ -7,7 +7,7 @@ const ProjectCard = ({project, handleDetailpage}) => {
     // const detailProject = {image, title, tools}
 
     return (
-        <div className='p-3 bg-white rounded-xl shadow-lg'>
+        <div className='p-3 bg-white rounded-xl shadow-lg mx-auto'>
             <div className=''>
                 <img className='rounded-xl w-full shadow-lg' src={image} alt={title} />
             </div>

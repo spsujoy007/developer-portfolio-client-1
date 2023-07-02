@@ -35,7 +35,7 @@ const GraphicSkill = () => {
 				images.map((img, i) => <div
 					key={i}
 				>
-					<img alt='images' className='object-cover w-full dark:bg-gray-500 aspect-square' src={img.image} />
+					<img alt='images' loading='lazy' className='object-cover w-full dark:bg-gray-500 aspect-square' src={img.image} />
 				</div>)
 			}
 			{/* <img alt='images' className="" src={img1} />

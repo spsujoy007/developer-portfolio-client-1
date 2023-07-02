@@ -5,10 +5,11 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../../Components/Loader/Loader';
 import useTitle from '../../../MyHooks/useTitle';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Projects = () => {
     useTitle('PROJECTS OF')
+    const navigate = useNavigate()
 
     const Ptitle = useLocation()
 
@@ -38,12 +39,34 @@ to improve the web' absolute core practicality and to even be concerned in its f
 incorporates a superb understanding of the terribly latest <span>Programming tricks.</span></p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
+                    Ptitle.pathname === '/' ?
+                    <>
+                    {
+                    projects.slice(0, 3).map(project => <ProjectCard
+                        key={project.id}
+                        project={project}
+                    ></ProjectCard>)
+                    }
+                    </>
+                    :
+                    <>
+                    {
                     projects.map(project => <ProjectCard
                         key={project.id}
                         project={project}
                     ></ProjectCard>)
                 }
+                    </>
+                }
+
+                
             </div>
+                {
+                    Ptitle.pathname  === '/' &&
+                    <div className='flex justify-center w-full mt-5'>
+                        <button onClick={() => navigate('/projects')} className='text-sky-500 bg-[#17333a] hover:bg-[#214953] md:px-20 px-10 py-2 rounded-md'>view more</button>
+                    </div>
+                }
         </div>
             </ContainItem>
         </div>
