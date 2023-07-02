@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Fade } from 'react-reveal';
 import { FaCode, FaDotCircle, FaLaptop, FaUndoAlt } from 'react-icons/fa';
-import { useNotification } from '../../../Components/Notification/useNotification';
 import ReviewSection from '../ReviewSection/ReviewSection';
 
 const ProjectDetails = () => {
@@ -24,7 +23,7 @@ const ProjectDetails = () => {
     </h2>
     
     <ol>
-        {alldetails.map(detail => <div className='flex mb-2 items-start gap-x-2'><FaDotCircle className=' w-5 h-5'></FaDotCircle><li className=''> {detail}</li></div>)}
+        {alldetails.map((detail, i) => <div key={i} className='flex mb-2 items-start gap-x-2'><FaDotCircle className=' w-5 h-5'></FaDotCircle><li className=''> {detail}</li></div>)}
     </ol>
     
     <h2 className='text-xl text-sky-500 font-semibold mt-6 uppercase'>Language, tools & other:</h2>

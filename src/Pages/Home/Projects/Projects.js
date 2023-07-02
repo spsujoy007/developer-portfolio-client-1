@@ -9,10 +9,8 @@ import { useLocation } from 'react-router-dom';
 
 const Projects = () => {
     useTitle('PROJECTS OF')
-    // console.log('url: ',url)
 
     const Ptitle = useLocation()
-    console.log(Ptitle)
 
     const {data: projects = [], refetch, isLoading } = useQuery({
         queryKey: ['projects'],
@@ -22,7 +20,6 @@ const Projects = () => {
             return data
         }
     })
-    console.log(projects)
     refetch()
 
     if(isLoading){

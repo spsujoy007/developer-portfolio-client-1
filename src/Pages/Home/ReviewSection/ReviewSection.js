@@ -2,29 +2,36 @@ import React from 'react';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { FaCheckCircle } from 'react-icons/fa';
-import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 
 const ReviewSection = ({project}) => {
-    const { _id, id, image, title, tools, codelink, demolink, details } = project;
+    const { _id, title } = project;
     const [rating, setRating] = useState(3);
     const [describe, setDescribe] = useState('');
     const [dark, setDark] = useState(false)
-    const getReview = localStorage.getItem("review_id")
+    const [getReview, setGetReview] = useState()
+    // const [loading, setLoading] = useState(true)
 
-    console.log(getReview, "hello")
-
+    const review = JSON.parse(localStorage.getItem("review_id"))?.find(r => r?.id === _id)
+    
+    
+    
     const getName = localStorage.getItem("username")
     const [showPostedMsg, setShowPostedMsg] = useState(false)  
-    const date = new Date();
-
+    
     const handlePostReview = (event) => {
+        setGetReview(review)
         event.preventDefault();
-        localStorage.setItem("review_id", JSON.stringify([]))
+        
+        if(!getReview?.length){
+            localStorage.setItem("review_id", JSON.stringify([{id: '0'}]))
+        }
+        
+        const date = new Date();    
         const form = event.target;
         const describe = form.describe.value;
         const projectDoc = project;
         const viewerName = form.viewerName.value;
-
+        
         fetch(`https://developer-portfolio-server.vercel.app/makereview`, {
             method: 'POST',
             headers: {
@@ -34,9 +41,11 @@ const ReviewSection = ({project}) => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
-            toast.success('Review submited')
-            localStorage.setItem("review_id", [JSON.parse(...getReview), {id: _id}])
+            toast.success(`Thanks for your feed back dear ${viewerName.length > 15 ? viewerName.slice(' ')[0] : viewerName}`)
+
+            const getReviews = JSON.parse(localStorage.getItem("review_id"))
+            const newReview = [...getReviews, {id: _id}]
+            localStorage.setItem("review_id", JSON.stringify(newReview))
             localStorage.setItem("username", viewerName);
             setShowPostedMsg(true)
             form.reset()
@@ -47,10 +56,10 @@ const ReviewSection = ({project}) => {
         <div className='mt-20 '>
             {/* <CommonHeading>Review Section</CommonHeading> */}
             {
-                getReview === _id ?
+                review?.id === _id ?
                 <div className=''>
                     {showPostedMsg ? 
-                    <h3 className='text-xl bg-sky-100 text-sky-500 p-3 border-l-4 border-sky-500'>Review submited dear {getName}</h3>
+                        <h3 className='text-xl bg-sky-100 text-sky-500 p-3 border-l-4 border-sky-500'>Review submited dear {getName}</h3>
                     :
                     <></>
                     }

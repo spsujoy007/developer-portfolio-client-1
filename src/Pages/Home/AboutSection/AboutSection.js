@@ -3,14 +3,12 @@ import { FaGithub } from 'react-icons/fa';
 import ContainItem from '../../../Components/Container/ContainItem';
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import './AboutSection.css'
-import { Fade } from 'react-reveal';
 import useTitle from '../../../MyHooks/useTitle';
 import { useLocation } from 'react-router-dom';
 
 const AboutSection = () => {
     useTitle('ABOUT')
     const getPath = useLocation().pathname;
-    console.log(getPath)
 
     return ( 
         <div data-aos="fade-up"
