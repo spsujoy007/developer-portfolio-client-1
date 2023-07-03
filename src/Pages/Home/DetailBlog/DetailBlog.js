@@ -1,11 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../../MyHooks/useTitle';
+import { toast } from 'react-hot-toast';
 
 const DetailBlog = () => {
+    const [commentBody, setCommentBody] = useState('')
+    const [nameCondition, setNameCondition] = useState(false)
     const blog = useLoaderData();
-    const {title, description, adminName, adminimg, blogimg, date} = blog
+    const {_id, title, description, adminName, adminimg, blogimg, date} = blog
     useTitle(title.slice(0, 15))
+    const currentdate = new Date()
+
+
+    const handleAddComment = () => {
+
+        if(commentBody.length > 0){
+            const comment = {
+                blog_id: _id,
+                comment: commentBody,
+                date: currentdate
+            }
+    
+            fetch(`http://localhost:5000/addcommentblog`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(comment)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.acknowledged){
+                    setCommentBody('')
+                    toast.success('Comment added')
+                    setNameCondition(false)
+                }
+            })
+        }
+    }
 
     return (
         <div className='py-20 mb-36 w-[85%] mx-auto'>
@@ -32,9 +64,14 @@ const DetailBlog = () => {
             </div>
 
             <div className='mt-20 bg-[#ededed] rounded-md  p-2'>
-                <textarea className='w-full h-[80px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
+                {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>"Name: John smith"</span></p>}
+                <textarea 
+                value={commentBody}
+                onChange={(e) => {setCommentBody(e.target.value)}}
+                onKeyDown={() => setNameCondition(true)}
+                className='w-full h-[80px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
                 <div className='h-[30px] flex justify-end'>
-                    <button className='bg-sky-500 rounded-md px-5 py-1 uppercase text-white'>Send</button>
+                    <button onClick={handleAddComment} className='bg-sky-500 rounded-md px-5 py-1 uppercase text-white'>Send</button>
                 </div>
             </div>
             </div>
