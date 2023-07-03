@@ -119,13 +119,14 @@ const ReviewSection = ({project}) => {
                     <textarea required name='describe' onChange={(e) => setDescribe(e.target.value)} maxLength={200} type="text" className='text-black pt-2 input w-full h-[120px]' placeholder={`Describe something about my project ${title}`}/> 
                     <p className='text-sm mt-0 mb-2 text-red-400'>{describe.length >= 200  && '200 characters limited'}</p>
 
-                    <div className='flex justify-between'>
+                    <div className='flex flex-col md:flex-row justify-between'>
                         <div>
-                            <input name='viewerName' type="text" className='input' placeholder='Enter your name' required />
+                            <input className='input w-full' name='viewerName' type="text" placeholder='Enter your name' required />
                         </div>
-                    <button type='submit' className='bg-sky-500 btn btn-md text-white border-none px-10 '>
+                    <button type='submit' className='bg-sky-500 btn btn-md mt-5 md:mt-0 text-white border-none px-10 '>
                         Post
                     </button>
+
                     </div>
                 </div>
             </div>
