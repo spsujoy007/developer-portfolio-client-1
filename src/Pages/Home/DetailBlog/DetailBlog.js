@@ -13,7 +13,7 @@ const DetailBlog = () => {
             <div  className="flex justify-start rounded-2xl">
                 <img className='w-full' src={blogimg} alt={title} />
             </div>
-            <div className='flex items-center p-2 bg-white rounded-b-xl'>
+            <div className='flex items-center p-2 bg-[#ededed] rounded-b-xl'>
                 <img className='rounded-full w-10 ring ring-white ring-offset-base-100 ring-offset-[1px]' src={adminimg} alt=""  />
                 <div className='ml-5'>
                     <h3 className='text-xl text-black uppercase my-0'>{adminName}</h3>
@@ -28,6 +28,13 @@ const DetailBlog = () => {
                 <div className='mt-5'>
                     <h1 className={`${title.length < 50 ? 'text-6xl' : 'text-3xl'} text-white mb-5`}>{title}:</h1>
                     <h5 className='text-white text-lg'>{description}</h5>
+                </div>
+            </div>
+
+            <div className='mt-20 bg-[#ededed] rounded-md  p-2'>
+                <textarea className='w-full h-[80px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
+                <div className='h-[30px] flex justify-end'>
+                    <button className='bg-sky-500 rounded-md px-5 py-1 uppercase text-white'>Send</button>
                 </div>
             </div>
             </div>

@@ -22,9 +22,12 @@ const ProjectDetails = () => {
       <div className="badge badge-secondary">Project no: {id}</div>
     </h2>
     
-    <ol>
-        {alldetails.map((detail, i) => <div key={i} className='flex mb-2 items-start gap-x-2'><FaDotCircle className=' w-5 h-5'></FaDotCircle><li className=''> {detail}</li></div>)}
-    </ol>
+    <div>
+        {alldetails.map((detail, i) => <div key={i} className='flex mb-2 items-start gap-x-2'>
+            <FaDotCircle className='text-xl'></FaDotCircle>
+            <h2 className=''> {detail}</h2>
+        </div>)}
+    </div>
     
     <h2 className='text-xl text-sky-500 font-semibold mt-6 uppercase'>Language, tools & other:</h2>
     <div className='grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-x-2 gap-y-2'>

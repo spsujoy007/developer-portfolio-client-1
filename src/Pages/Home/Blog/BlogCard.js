@@ -1,4 +1,3 @@
-import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { FaCheckCircle, FaThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -10,14 +9,6 @@ const BlogCard = ({blog, refetch}) => {
     const {title, _id, adminimg, adminName, blogimg, description, likes} = blog;
     const likevalue = localStorage.getItem(`${_id}`)
     const [ifLiked, setIfLiked] = useState(likevalue)
-
-    // get the likes of blog
-    // const {} = useQuery({
-    //     queryKey: 'bloglikes',
-    //     queryFn: async() => {
-    //         const res = await fetch('')
-    //     }
-    // })
 
     const handleLike = () => {
         refetch()
