@@ -38,14 +38,6 @@ const GraphicSkill = () => {
 					<img alt='images' loading='lazy' className='object-cover w-full dark:bg-gray-500 aspect-square' src={img.image} />
 				</div>)
 			}
-			{/* <img alt='images' className="" src={img1} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img2} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img3} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img4} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img5} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img6} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img8} />
-			<img alt='images' className="object-cover w-full dark:bg-gray-500 aspect-square" src={img9} /> */}
 		</div>
 	</div>
 </section>

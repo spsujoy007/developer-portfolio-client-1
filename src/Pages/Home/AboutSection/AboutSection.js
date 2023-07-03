@@ -5,6 +5,7 @@ import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import './AboutSection.css'
 import useTitle from '../../../MyHooks/useTitle';
 import { useLocation } from 'react-router-dom';
+import devCover from '../../../assets/developer_cover.png'
 
 const AboutSection = () => {
     useTitle('ABOUT')
@@ -15,7 +16,8 @@ const AboutSection = () => {
         data-aos-easing="linear"
         data-aos-duration="2000">
         <ContainItem> 
-        <div id='aboutsection' className={`mx-6 ${getPath === '/about' && 'min-h-screen py-10'}`}>
+        
+        <div id='aboutsection' className={`mx-6 ${getPath === '/about' && 'min-h-screen py-10'} aboutHome`}>
             <CommonHeading>About</CommonHeading>
 
             <div className='md:flex gap-10 text-lg'>
@@ -65,6 +67,11 @@ const AboutSection = () => {
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className={`mt-20 h-[280px] rounded-xl font-bold uppercase overflow-hidden devImgShadow bg-white ${getPath !== '/about' && 'hidden'}`}>
+            <h5 className='px-2 py-1 text-black'>I perform my tasks diligently, aiming for excellence.</h5>
+            <img className='rounded-b-xl' src={devCover} alt="developer_cover" />
         </div>
 
         </div>

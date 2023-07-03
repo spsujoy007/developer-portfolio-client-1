@@ -12,10 +12,11 @@ import metarialui from '../../../assets/tools/metarialui.png'
 import nodejs from '../../../assets/tools/nodejs.webp'
 import git from '../../../assets/tools/git.png'
 import firebase from '../../../assets/tools/firebase.png'
+import nextJS from '../../../assets/tools/nextjs_logo.png'
 import vercel from '../../../assets/tools/vercel.png'
 import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import SkillCard from '../SkillCard/SkillCard';
-import { Fade } from 'react-reveal';
+
 
 
 const Skills = () => {
@@ -25,6 +26,7 @@ const Skills = () => {
         {id: '2', img: CSS, title: "CSS"},
         {id: '3', img: JS, title: "Javascript"},
         {id: '4', img: react, title: "React JS"},
+        {id: '14', img: nextJS, title: "Next JS"},
         {id: '5', img: Mongo, title: "MongoDb"},
         {id: '6', img: firebase, title: "Firebase"},
         {id: '7', img: Bootstrap, title: "Bootstrap"},

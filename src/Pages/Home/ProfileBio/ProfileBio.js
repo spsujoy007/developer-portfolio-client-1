@@ -1,26 +1,18 @@
-import React, { useContext } from 'react';
-import profiledp from '../../../assets/profiledp.jpg'
-import { FaEye, FaFacebook, FaFileDownload, FaReadme, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
+import React from 'react';
+import { FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi";
 import { AiTwotoneMail } from "react-icons/ai";
 import './ProfileBio.css'
-import resume from '../../../assets/Sujoy paul.pdf'
-import { Fade } from 'react-reveal';
 import AutoMessage from '../AutoMessage/AutoMessage';
-import ClockTime from '../../../Components/ClockTime/ClockTime';
-import { ContentContext } from '../../../context/ContentProvider';
 import { useState } from 'react';
 
 const ProfileBio = () => {
-    const {adminName } = useContext(ContentContext)
+    // const {adminName } = useContext(ContentContext)
     const [onMouse, setOnMouse] = useState(false)
-    const texts1 = 'sujoy'
-    const texts2 = 'paul'
-    const name = texts1.split('')
 
     return (
         <div >
-            <div className='flex min-h-screen md:flex-row flex-col items-center md:py-[150px]'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
+            <div className='flex min-h-screen pt-24 md:flex-row flex-col items-center md:py-[150px]'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
             {/* for left image */}
             <div data-aos="fade-right" data-aos-duration="1500">
                 <div className='flex justify-center items-center md:px-20 px-5'>
