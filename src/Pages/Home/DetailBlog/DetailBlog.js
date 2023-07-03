@@ -34,7 +34,7 @@ const DetailBlog = () => {
                 date: currentdate
             }
     
-            fetch(`http://localhost:5000/addcommentblog`, {
+            fetch(`https://developer-portfolio-server.vercel.app/addcommentblog`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
