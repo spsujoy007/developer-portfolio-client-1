@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../../MyHooks/useTitle';
 import { toast } from 'react-hot-toast';
+import { useQuery } from '@tanstack/react-query';
+import userImg from '../../../assets/user.png'
 
 const DetailBlog = () => {
     const [commentBody, setCommentBody] = useState('')
@@ -10,6 +12,17 @@ const DetailBlog = () => {
     const {_id, title, description, adminName, adminimg, blogimg, date} = blog
     useTitle(title.slice(0, 15))
     const currentdate = new Date()
+
+
+    const {data: blogComments = [] , refetch} = useQuery({
+        queryKey: ["blogComments"],
+        queryFn: async () => {
+            const res = await fetch(`http://localhost:5000/blogcomments?blogid=${_id}`)
+            const data = res.json()
+            return data
+        }
+    })
+    // console.log(blogComments)
 
 
     const handleAddComment = () => {
@@ -34,6 +47,7 @@ const DetailBlog = () => {
                     setCommentBody('')
                     toast.success('Comment added')
                     setNameCondition(false)
+                    refetch()
                 }
             })
         }
@@ -63,7 +77,9 @@ const DetailBlog = () => {
                 </div>
             </div>
 
-            <div className='mt-20 bg-[#ededed] rounded-md  p-2'>
+            <div className='bg-[#183841] p-4 mt-20 rounded-md'>
+
+            <div className=' bg-[#ededed] rounded-md  p-2'>
                 {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>"Name: John smith"</span></p>}
                 <textarea 
                 value={commentBody}
@@ -73,6 +89,21 @@ const DetailBlog = () => {
                 <div className='h-[30px] flex justify-end'>
                     <button onClick={handleAddComment} className='bg-sky-500 rounded-md px-5 py-1 uppercase text-white'>Send</button>
                 </div>
+            </div>
+
+            <div className='mt-12'>
+                <p className='text-white mb-2'>comment's</p>
+                {
+                    blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>
+                        <div className='flex gap-2 items-end'>
+                            <img className='w-[30px] h-[30px] bg-white rounded-full p-1' src={userImg} alt="user" />
+                            <div className='chat chat-start w-full'>
+                                <p className='bg-[#ffffff] w-full chat-bubble  text-black rounded-md'>{comment.comment.length > 300 ? <>{comment.comment.slice(0, 300)}...</> : comment.comment}</p>
+                            </div>
+                        </div>
+                    </div>)
+                }
+            </div>
             </div>
             </div>
         </div>
