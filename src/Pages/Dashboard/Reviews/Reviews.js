@@ -76,7 +76,7 @@ const Reviews = () => {
             reviews.map(({_id, projectDoc, describe, review_status}, idx) => <tr key={_id} className="">
             <th>{idx+1}</th>
             <td>{projectDoc?.title}</td>
-            <td>{describe?.slice(0, 50)}...</td>
+            <td>{describe}</td>
             <td className='text-center'>
                 <button className='bg- p-2 bg-sky-500 text-white rounded-full'><FaEye></FaEye></button>
             </td>
