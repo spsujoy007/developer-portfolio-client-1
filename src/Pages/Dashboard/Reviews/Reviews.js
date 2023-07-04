@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { TiTick } from "react-icons/ti";
 import React, { useState } from 'react';
 import loadingIcon from '../../../assets/loading-gif.gif'
+import { toast } from 'react-hot-toast';
 
 const Reviews = () => {
     const [loading, setLoading] = useState(false)
@@ -32,6 +33,24 @@ const Reviews = () => {
                 refetch()
             }
         })
+    }
+
+
+    const handleActionDelete = (id) => {
+        const confirm = window.confirm('Are you want to delete?')
+        if(confirm){
+            fetch(`http://localhost:5000/deleteReview?id=${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.deletedCount > 0){
+                toast.success("deleted")
+                refetch()
+            }
+        })
+        }
     }
 
     return (
@@ -70,7 +89,7 @@ const Reviews = () => {
                 <td className='text-green-500'>Accepted</td>
                 }
             <td>
-                <button className='text-2xl p-2'><RxCross2></RxCross2></button>
+                <button onClick={() => handleActionDelete(_id)} className='text-2xl p-2'><RxCross2></RxCross2></button>
             </td>
           </tr> )
         }
