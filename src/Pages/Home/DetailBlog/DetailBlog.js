@@ -9,7 +9,7 @@ const DetailBlog = () => {
     const [commentBody, setCommentBody] = useState('')
     const [nameCondition, setNameCondition] = useState(false)
     const blog = useLoaderData();
-    const {_id, title, description, adminName, adminimg, blogimg, date} = blog
+    const {_id, title, description, adminName, adminimg, blogimg, date, sourse} = blog
     useTitle(title.slice(0, 15))
     const currentdate = new Date()
 
@@ -17,7 +17,7 @@ const DetailBlog = () => {
     const {data: blogComments = [] , refetch} = useQuery({
         queryKey: ["blogComments"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/blogcomments?blogid=${_id}`)
+            const res = await fetch(`https://developer-portfolio-server.vercel.app/blogcomments?blogid=${_id}`)
             const data = res.json()
             return data
         }
@@ -74,6 +74,11 @@ const DetailBlog = () => {
                 <div className='mt-5'>
                     <h1 className={`${title.length < 50 ? 'text-6xl' : 'text-3xl'} text-white mb-5`}>{title}:</h1>
                     <h5 className='text-white text-lg'>{description}</h5>
+                    <div className='mt-4'>
+                    {
+                        sourse && <span className='text-white font-bold'>sourse: <a target='_blank' rel="noreferrer" className='font-normal underline text-sky-500' href={sourse}>{sourse}</a> </span> 
+                    }
+                    </div>
                 </div>
             </div>
 

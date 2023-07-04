@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { BsFileEarmarkImage, BsFillBookmarkStarFill } from "react-icons/bs";
+import React from 'react';
 
 const AddSkills = () => {
     // codelink demolink details id image title tools
-    const [livePhoto, setLivePhoto] = useState(null);
+    // const [livePhoto, setLivePhoto] = useState(null);
 
     return (
         <div className='px-5 flex justify-center mt-20'>

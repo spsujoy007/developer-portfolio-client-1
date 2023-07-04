@@ -16,6 +16,7 @@ import Skills from "../Pages/Home/Skills/Skills";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import AddProject from "../Pages/Dashboard/AddProject/AddProject";
 import AdminProtect from "../Components/PrivetRoute/AdminProtect";
+import Reviews from "../Pages/Dashboard/Reviews/Reviews";
 
 export const routes = createBrowserRouter([
     {
@@ -78,6 +79,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/dashboard/addblog',
                 element: <AdminProtect><AddBlog></AddBlog></AdminProtect>
+            },
+            {
+                path: '/dashboard/reviews',
+                element: <AdminProtect><Reviews></Reviews></AdminProtect>
             },
             {
                 path: '/dashboard/myblogs',

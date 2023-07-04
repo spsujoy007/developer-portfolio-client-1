@@ -21,6 +21,7 @@ const AddBlog = () => {
         const form = event.target;
         const picture = form.image.files[0];
         const name = form.name.value;
+        const sourse = form.sourse.value;
         const title = form.title.value;
         const description = form.description.value;
 
@@ -37,6 +38,7 @@ const AddBlog = () => {
             // if(pictureData.success){
                 const blogcontent = {
                     title,
+                    sourse,
                     blogimg: pictureData.data.url,
                     adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
                     adminName: name,
@@ -82,9 +84,14 @@ const AddBlog = () => {
                     <input required name="name" type="text" className="input input-bordered w-full" disabled defaultValue='Sujoy Paul'/>
                 </div>
 
-                <div className='flex items-center justify-center md:py-20 py-6'>
-                    <h1 className='uppercase text-3xl text-error font-bold'>Keep rock</h1>
+                <div className="form-control mt-5">
+                    <label className="label"><span className="label-text text-white">Sourse</span></label>
+                    <input required name="sourse" type="text" className="input input-bordered w-full" placeholder='type sourse url:' />
                 </div>
+
+                {/* <div className='flex items-center justify-center md:py-20 py-6'>
+                    <h1 className='uppercase text-3xl text-error font-bold'>Keep rock</h1>
+                </div> */}
                 </div>
 
                 {/* right side input  */}

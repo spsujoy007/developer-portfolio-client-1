@@ -5,7 +5,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 
 const ReviewSection = ({project}) => {
     const { _id, title } = project;
-    const [rating, setRating] = useState(3);
+    const [rating, setRating] = useState(5);
     const [describe, setDescribe] = useState('');
     const [dark, setDark] = useState(false)
     const [getReview, setGetReview] = useState({})
@@ -42,14 +42,14 @@ const ReviewSection = ({project}) => {
         .then(res => res.json())
         .then(data => {
             if(data.acknowledged){
-                toast.success(`Thanks for your feed back dear ${viewerName.length > 15 ? viewerName.slice(' ')[0] : viewerName}`)
                 const getReviews = JSON.parse(localStorage.getItem("review_id"))
                 const newReview = [...getReviews, {id: _id}]
                 localStorage.setItem("review_id", JSON.stringify(newReview))
                 localStorage.setItem("username", viewerName);
                 setShowPostedMsg(true)
                 form.reset()
-
+                
+                toast.success(`Thanks for your feed back`)
             }
         })
     }

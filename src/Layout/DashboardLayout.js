@@ -19,6 +19,7 @@ const DashboardLayout = () => {
       <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/addskill'>Add Skill</Link></li>
       <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/addblog'>Add Blog</Link></li>
       <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/myblogs'>MY Blogs</Link></li>
+      <li className='bg-sky-500 text-white rounded-xl mb-2 text-center'><Link to='/dashboard/reviews'>Reviews</Link></li>
     </ul>
   
   </div>
