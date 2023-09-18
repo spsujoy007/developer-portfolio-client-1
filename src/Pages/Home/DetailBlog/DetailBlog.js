@@ -4,6 +4,7 @@ import useTitle from '../../../MyHooks/useTitle';
 import { toast } from 'react-hot-toast';
 import { useQuery } from '@tanstack/react-query';
 import userImg from '../../../assets/user.png'
+import { IconName, RiArrowRightUpLine } from "react-icons/ri";
 
 const DetailBlog = () => {
     const [commentBody, setCommentBody] = useState('')
@@ -76,7 +77,7 @@ const DetailBlog = () => {
                     <h5 className='text-white text-lg'>{description}</h5>
                     <div className='mt-4'>
                     {
-                        sourse && <span className='text-white font-bold'>sourse: <a target='_blank' rel="noreferrer" className='font-normal underline text-sky-500' href={sourse}>{sourse}</a> </span> 
+                        sourse && <a target='_blank' rel="noreferrer" className='font-normal underline px-5 py-1 gap-x-1 bg-[#152e35] text-sky-500 flex items-center' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
                     }
                     </div>
                 </div>

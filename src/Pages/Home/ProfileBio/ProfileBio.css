@@ -7,10 +7,10 @@
     transition: all 0.2s;
     
 }
-.commonbtn:hover {
+/* .commonbtn:hover {
     animation: btnbg 1.0s ease-in infinite ;
     box-shadow: 0px 0px 15px #66caf1;
-}
+} */
 
 .dbimage{
     border: 3px solid #ffffff;
@@ -47,7 +47,7 @@
         box-shadow: none;
     }
     50%{
-        box-shadow: 0px 0px 15px #66caf1;
+        box-shadow: 0px 0px 45px #66caf16d;
     }
     100%{
         box-shadow: none;
@@ -59,10 +59,10 @@
         box-shadow: none;
     }
     50%{
-        box-shadow: 0px 0px 100px #0988d166;
+        box-shadow: 0px 0px 500px #0988d166;
     }
     75%{
-        box-shadow: 0px 0px 50px #feffff66;
+        box-shadow: 0px 0px 200px #098E59;
     }
     100%{
         box-shadow: none;

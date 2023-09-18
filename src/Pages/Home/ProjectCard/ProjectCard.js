@@ -18,10 +18,9 @@ const ProjectCard = ({project, handleDetailpage}) => {
                         <button className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
                     </Link>
                 </div>
-                <div className='grid md:grid-cols-3 grid-cols-2 gap-x-2 gap-y-2'>
+                <div className='flex flex-wrap'>
                     {
-                        tools.map((tool, i) => <div key={i} className='cursor-pointer hover:bg-sky-200 flex items-center px-2 py-2 rounded-full bg-sky-100 text-white'>
-                            <img className='w-5 h-5 mr-2' src={tool.img} alt={tool.title} />
+                        tools.map((tool, i) => <div key={i} className='cursor-pointer md:w-[32%] w-[48%] hover:bg-sky-200  text-center rounded-full bg-sky-100 text-white p-1 m-[2px]'>
                             <p className='text-sky-500 text-sm font-semibold '>{tool.title}</p>
                         </div>)
                     }

@@ -5,10 +5,13 @@ import { AiTwotoneMail } from "react-icons/ai";
 import './ProfileBio.css'
 import AutoMessage from '../AutoMessage/AutoMessage';
 import { useState } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import profileImg from '../../../assets/profiledp.jpg'
 
 const ProfileBio = () => {
     // const {adminName } = useContext(ContentContext)
     const [onMouse, setOnMouse] = useState(false)
+    const [hoverOut, setHoverOut] = useState(true);
 
     return (
         <div >
@@ -20,9 +23,9 @@ const ProfileBio = () => {
                 <div 
                 onMouseEnter={() => {setOnMouse(true)}}
                 onMouseLeave={() => setOnMouse(false)}
-                className={`w-80 ring-offset-2 dbimage duration-500 ${onMouse ? "hoverProfile" : "rounded-full"}`}>
-                    {/* <img src={profiledp} alt='' /> */}
-                    <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' />
+                className={`w-80  dbimage duration-500 ${onMouse ? "hoverProfile" : "rounded-full"}`}>
+                    {/* <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' /> */}
+                    <img src={profileImg} alt='' />
                 </div>
             </div>
             </div>
@@ -35,15 +38,34 @@ const ProfileBio = () => {
             </div>
             <h1 className='text-4xl font-semibold uppercase text-white'>Hi! I am<br />
             <span className='text-info md:text-6xl text-5xl'>
-                <span className='nameAnim_1'>s</span>
-                <span className='nameAnim_2'>u</span>
-                <span className='nameAnim_3'>j</span>
-                <span className='nameAnim_4'>o</span>
-                <span className='nameAnim_5'>y</span>
+                <span className='nameAnim_1s'>s</span>
+                <span className='nameAnim_2s'>u</span>
+                <span className='nameAnim_3s'>j</span>
+                <span className='nameAnim_4s'>o</span>
+                <span className='nameAnim_5s'>y</span>
 
-                <span className=''> kumar paul</span>
-                </span>
-                <p className='text-2xl'>A WEB DEVELOPER</p>
+                <span className=''> paul</span> 
+                </span><br />
+                {/* <p className='text-2xl'>A WEB DEVELOPER</p> */}
+                <code>
+                <TypeAnimation
+                    sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    'A web developer',
+                    1000, 
+                    'A Graphic designer',
+                    1000, 
+                    'create frontend websites',
+                    1000,
+                    'something is updating soon...',
+                    3000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: '1.563rem', fontWeight: 'normal', display: 'inline-block' }}
+                repeat={Infinity}
+                />
+                </code>
             </h1>
             
             <p className='text-gray-300 mt-3 text-lg md:max-w-[80%]'>
@@ -52,7 +74,10 @@ const ProfileBio = () => {
             
             {/* <a href={resume} download={resume}> */}
             <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link">
-                <button className='btn gap-x-1 btn-info btnanim hover:btn-outline mt-3 rounded-r-full w-full md:w-44 capitalize'><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
+                <button 
+                    onMouseEnter={()=> setHoverOut(false)} 
+                    onMouseLeave={()=> setHoverOut(true)} 
+                className={`flex  items-center py-2 text-white px-3 gap-x-1 btn-info ${hoverOut ? `btnanim` : ''} hover:btn-outline mt-3 rounded-full  text-sm font-bold w-full md:w-44 uppercase`}><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
             </a>
 
             <div className='flex text-2xl text-white mt-7 justify-between md:justify-start'>

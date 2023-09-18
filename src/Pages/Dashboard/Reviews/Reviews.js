@@ -3,7 +3,7 @@ import { FaEye } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { TiTick } from "react-icons/ti";
 import React, { useState } from 'react';
-import loadingIcon from '../../../assets/loading-gif.gif'
+// import loadingIcon from '../../../assets/loading-gif.gif'
 import { toast } from 'react-hot-toast';
 
 const Reviews = () => {
@@ -20,7 +20,7 @@ const Reviews = () => {
 
     const handleActionAccept = (id) => {
         setLoading(true)
-        fetch(`http://localhost:5000/editreview?id=${id}`, {
+        fetch(`https://developer-portfolio-server.vercel.app/editreview?id=${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -39,7 +39,7 @@ const Reviews = () => {
     const handleActionDelete = (id) => {
         const confirm = window.confirm('Are you want to delete?')
         if(confirm){
-            fetch(`http://localhost:5000/deleteReview?id=${id}`, {
+            fetch(`https://developer-portfolio-server.vercel.app/deleteReview?id=${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
