@@ -4,11 +4,12 @@ import AboutSection from '../AboutSection/AboutSection';
 import GraphicSkill from '../OtherWorks/GraphicSkill/GraphicSkill';
 import ProfileBio from '../ProfileBio/ProfileBio';
 import Projects from '../Projects/Projects';
-import ReviewSection from '../ReviewSection/ReviewSection';
 import Skills from '../Skills/Skills';
-import { FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt, FaTwitter } from 'react-icons/fa';
-import { AiTwotoneMail } from 'react-icons/ai';
-
+import { BiHomeAlt } from "react-icons/bi";
+import { GrProjects } from "react-icons/gr";
+import { AiFillInfoCircle } from 'react-icons/ai';
+import { SiApostrophe } from "react-icons/si";
+import { RiHomeFill, RiMessage3Fill } from "react-icons/ri";
 const Home = () => {
     useTitle('Portfolio')
     return (
@@ -22,12 +23,26 @@ const Home = () => {
             </div>
                 <div className='absolute hidden md:block top-[55vh] left-2 '>
                     <div className='flex flex-col fixed text-2xl gap-y-5 text-white mt-7 justify-between md:justify-start'>
-                        <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
-                        <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.facebook.com/spsujoy07'><FaFacebook></FaFacebook></a>
-                        <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin></FaLinkedin></a>
-                        <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href="tel:+8801859342364"><FaPhoneAlt></FaPhoneAlt></a>
-                        <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://twitter.com/spsujoy007'><FaTwitter></FaTwitter></a>
-                        <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail></AiTwotoneMail></a>
+                        <div className='button'>
+                            <div className='icon'><RiHomeFill></RiHomeFill></div>
+                            <span>Home</span>
+                        </div>
+                        <div className='button'>
+                            <div className='icon'><AiFillInfoCircle></AiFillInfoCircle></div>
+                            <span>About</span>
+                        </div>
+                        <div className='button'>
+                            <div className='icon'><GrProjects></GrProjects></div>
+                            <span>Projects</span>
+                        </div>
+                        <div className='button'>
+                            <div className='icon'><SiApostrophe></SiApostrophe></div>
+                            <span>Blog</span>
+                        </div>
+                        <div className='button'>
+                            <div className='icon'><RiMessage3Fill></RiMessage3Fill></div>
+                            <span>Contact</span>
+                        </div>
                     </div>
                 </div>
         </div>

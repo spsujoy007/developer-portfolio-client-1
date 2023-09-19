@@ -12,6 +12,9 @@ body {
   /* background-image: linear-gradient(90deg, #EBE40A, #F049A1, #AC32EE);
   background-image: linear-gradient(90deg, tomato, crimson); */
   background-color: #0e2025;
+  background-image: url(../src/assets/bgimgshape.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
 }
 
 /* width */
