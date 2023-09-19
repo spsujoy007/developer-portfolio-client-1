@@ -31,7 +31,7 @@ const Projects = () => {
         <div data-aos="fade-up"
         data-aos-duration="1500">
             <ContainItem>
-            <div className={`px-5 mb-[150px] ${Ptitle.pathname === '/projects' && "py-16"}`} id='projects'>
+            <div className={`px-5 mb-[150px] ${Ptitle.pathname === '/projects' && "py-16 md:max-w-[1240px] mx-auto"}`} id='projects'>
             <CommonHeading>Projects</CommonHeading>
             <p className='text-center mb-10 text-base-100'>An accomplished individual with a powerful background in <span className='text-sky-500'>React, JavaScript, HTML and CSS, Express JS, Node
 JS, Tailwind CSS, and MongoDB,</span> I feel within the power of the web and have an intense want to be told the way

@@ -23,7 +23,7 @@ const ProfileBio = () => {
                 <div 
                 onMouseEnter={() => {setOnMouse(true)}}
                 onMouseLeave={() => setOnMouse(false)}
-                className={`w-80  dbimage duration-500 ${onMouse ? "hoverProfile" : "rounded-full"}`}>
+                className={`w-80 md:mt-10 dbimage duration-500 ${onMouse ? "hoverProfile" : "rounded-full"}`}>
                     {/* <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' /> */}
                     <img src={profileImg} alt='' />
                 </div>
@@ -36,8 +36,8 @@ const ProfileBio = () => {
             <div className='flex justify-end'>
                 <AutoMessage></AutoMessage>
             </div>
-            <h1 className='text-4xl font-semibold uppercase text-white'>Hi! I am<br />
-            <span className='text-info md:text-6xl text-5xl'>
+            <h1 className='text-4xl font-semibold  text-white'>Hi! I am<br />
+            <span className='text-info md:text-6xl uppercase text-5xl'>
                 <span className='nameAnim_1s'>s</span>
                 <span className='nameAnim_2s'>u</span>
                 <span className='nameAnim_3s'>j</span>
@@ -73,14 +73,14 @@ const ProfileBio = () => {
             </p>
             
             {/* <a href={resume} download={resume}> */}
-            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link">
+            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link" className='inline'>
                 <button 
                     onMouseEnter={()=> setHoverOut(false)} 
                     onMouseLeave={()=> setHoverOut(true)} 
-                className={`flex  items-center py-2 text-white px-3 gap-x-1 btn-info ${hoverOut ? `btnanim` : ''} hover:btn-outline mt-3 rounded-full  text-sm font-bold w-full md:w-44 uppercase`}><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
+                className={`flex items-center py-2 text-white px-3 gap-x-1 btn-info ${hoverOut ? `btnanim` : ''} hover:btn-outline mt-5 rounded-full text-center justify-center duration-200 text-sm font-bold w-full md:w-44 uppercase`}><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
             </a>
 
-            <div className='flex text-2xl text-white mt-7 justify-between md:justify-start'>
+            <div className='flex bg-[#153038] rounded-full md:hidden text-2xl text-white mt-7 justify-between md:justify-start p-2 md:p-0'>
                 <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
                 <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.facebook.com/spsujoy07'><FaFacebook></FaFacebook></a>
                 <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin></FaLinkedin></a>
