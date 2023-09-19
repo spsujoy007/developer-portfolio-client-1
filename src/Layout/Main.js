@@ -12,11 +12,13 @@ import './Main.css'
 const Main = () => {
     return (
         <div>
-            {/* <Header></Header> */}
+            <div className='md:hidden block'>
+                <Header></Header>
+            </div>
                 <Container>
                     <Outlet></Outlet>
-                <div className='absolute hidden md:block top-[55vh] left-2 '>
-                    <div className='flex flex-col wrapper fixed text-2xl gap-y-5 text-white mt-7 justify-between md:justify-start'>
+                <div className='absolute hidden md:block top-[35vh] left-2 '>
+                    <div className='flex flex-col wrapper fixed text-2xl gap-y-3 text-white mt-7 justify-between md:justify-start'>
                         <Link to={'/'} className='button'>
                             <div className='icon'><RiHomeFill></RiHomeFill></div>
                             <span>Home</span>

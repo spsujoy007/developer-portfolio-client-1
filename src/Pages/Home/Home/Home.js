@@ -6,7 +6,6 @@ import ProfileBio from '../ProfileBio/ProfileBio';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 
-import './Home.css'
 
 const Home = () => {
     useTitle('Portfolio')
