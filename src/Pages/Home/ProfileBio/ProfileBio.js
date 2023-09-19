@@ -73,7 +73,7 @@ const ProfileBio = () => {
             </p>
             
             {/* <a href={resume} download={resume}> */}
-            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link" className='inline'>
+            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1O0JGPhQGrxZdiPCTloMSFVAGadN6-3HS/view?usp=share_link" className='md:inline-block'>
                 <button 
                     onMouseEnter={()=> setHoverOut(false)} 
                     onMouseLeave={()=> setHoverOut(true)} 
