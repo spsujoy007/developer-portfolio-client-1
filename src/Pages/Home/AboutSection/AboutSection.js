@@ -18,7 +18,7 @@ const AboutSection = () => {
         data-aos-duration="2000">
         <ContainItem> 
         
-        <div id='aboutsection' className={`mx-6 mb-[150px]  ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
+        <div id='aboutsection' className={`mx-6 mb-[150px] py-28 bglineleftbox  ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
                     <div>
                     <CommonHeading>About</CommonHeading>
 

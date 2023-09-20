@@ -24,7 +24,7 @@ const GraphicSkill = () => {
 	]
 
     return (
-        <div className=''>
+        <div className='bglineleftround'>
             <ContainItem>
 			<CommonHeading>Other Skills</CommonHeading>
             <p className=' text-gray-200 text-center'>Graphic design logos and other</p>

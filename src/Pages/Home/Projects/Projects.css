@@ -1,0 +1,27 @@
+.bglineleft{
+    background-image: url(../../../assets//linebg-left-top.png);
+    background-position: 400px -60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bglineleftbox{
+    background-image: url(../../../assets//bgboxleft.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bglineleftround{
+    background-image: url(../../../assets/bground-bottom.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bglineleftskill{
+    background-image: url(../../../assets/linebg-right-down.png);
+    background-position: -50px -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+}
