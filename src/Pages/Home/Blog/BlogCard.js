@@ -55,19 +55,18 @@ const BlogCard = ({blog, refetch}) => {
   <div className="card-body min-h-[100px] max-w-[400px]">
         
 
-    <div className='p-2 rounded-xl min-h-[120px]'>
-    <h2 className="card-title text-[#FE634E]">{title}</h2>
-    {
+    <div className='px-2 rounded-xl'>
+    {/* {
         showDetail ? <>
         <button className='text-left hover:bg-slate-50 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
             <p>{description}</p>
-        </button></>
-        :
-        <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
-    <button onClick={() => setShowDetail(!showDetail)} className="text-[#2B4B36] font-semibold">See more</button> </span> :
-    <span>{description}</span>}
-    </p>
-    }
+            </button></>
+            :
+            <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
+            <button onClick={() => setShowDetail(!showDetail)} className="text-[#2B4B36] font-semibold">See more</button> </span> :
+            <span>{description}</span>}
+            </p>
+        } */}
     </div>
 
     <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
@@ -87,6 +86,7 @@ const BlogCard = ({blog, refetch}) => {
             <img className='image ' src={blogimg} alt="Shoes" />
         </div>
     </figure>
+        <h2 className="card-title text-[#FE634E] py-2">{title}</h2>
     
     <div className="card-actions justify-between items-center mt-2">
         {/* <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2> */}
@@ -95,7 +95,7 @@ const BlogCard = ({blog, refetch}) => {
                 ifLiked === 'liked' ?
                 <button onClick={handleDeleteLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-[#ff644f78] hover:text-sky-500 bg-white text-[#FF644F] outline-none '><FaThumbsUp></FaThumbsUp> Liked {likes}</button>
                 :
-                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-[#ff644f78] hover:text-[#FF644F] bg-white text-black outline-none '><FaThumbsUp></FaThumbsUp> Like {likes}</button>
+                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-[#ff644f33] hover:text-[#FF644F]  text-black outline-none '><FaThumbsUp></FaThumbsUp> Like {likes}</button>
             }
         </div>
     <Link to={`/blog/${_id}`}>
