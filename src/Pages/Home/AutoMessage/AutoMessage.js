@@ -4,7 +4,7 @@ import ClockTime from '../../../Components/ClockTime/ClockTime';
 // import Notification from '../../../Components/Notification/Notification';
 
 const AutoMessage = () => {
-    const [mymessage, setMymessage] = useState('')
+    const [mymessage, setMymessage] = useState('Never stop dreaming ❤️')
 
     const messages = [
         {
@@ -18,7 +18,11 @@ const AutoMessage = () => {
         {
             id: 3,
             msg: "When 404! My heart is blocked 😂"
-        }
+        },
+        {
+            id: 4,
+            msg: "Never stop dreaming ❤️"
+        },
     ]
 
     useEffect(() => {

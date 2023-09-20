@@ -15,7 +15,7 @@ const ProjectCard = ({project, handleDetailpage}) => {
             <div>
                 <div className='flex justify-between items-center py-3'>
                     <Link to={`/project/${_id}`} className='w-full'>
-                        <button className='flex items-center justify-center border-[2px] text-center px-5 py-1 w-full  btn-sky-500 rounded-md bg-[#39253C] hover:bg-transparent duration-150 hover:text-[#39253C] text-white'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
+                        <button className='flex items-center justify-center border-[2px] text-center px-5 py-1 w-full  btn-sky-500 rounded-md hover:bg-[#39253C] bg-transparent duration-150 text-[#39253C] hover:text-white'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
                     </Link>
                 </div>
                 <div className='flex flex-wrap'>
