@@ -51,22 +51,12 @@ const BlogCard = ({blog, refetch}) => {
     }
 
     return (
-        <div className="card card-compact bg-white shadow-xl rounded-xl">
-  <div className="card-body">
-        <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
-            <div className="avatar relative">
-                <div className="w-10 rounded-full">
-                    <img src={adminimg} alt={adminName}/>
-                </div>
-                 <div className='absolute ml-7 rounded-full p-px bg-white'>
-                    <FaCheckCircle className='animate-pulse text-sky-600'></FaCheckCircle>
-                 </div>
-            </div>
-            <h2 className='text-lg uppercase'>{adminName}</h2>
-        </div>
+        <div className="card card-compact bg-[#fbf6e4] shadow-xl rounded-xl">
+  <div className="card-body min-h-[100px] max-w-[400px]">
+        
 
     <div className='p-2 rounded-xl min-h-[120px]'>
-    <h2 className="card-title">{title}</h2>
+    <h2 className="card-title text-[#FE634E]">{title}</h2>
     {
         showDetail ? <>
         <button className='text-left hover:bg-slate-50 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
@@ -74,11 +64,29 @@ const BlogCard = ({blog, refetch}) => {
         </button></>
         :
         <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
-    <button onClick={() => setShowDetail(!showDetail)} className="text-blue-500 font-semibold">See more</button> </span> :
+    <button onClick={() => setShowDetail(!showDetail)} className="text-[#2B4B36] font-semibold">See more</button> </span> :
     <span>{description}</span>}
     </p>
     }
     </div>
+
+    <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
+            <div className="avatar relative">
+                <div className="w-8 rounded-full">
+                    <img src={adminimg} alt={adminName}/>
+                </div>
+                 <div className='absolute ml-5 rounded-full p-px bg-white'>
+                    <FaCheckCircle className='animate-pulse text-sky-600'></FaCheckCircle>
+                 </div>
+            </div>
+            <h2 className='text-md uppercase'>{adminName}</h2>
+        </div>
+
+    <figure>
+        <div className='imgEffect rounded-xl overflow-hidden'>
+            <img className='image ' src={blogimg} alt="Shoes" />
+        </div>
+    </figure>
     
     <div className="card-actions justify-between items-center mt-2">
         {/* <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2> */}
@@ -98,11 +106,7 @@ const BlogCard = ({blog, refetch}) => {
 
   </div>
 
-  <figure>
-        <div className='imgEffect'>
-            <img className='image' src={blogimg} alt="Shoes" />
-        </div>
-    </figure>
+  
 </div>
     );
 };

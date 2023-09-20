@@ -10,7 +10,7 @@ import profileImg from '../../../assets/profiledp.jpg'
 
 const ProfileBio = () => {
     // const {adminName } = useContext(ContentContext)
-    const [onMouse, setOnMouse] = useState(false)
+    // const [onMouse, setOnMouse] = useState(false)
     const [hoverOut, setHoverOut] = useState(true);
 
     return (
@@ -21,8 +21,6 @@ const ProfileBio = () => {
                 <div className='flex justify-center items-center md:px-20 px-5'>
             <div className="avatar dbimageMain">
                 <div 
-                onMouseEnter={() => {setOnMouse(true)}}
-                onMouseLeave={() => setOnMouse(false)}
                 className={`w-80 md:mt-10 dbimage duration-500 rounded-full`}>
                     {/* <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' /> */}
                     <img src={profileImg} alt='' />

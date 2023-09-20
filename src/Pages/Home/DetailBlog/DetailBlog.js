@@ -57,7 +57,8 @@ const DetailBlog = () => {
     return (
         <div className='py-20 mb-36 w-[85%] mx-auto'>
             <div className='mx-auto md:max-w-[1240px]'>
-            <div className="flex justify-start rounded-2xl">
+            <div className=''>
+            <div className="flex justify-start rounded-2xl ">
                 <img className='w-full' src={blogimg} alt={title} />
             </div>
             <div className='flex items-center p-2 bg-[#ededed] rounded-b-xl'>
@@ -66,6 +67,7 @@ const DetailBlog = () => {
                     <h3 className='text-xl text-black uppercase my-0'>{adminName}</h3>
                     <p className='text-gray-700'>Post time: ({date})</p>
                 </div>
+            </div>
             </div>
 
             <div className='mt-10 px-2 md-px-0'>

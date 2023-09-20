@@ -18,6 +18,13 @@
     background-repeat: no-repeat;
 }
 
+.blogbgimg{
+    background-image: url('https://img.freepik.com/free-vector/hand-drawn-doodle-background_23-2149974402.jpg?w=1060&t=st=1695194476~exp=1695195076~hmac=1530f42636472ea30e3535cad7e7ac3062de64506388906197654d9c06c76271');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .bglineleftround{
     background-image: url(../../../assets/bground-bottom.png);
     background-position: center;
