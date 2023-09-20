@@ -12,6 +12,13 @@
     background-repeat: no-repeat;
 }
 
+.commentsbg{
+    background-image:  linear-gradient(0deg, #0e2025cc, #0e2025cc), url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .mainHomebg{
     background-image: url(../../../assets/bgimgshape2.png);
   background-size: 100vw;

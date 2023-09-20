@@ -85,28 +85,28 @@ const DetailBlog = () => {
                 </div>
             </div>
 
-            <div className='bg-[#183841] p-4 mt-20 rounded-md'>
+            <div className='bg-[#183841] p-4 mt-20 rounded-md commentsbg '>
 
-            <div className=' bg-[#ededed] rounded-md  p-2'>
+            <div className=' bg-[#ededed] rounded-md w-full p-2 '>
                 {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>"Name: John smith"</span></p>}
                 <textarea 
                 value={commentBody}
                 onChange={(e) => {setCommentBody(e.target.value)}}
                 onKeyDown={() => setNameCondition(true)}
-                className='w-full h-[80px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
-                <div className='h-[30px] flex justify-end'>
-                    <button onClick={handleAddComment} className='bg-sky-500 rounded-md px-5 py-1 uppercase text-white'>Send</button>
+                className='w-full min-h-[105px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
+                <div className='w-full flex justify-end items-end'>
+                    <button onClick={handleAddComment} className='bg-sky-500 w-full rounded-md px-5 py-1 uppercase text-white'>Post</button>
                 </div>
             </div>
 
-            <div className='mt-12'>
-                <p className='text-white mb-2'>comment's</p>
+            <div className='px-3 mt-8 md:mt-0'>
+                <p className='text-white mb-2'>Comment's</p>
                 {
                     blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>
                         <div className='flex gap-2 items-end'>
-                            <img className='w-[30px] h-[30px] bg-white rounded-full p-1' src={userImg} alt="user" />
+                            <img className='w-[50px] h-[50px] rounded-full' src={`https://api.dicebear.com/7.x/thumbs/svg?seed=Mimi`} alt="user" />
                             <div className='chat chat-start w-full'>
-                                <p className='bg-[#ffffff] w-full chat-bubble  text-black rounded-md'>{comment.comment.length > 300 ? <>{comment.comment.slice(0, 300)}...</> : comment.comment}</p>
+                                <p className='bg-[#ffffff]  min-w-[130px] chat-bubble  text-black rounded-md'>{comment.comment.length > 300 ? <>{comment.comment.slice(0, 300)}...</> : comment.comment}</p>
                             </div>
                         </div>
                     </div>)

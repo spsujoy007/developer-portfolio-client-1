@@ -105,7 +105,7 @@ const AddBlog = () => {
 
                 <div className="form-control mt-5">
                     <label className="label"><span className="label-text text-white">Add description</span></label>
-                    <textarea required name="description" type="text" className="input input-bordered w-full h-36 py-3"  placeholder="blog description" />
+                    <textarea name="description" type="text" className="input input-bordered w-full h-36 py-3"  placeholder="blog description" />
                 </div>
 
                 <div className='py-3 flex justify-end'>
