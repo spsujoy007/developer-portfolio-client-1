@@ -8,9 +8,9 @@ import useTitle from '../../../MyHooks/useTitle';
 import BlogCard from './BlogCard';
 
 const Blog = () => {
-    useTitle('BLOG')
-    const userName = process.env.REACT_APP_username;
-  const userPass = process.env.REACT_APP_ADMIN_pass;
+    useTitle('Blog')
+//     const userName = process.env.REACT_APP_username;
+//   const userPass = process.env.REACT_APP_ADMIN_pass;
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],
@@ -23,7 +23,9 @@ const Blog = () => {
 
     
     if(isLoading){
-        return <Loader></Loader>
+        return <div className='mx-auto md:max-w-[500px]'>
+            <Loader></Loader>
+        </div>
     }
     refetch();
     

@@ -11,6 +11,12 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.contactBg{
+    background-image: url(../../../assets/bgcontact.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .bglineleftround{
     background-image: url(../../../assets/bground-bottom.png);
@@ -18,9 +24,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .bglineleftskill{
     background-image: url(../../../assets/linebg-right-down.png);
-    background-position: -50px -100px;
+    background-position: -50px -200px;
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);

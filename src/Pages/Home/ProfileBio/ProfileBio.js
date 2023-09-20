@@ -23,7 +23,7 @@ const ProfileBio = () => {
                 <div 
                 onMouseEnter={() => {setOnMouse(true)}}
                 onMouseLeave={() => setOnMouse(false)}
-                className={`w-80 md:mt-10 dbimage duration-500 ${onMouse ? "hoverProfile" : "rounded-full"}`}>
+                className={`w-80 md:mt-10 dbimage duration-500 rounded-full`}>
                     {/* <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' /> */}
                     <img src={profileImg} alt='' />
                 </div>

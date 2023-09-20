@@ -26,9 +26,9 @@
     animation: textanimation 1s steps(5) infinite;
 }
 
-.hoverProfile{
+/* .hoverProfile{
     border-radius: 78% 22% 25% 25% / 75% 25% 25% 25%;
-}
+} */
 
 @keyframes textanimation {
 	0%{

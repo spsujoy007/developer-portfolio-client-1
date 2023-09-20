@@ -14,11 +14,11 @@ const AboutSection = () => {
     return ( 
         <div data-aos="fade-up"
         data-aos-easing="linear"
-        className='md:max-w-[1240px] mx-auto'
-        data-aos-duration="2000">
+        className='bglineleftbox '
+        data-aos-duration="1500">
         <ContainItem> 
         
-        <div id='aboutsection' className={`mx-6 mb-[150px] py-28 bglineleftbox  ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
+        <div id='aboutsection' className={`px-5 mb-[150px] mx-auto md:max-w-[1240px] ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
                     <div>
                     <CommonHeading>About</CommonHeading>
 

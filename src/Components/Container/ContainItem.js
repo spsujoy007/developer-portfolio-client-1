@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContainItem = ({children}) => {
     return (
-        <div className='pt-10'>
+        <div className='pb-[150px]'>
             {children}
         </div>
     );

@@ -7,7 +7,8 @@ const AddBlog = () => {
     const [checkImage, setCheckImage] = useState('')
     
 
-    const imageHostKey = process.env.REACT_APP_imgbb_key;
+    // const imageHostKey = process.env.REACT_APP_imgbb_key;
+    const imageHostKey = 'ff3809d2742608d297787e8303a0cf38';
     const navigate = useNavigate();
 
     const currentdate = new Date();
@@ -34,6 +35,7 @@ const AddBlog = () => {
         })
         .then(res => res.json())
         .then(pictureData => {
+            console.log(pictureData)
             setLoading(true)
             // if(pictureData.success){
                 const blogcontent = {
@@ -56,11 +58,11 @@ const AddBlog = () => {
                 })
                 .then(res => res.json())
                 .then(data => {
+                    console.log(data)
                     toast.success('Blog added. Keep rock!')
                     setLoading(false)
                     form.reset()
                     navigate('/dashboard')
-                    
                 })
             // }
         })
@@ -86,7 +88,7 @@ const AddBlog = () => {
 
                 <div className="form-control mt-5">
                     <label className="label"><span className="label-text text-white">Sourse</span></label>
-                    <input required name="sourse" type="text" className="input input-bordered w-full" placeholder='type sourse url:' />
+                    <input name="sourse" type="text" className="input input-bordered w-full" placeholder='type sourse url:' />
                 </div>
 
                 {/* <div className='flex items-center justify-center md:py-20 py-6'>

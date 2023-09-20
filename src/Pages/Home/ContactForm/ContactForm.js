@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     return (
         <Fade bottom>
-          <div className='py-20 min-h-screen rounded-xl' id='contactform'>
+          <div className='py-20 min-h-screen rounded-xl contactBg' id='contactform'>
             {/* <CommonHeading>Contact Form</CommonHeading> */}
             <div className="hero mt-6">
   <div className="hero-content flex-col py-[100px] lg:flex-row bg-white rounded-xl w-full gap-10">
