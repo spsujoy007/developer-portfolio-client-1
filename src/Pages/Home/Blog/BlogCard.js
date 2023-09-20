@@ -93,13 +93,13 @@ const BlogCard = ({blog, refetch}) => {
         <div>
             {
                 ifLiked === 'liked' ?
-                <button onClick={handleDeleteLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-sky-500 outline-none '><FaThumbsUp></FaThumbsUp> Liked {likes}</button>
+                <button onClick={handleDeleteLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-[#ff644f78] hover:text-sky-500 bg-white text-[#FF644F] outline-none '><FaThumbsUp></FaThumbsUp> Liked {likes}</button>
                 :
-                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-sky-100 hover:text-sky-500 bg-white text-black outline-none '><FaThumbsUp></FaThumbsUp> Like {likes}</button>
+                <button onClick={handleLike} className='flex items-center gap-x-2 text-lg p-2 rounded-xl hover:bg-[#ff644f78] hover:text-[#FF644F] bg-white text-black outline-none '><FaThumbsUp></FaThumbsUp> Like {likes}</button>
             }
         </div>
     <Link to={`/blog/${_id}`}>
-        <button className="px-2 py-px bg-sky-600 rounded-full transition-all ease-in text-white text-lg hover:bg-black uppercase">see post</button>
+        <button className="px-2 py-px bg-[#FF644F] rounded-full transition-all ease-in text-white text-lg hover:bg-[#FFA61B] ">See Post</button>
       </Link>
         
         </div>

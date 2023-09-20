@@ -31,8 +31,7 @@ const Projects = () => {
     }
 
     return (
-        <div data-aos="fade-up"
-        data-aos-duration="1500">
+        <div >
             <ContainItem>
             <div className={`px-5  bglineleft ${Ptitle.pathname === '/projects' && "py-16 md:max-w-[1240px] mx-auto"}`} id='projects'>
             <CommonHeading>Projects</CommonHeading>
