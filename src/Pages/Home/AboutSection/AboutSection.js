@@ -18,8 +18,8 @@ const AboutSection = () => {
         data-aos-duration="1500">
         <ContainItem> 
         
-        <div id='aboutsection' className={`px-5 mb-[150px] mx-auto md:max-w-[1240px] ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
-                    <div>
+        <div id='aboutsection' className={`px-5 mb-[100px] mt-10 md:mt-0 mx-auto md:max-w-[1240px] ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
+                    <div className='pt-12'>
                     <CommonHeading>About</CommonHeading>
 
         <div className='md:flex gap-10 text-lg'>
@@ -37,7 +37,7 @@ const AboutSection = () => {
         {/* Personal information section  */}
         <div className='mt-6 grid md:grid-cols-2 grid-cols-1'>
         <div className=''>
-            <h1 className='uppercase text-3xl text-white'>Personal information</h1>
+            <h1 className='capitalize text-3xl text-white'>Personal information</h1>
             <div className='capitalize text-white md:flex gap-10 mt-2'>
                 <div>
                     <span className="text-gray-300">Name:</span> sujoy paul <br />
@@ -57,12 +57,12 @@ const AboutSection = () => {
 
         {/* right side items  */}
         <div className='grid md:grid-cols-2 grid-cols-1 gap-10 mt-10 md:mt-0'> 
-            <div className="card text-white flex cardShadow">
+            <div className="card text-white flex ">
                 <div className="card-body">
                     <h2 className="card-title"><span className='text-5xl'>1+</span> </h2><h2 className='text-2xl'> years of experience</h2>
                 </div>
             </div>
-            <div className="card text-white shadow-xl cardShadow">
+            <div className="card text-white  ">
                 <div className="card-body">
                     <h2 className="card-title"><span className='text-5xl'>20+</span> 
                     </h2><h2 className='text-2xl'>Completed Projects</h2>

@@ -14,7 +14,7 @@ const Blog = () => {
 //     const userName = process.env.REACT_APP_username;
 //   const userPass = process.env.REACT_APP_ADMIN_pass;
 
-    setTimeout(() => setWaiting(false), 2200)
+    setTimeout(() => setWaiting(false), 1200)
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],

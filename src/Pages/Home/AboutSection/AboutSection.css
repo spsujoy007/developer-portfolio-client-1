@@ -3,11 +3,11 @@
     padding-left: 20px;
 }
 
-.cardShadow{
+/* .cardShadow{
     transition: all 0.4s;
     cursor: pointer;
     box-shadow: 3px 3px 5px #00000059, -3px -3px 5px #f8f8f823;
-}
+} */
 
 .cardShadow:hover {
     box-shadow: 5px 5px 25px #44b2dd23;

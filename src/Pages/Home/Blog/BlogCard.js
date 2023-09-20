@@ -53,21 +53,7 @@ const BlogCard = ({blog, refetch}) => {
     return (
         <div className="card card-compact bg-[#fbf6e4] shadow-xl rounded-xl">
   <div className="card-body min-h-[100px] max-w-[400px]">
-        
-
-    <div className='px-2 rounded-xl'>
-    {/* {
-        showDetail ? <>
-        <button className='text-left hover:bg-slate-50 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
-            <p>{description}</p>
-            </button></>
-            :
-            <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
-            <button onClick={() => setShowDetail(!showDetail)} className="text-[#2B4B36] font-semibold">See more</button> </span> :
-            <span>{description}</span>}
-            </p>
-        } */}
-    </div>
+       
 
     <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
             <div className="avatar relative">
@@ -87,7 +73,19 @@ const BlogCard = ({blog, refetch}) => {
         </div>
     </figure>
         <h2 className="card-title text-[#FE634E] py-2">{title}</h2>
-    
+        <div className='px-2 rounded-xl min-h-[40px]'>
+    {
+        showDetail ? <>
+        <button className='text-left hover:bg-slate-50 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
+            <p>{description}</p>
+            </button></>
+            :
+            <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
+            <button onClick={() => setShowDetail(!showDetail)} className="text-[#2B4B36] font-semibold">See more</button> </span> :
+            <span>{description}</span>}
+            </p>
+        }
+    </div>
     <div className="card-actions justify-between items-center mt-2">
         {/* <h2 className='flex items-center'><BiTimeFive className='mr-1'></BiTimeFive> {date}</h2> */}
         <div>
