@@ -7,15 +7,15 @@ const ProjectCard = ({project, handleDetailpage}) => {
     // const detailProject = {image, title, tools}
 
     return (
-        <div className='p-3 bg-white rounded-xl shadow-lg mx-auto'>
+        <div className='p-3 bg-white rounded-xl shadow-lg mx-auto w-[380px]'>
+            <h2 className='text-xl text-black mb-2 font-semibold uppercase py-2'>{title}</h2>
             <div className=''>
                 <img className='rounded-xl w-full shadow-lg' src={image} alt={title} />
             </div>
             <div>
                 <div className='flex justify-between items-center py-3'>
-                    <h2 className='text-xl text-black mt-2 font-semibold uppercase py-2'>{title}</h2>
-                    <Link to={`/project/${_id}`}>
-                        <button className='btn btn-xs px-5 btn-outline btn-sky-500 rounded-full'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
+                    <Link to={`/project/${_id}`} className='w-full'>
+                        <button className='flex items-center justify-center border-[2px] text-center px-5 py-1 w-full  btn-sky-500 rounded-md bg-[#39253C] hover:bg-transparent duration-150 hover:text-[#39253C] text-white'> <FaInfoCircle className='mr-2'></FaInfoCircle>view details</button>
                     </Link>
                 </div>
                 <div className='flex flex-wrap'>

@@ -6,11 +6,15 @@ import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import Loader from '../../../Components/Loader/Loader';
 import useTitle from '../../../MyHooks/useTitle';
 import BlogCard from './BlogCard';
+import { useState } from 'react';
 
 const Blog = () => {
+    const [waiting, setWaiting] = useState(true)
     useTitle('Blog')
 //     const userName = process.env.REACT_APP_username;
 //   const userPass = process.env.REACT_APP_ADMIN_pass;
+
+    setTimeout(() => setWaiting(false), 2200)
 
     const {data: blogs = [], refetch, isLoading} = useQuery({
         queryKey: ['blogs'],
@@ -22,8 +26,8 @@ const Blog = () => {
     });
 
     
-    if(isLoading){
-        return <div className='mx-auto md:max-w-[500px]'>
+    if(isLoading || waiting){
+        return <div className='mx-auto md:max-w-[500px] min-h-screen'>
             <Loader></Loader>
         </div>
     }
@@ -31,7 +35,9 @@ const Blog = () => {
     
     return (
         
-        <div data-aos="fade-up" data-aos-duration="1000" className='py-16 min-h-screen blogbgimg '>
+        // <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" >
+        <div >
+            <div className='py-16  blogbgimg '>
             <div className='md:max-w-[1240px] mx-auto '>
             <CommonHeading>Blog<Link to='/dashboard' className='text-gray-900 text-xs'>.</Link></CommonHeading>
             <div className='flex flex-wrap gap-5 justify-center'>
@@ -42,6 +48,7 @@ const Blog = () => {
                         refetch={refetch}
                     ></BlogCard>)
                 }
+            </div>
             </div>
             </div>
         </div>

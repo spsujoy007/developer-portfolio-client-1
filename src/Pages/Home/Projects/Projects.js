@@ -39,7 +39,7 @@ const Projects = () => {
                 React, JavaScript, HTML and CSS, Express JS, Node
                 JS, Tailwind CSS, and MongoDB,</span> I feel within the power of the web and have an intense want to be told the way to improve the web' absolute core practicality and to even be concerned in its future development. He conjointly
                 incorporates a superb understanding of the terribly latest <span>Programming tricks.</span></p>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className='flex flex-wrap gap-6'>
                 {
                     Ptitle.pathname === '/' ?
                     <>

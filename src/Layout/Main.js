@@ -11,7 +11,7 @@ import './Main.css'
 
 const Main = () => {
     return (
-        <div>
+        <div className='mainHomebg'>
             <div className='md:hidden block'>
                 <Header></Header>
             </div>

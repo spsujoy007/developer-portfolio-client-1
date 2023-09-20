@@ -11,6 +11,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.mainHomebg{
+    background-image: url(../../../assets/bgimgshape2.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+
 .contactBg{
     background-image: url(../../../assets/bgcontact.jpg);
     background-position: center;
@@ -19,7 +26,7 @@
 }
 
 .blogbgimg{
-    background-image: url('https://img.freepik.com/free-vector/hand-drawn-doodle-background_23-2149974402.jpg?w=1060&t=st=1695194476~exp=1695195076~hmac=1530f42636472ea30e3535cad7e7ac3062de64506388906197654d9c06c76271');
+    background-image: url(../../../assets/bgblog.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
