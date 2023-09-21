@@ -9,7 +9,7 @@ import BlogCard from './BlogCard';
 import { useState } from 'react';
 
 const Blog = () => {
-    const [waiting, setWaiting] = useState(true)
+    const [waiting, setWaiting] = useState(false)
     useTitle('Blog')
 //     const userName = process.env.REACT_APP_username;
 //   const userPass = process.env.REACT_APP_ADMIN_pass;
@@ -36,7 +36,7 @@ const Blog = () => {
     return (
         
         // <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" >
-        <div >
+        <Fade top >
             <div className='py-16  blogbgimg '>
             <div className='md:max-w-[1240px] mx-auto px-3 md:px-0'>
             <CommonHeading>Blog<Link to='/dashboard' className='text-gray-900 text-xs'>.</Link></CommonHeading>
@@ -51,7 +51,7 @@ const Blog = () => {
             </div>
             </div>
             </div>
-        </div>
+        </Fade>
         
     );
 };
