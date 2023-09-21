@@ -3,8 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../../MyHooks/useTitle';
 import { toast } from 'react-hot-toast';
 import { useQuery } from '@tanstack/react-query';
-import userImg from '../../../assets/user.png'
-import { IconName, RiArrowRightUpLine } from "react-icons/ri";
+// import userImg from '../../../assets/user.png'
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 const DetailBlog = () => {
     const [commentBody, setCommentBody] = useState('')
@@ -57,35 +57,40 @@ const DetailBlog = () => {
     return (
         <div className='py-20 mb-36 w-[85%] mx-auto'>
             <div className='mx-auto md:max-w-[1240px]'>
-            <div className=''>
-            <div className="flex justify-start rounded-2xl ">
-                <img className='w-full' src={blogimg} alt={title} />
-            </div>
-            <div className='flex items-center p-2 bg-[#ededed] rounded-b-xl'>
-                <img className='rounded-full w-10 ring ring-white ring-offset-base-100 ring-offset-[1px]' src={adminimg} alt=""  />
-                <div className='ml-5'>
-                    <h3 className='text-xl text-black uppercase my-0'>{adminName}</h3>
-                    <p className='text-gray-700'>Post time: ({date})</p>
-                </div>
-            </div>
-            </div>
+            
 
             <div className='mt-10 px-2 md-px-0'>
                 <div className='py-2'>
                     <h1 className='text-xl text-base-200 py-2 uppercase border-b-[1px] border-gray-500'>About Blog</h1>
                 </div>
                 <div className='mt-5'>
-                    <h1 className={`${title.length < 50 ? 'text-6xl' : 'text-3xl'} text-white mb-5`}>{title}:</h1>
+                    <h1 className={`${title.length < 50 ? 'md:text-6xl text-3xl' : 'md:text-3xl text-3xl'} text-white mb-5`}>{title}:</h1>
                     <h5 className='text-white text-lg'>{description}</h5>
-                    <div className='mt-4'>
-                    {
-                        sourse && <a target='_blank' rel="noreferrer" className='font-normal underline px-5 py-1 gap-x-1 bg-[#152e35] text-sky-500 flex items-center' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
-                    }
-                    </div>
                 </div>
             </div>
 
+            <div className='w-[450px] p-3 mt-3 rounded-md bg-[#eaeaea]'>
+            <div className="rounded-2xl">
+                <img className='rounded-md ' src={blogimg} alt={title} />
+                <p className='text-[#3f9ab3] text-center'>{title}</p>
+            </div>
+
+            
+            </div>
+                    <div className='my-4'>
+                    {
+                        sourse && <a target='_blank' rel="noreferrer" className='font-normal underline px-5 py-3 gap-x-1 bg-[#152e35] text-sky-500 flex items-center text-lg' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
+                    }
+                    </div>
+
             <div className='bg-[#183841] p-4 mt-20 rounded-md commentsbg '>
+            <div className='flex items-center p-2 '>
+                <img className='rounded-full w-10 border-[3px] border-white' src={adminimg} alt=""  />
+                <div className='ml-5'>
+                    <h3 className='text-xl text-white uppercase my-0'>{adminName}</h3>
+                    <p className='text-gray-300 text-sm'>{date.split(',')[0]}</p>
+                </div>
+            </div>
 
             <div className=' bg-[#ededed] rounded-md w-full p-2 '>
                 {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>"Name: John smith"</span></p>}
@@ -99,7 +104,9 @@ const DetailBlog = () => {
                 </div>
             </div>
 
-            <div className='px-3 mt-8 md:mt-0'>
+            
+
+            <div className='px-3 mt-8 '>
                 <p className='text-white mb-2'>Comment's</p>
                 {
                     blogComments.length ? blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>

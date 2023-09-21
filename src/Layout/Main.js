@@ -22,7 +22,11 @@ const Main = () => {
                 <Container>
                     <Outlet></Outlet>
                 <div className='absolute hidden md:block  top-[33vh] left-2 '>
-                    <div className={`flex ${PN ==='/contact' && "bg-[#faeed8]"} ${PN ==='/blog' ? "bg-[#FF644E]": "bg-[#193841]"} hover:bg-transparent duration-300 rounded-full py-5 flex-col wrapper fixed text-2xl gap-y-3 text-white mt-7 justify-between md:justify-start`}>
+                    <div className={`flex 
+                    ${PN === '/contact' && "bg-[#faeed8]"} 
+                    ${PN ==='/blog' && "bg-[#FF644E]"} 
+                    ${PN ==='/' && "bg-[#193841]"} 
+                    hover:bg-transparent duration-300 rounded-full py-5 flex-col wrapper fixed text-2xl gap-y-3 text-white mt-7 justify-between md:justify-start`}>
                         <Link to={'/'} className='button'>
                             <div className='icon'><RiHomeFill></RiHomeFill></div>
                             <span>Home</span>
