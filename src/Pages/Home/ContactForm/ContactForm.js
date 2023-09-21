@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 // import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
-import emailimg from '../../../assets/senmail.png'
+import emailimg from '../../../assets/contactIconsBg.png'
 import './ContactForm.css'
 import { Fade } from 'react-reveal';
 import useTitle from '../../../MyHooks/useTitle';
@@ -32,50 +32,37 @@ const ContactForm = () => {
 
     return (
         <Fade bottom>
-          <div className='py-20 min-h-screen rounded-xl contactBg' id='contactform'>
+          <div className='py-20 min-h-screen rounded-xl contactBg shadow-xl' id='contactform'>
             {/* <CommonHeading>Contact Form</CommonHeading> */}
             <div className="hero mt-6">
-  <div className="hero-content flex-col py-[100px] lg:flex-row bg-white rounded-xl w-full gap-10">
+  <div className="hero-content flex-col py-[100px] lg:flex-row  rounded-xl w-full gap-10">
     <div className="text-center lg:text-left text-black rounded-xl">
-      <h1 className="text-5xl font-bold text-sky-500 capitalize">Feel free to message</h1>
+      <h1 className="text-5xl font-bold text-[#ffbc5e] capitalize">Feel free to message</h1>
       <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
-      <div className='flex items-center contactImg'>
-        <img className='w-96 ' src={emailimg} alt="email template" />
+      <div className='flex items-center justify-center contactImg'>
+        <img className='w-80' src={emailimg} alt="email template" />
       </div>
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm ">
+
+    <div className="card flex-shrink-0 w-full max-w-sm contactLetter">
       {/* <form action="https://formsubmit.co/54cffcd395c44072d62b9d1725fee82b" method="POST" className="card-body"> */}
-      <form ref={form} onSubmit={sendEmail} className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Name</span>
-          </label>
-          <input type="text" name='user_name' placeholder="your name" className="input input-bordered" />
+      <form ref={form} onSubmit={sendEmail} className="h-[500px] ml-14">
+        <div className="pt-[115px]">
+          <span className='font-bold text-[#739E47]'>Name:</span>
+          <input type="text" name='user_name' placeholder="type your name" className="  bg-transparent text-[18px] ml-2 border-none outline-none text-[#3E6B7E]" />
         </div>
 
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input required type="email" name='user_email' placeholder="john@gmail.com" className="input input-bordered" />
+        <div className="-mt-1">
+        <span className='font-bold text-[#739E47]'>Email:</span>
+          <input required type="email" name='user_email' placeholder="john@gmail.com" className="text-[18px] ml-2 text-[#3E6B7E] bg-transparent border-none outline-none " />
         </div>
 
-        {/* <div className="form-control">
-          <label className="label">
-            <span className="label-text">Subject</span>
-          </label>
-          <input type="text" name='Subject' placeholder="subject" className="input input-bordered" />
-        </div> */}
-
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Message</span>
-          </label>
-          <textarea required type="text" name='message' placeholder="type your message here..." className="min-h-[100px] input input-bordered" />
+        <div className="pt-6">
+          <textarea required type="text" name='message' placeholder="type your message here..." className="min-h-[180px] w-[92%]  text-[18px] bg-transparent border-none outline-none " />
         </div>
 
-        <div className="form-control mt-6">
-          <button type='submit' className="btn bg-sky-500 text-white border-none">Submit</button>
+        <div className="w-full mt-6">
+          <button type='submit' className="btn w-[85%] bg-[#9c3130] text-white border-none">Submit</button>
         </div>
       </form>
     </div>

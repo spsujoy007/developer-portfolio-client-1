@@ -1,4 +1,4 @@
-.contactImg{
+/* .contactImg{
     animation: myimg 3s ease-in infinite;
 }
 
@@ -12,4 +12,11 @@
     100%{
         filter: opacity(100%);
     }
+} */
+
+.contactLetter{
+    background-image: url(../../../assets/contactLetter.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
