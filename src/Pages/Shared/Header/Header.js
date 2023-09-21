@@ -13,8 +13,7 @@ const Header = () => {
         <li className='hover:text-sky-500'><Link to='/contact' className='rounded-xl mr-1'>Contact</Link></li>
         {/* <li className='hover:text-sky-500'><Link to='/dashboard' className='rounded-xl mr-1'>Dash</Link></li> */}
     </ScrollToTop>
-        
-    
+       
 
     return (
         <div style={{

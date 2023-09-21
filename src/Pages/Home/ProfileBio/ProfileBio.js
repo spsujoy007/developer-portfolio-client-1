@@ -16,7 +16,7 @@ const ProfileBio = () => {
 
     return (
         <div >
-            <h1 className='bg-[#10301f] text-[#35e37d] text-center py-1'>Website update is in progress...</h1>
+            {/* <h1 className='bg-[#10301f] text-[#35e37d] text-center py-1'>Website update is in progress...</h1> */}
             <div className='flex min-h-screen pt-24 md:flex-row flex-col items-center md:py-[150px]'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
             {/* for left image */}
             <div data-aos="fade-right" data-aos-duration="1500">

@@ -36,7 +36,7 @@ const Blog = () => {
     return (
         
         // <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="linear" >
-        <Fade top >
+        <div  >
             <div className='py-16  blogbgimg '>
             <div className='md:max-w-[1240px] mx-auto px-3 md:px-0'>
             <CommonHeading>Blog<Link to='/dashboard' className='text-gray-900 text-xs'>.</Link></CommonHeading>
@@ -51,7 +51,7 @@ const Blog = () => {
             </div>
             </div>
             </div>
-        </Fade>
+        </div>
         
     );
 };

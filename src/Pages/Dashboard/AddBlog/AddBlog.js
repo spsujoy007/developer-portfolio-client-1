@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AddBlog = () => {
     const [loading, setLoading] = useState(false)
+    const [selectImg, setSelectImg] = useState(true);
     const [checkImage, setCheckImage] = useState('')
     
 
@@ -20,54 +21,85 @@ const AddBlog = () => {
     const handlePostBlog = (event) => {
         event.preventDefault();
         const form = event.target;
-        const picture = form.image.files[0];
         const name = form.name.value;
         const sourse = form.sourse.value;
         const title = form.title.value;
         const description = form.description.value;
-
-        const formData = new FormData()
-        formData.append('image', picture);
-        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-        .then(res => res.json())
-        .then(pictureData => {
-            console.log(pictureData)
-            setLoading(true)
-            // if(pictureData.success){
-                const blogcontent = {
-                    title,
-                    sourse,
-                    blogimg: pictureData.data.url,
-                    adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
-                    adminName: name,
-                    description,
-                    date,
-                    likes: 0
-                }
-
-                fetch(`https://developer-portfolio-server.vercel.app/blogs`, {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(blogcontent)
-                })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    toast.success('Blog added. Keep rock!')
-                    setLoading(false)
-                    form.reset()
-                    navigate('/dashboard')
-                })
-            // }
-        })
-        .catch(err => console.error(err))
+        
+        if(selectImg){
+            const picture = form.image?.files[0];
+            const formData = new FormData()
+            const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
+            formData.append('image', picture);
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(pictureData => {
+                console.log(pictureData)
+                setLoading(true)
+                // if(pictureData.success){
+                    const blogcontent = {
+                        title,
+                        sourse,
+                        blogimg: pictureData.data.url,
+                        adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
+                        adminName: name,
+                        description,
+                        date,
+                        likes: 0
+                    }
+    
+                    fetch(`https://developer-portfolio-server.vercel.app/blogs`, {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(blogcontent)
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        toast.success('Blog added. Keep rock!')
+                        setLoading(false)
+                        form.reset()
+                        navigate('/dashboard')
+                    })
+                // }
+            })
+            .catch(err => console.error(err))
+        }
+        else{
+            
+                    const blogcontent = {
+                        title,
+                        sourse,
+                        blogimg: checkImage,
+                        adminimg: 'https://i.ibb.co/6Phpt7C/6b0-MATk-Q-400x400.jpg',
+                        adminName: name,
+                        description,
+                        date,
+                        likes: 0
+                    }
+                    fetch(`https://developer-portfolio-server.vercel.app/blogs`, {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(blogcontent)
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        toast.success('Blog added. Keep rock!')
+                        setLoading(false)
+                        form.reset()
+                        navigate('/dashboard')
+                    })
+        }
     }
+    
 
     return (
         <div className='px-5'>
@@ -76,10 +108,19 @@ const AddBlog = () => {
                 
                 {/* left side input */}
                 <div>
-                <div className="form-control">
-                    <label className="label"><span className="label-text text-white">Blog Image</span></label>
-                    <input onChange={(e) => setCheckImage(e.target.value)} name="image" type="file" className="file-input file-input-bordered w-full" />
-                </div>
+                <input type="checkbox" className="toggle toggle-lg" onClick={() => setSelectImg(!selectImg)} />
+                {
+                    selectImg ?
+                    <div className="form-control">
+                        <label className="label"><span className="label-text text-white">Blog Image</span></label>
+                        <input onChange={(e) => setCheckImage(e.target.value)} name="image" type="file" className="file-input file-input-bordered w-full" />
+                    </div>
+                    :
+                    <div className="form-control">
+                        <label className="label"><span className="label-text text-white">Blog Image</span></label>
+                        <input onChange={(e) => setCheckImage(e.target.value)} name="image" type="url" className="file-input file-input-bordered w-full pl-2" placeholder='Image address (url)' />
+                    </div>
+                }
 
                 <div className="form-control mt-5">
                     <label className="label"><span className="label-text text-white">Author name</span></label>

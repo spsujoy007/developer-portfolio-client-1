@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 // import CommonHeading from '../../../Components/CommonHeading/CommonHeading';
 import emailimg from '../../../assets/contactIconsBg.png'
 import './ContactForm.css'
-import { Fade } from 'react-reveal';
+// import { Fade } from 'react-reveal';
 import useTitle from '../../../MyHooks/useTitle';
 import { toast } from 'react-hot-toast';
 
@@ -31,13 +31,13 @@ const ContactForm = () => {
 
 
     return (
-        <Fade bottom>
+        <div >
           <div className='py-20 min-h-screen contactBg shadow-xl' id='contactform'>
             {/* <CommonHeading>Contact Form</CommonHeading> */}
             <div className="hero mt-6">
   <div className="hero-content flex-col py-[100px] lg:flex-row  rounded-xl w-full gap-10">
     <div className="text-center lg:text-left text-black rounded-xl">
-      <h1 className="text-5xl font-bold text-[#ffbc5e] capitalize">Feel free to message</h1>
+      <h1 className="text-5xl font-bold text-[#e7a242] capitalize">Feel free to message</h1>
       <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
       <div className='flex items-center justify-center contactImg'>
         <img className='w-80' src={emailimg} alt="email template" />
@@ -52,7 +52,7 @@ const ContactForm = () => {
           <input type="text" name='user_name' placeholder="type your name" className="  bg-transparent text-[18px] ml-2 border-none outline-none text-[#3E6B7E]" />
         </div>
 
-        <div className="mt-2  border-b-[1px] w-[90%] border-[#739E47] flex items-center mt-[8px]">
+        <div className="border-b-[1px] w-[90%] border-[#739E47] flex items-center mt-[8px]">
         <span className='font-bold text-[#739E47]'>Email:</span>
           <input required type="email" name='user_email' placeholder="john@gmail.com" className="text-[18px] ml-2 text-[#3E6B7E] bg-transparent border-none outline-none " />
         </div>
@@ -69,7 +69,7 @@ const ContactForm = () => {
   </div>
 </div>
         </div>
-        </Fade>
+        </div>
     );
 };
 

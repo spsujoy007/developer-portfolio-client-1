@@ -69,10 +69,10 @@ const BlogCard = ({blog, refetch}) => {
 
     <figure>
         <div className='imgEffect rounded-xl overflow-hidden'>
-            <img className='image ' src={blogimg} alt="Shoes" />
+            <img className='image ' loading='lazy' src={blogimg} alt={title.slice(0, 15)} />
         </div>
     </figure>
-        <h2 className="card-title text-[#FE634E] py-2">{title}</h2>
+        <h2 className="card-title text-[#FE634E] py-2">{title.slice(0, 30)}</h2>
         <div className='px-2 rounded-xl min-h-[40px]'>
     {
         showDetail ? <>

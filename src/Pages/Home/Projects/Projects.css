@@ -13,7 +13,8 @@
 }
 
 .commentsbg{
-    background-image:  linear-gradient(0deg, #0e2025cc, #0e2025cc), url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg');
+    background-image:  linear-gradient(0deg, #0e2025e7, #0e2025e7), url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg');
+    /* background-image:  url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg'); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

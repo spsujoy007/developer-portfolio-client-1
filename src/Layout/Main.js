@@ -12,7 +12,7 @@ import './Main.css'
 const Main = () => {
 
     const PN = useLocation().pathname;
-    console.log(PN)
+    console.log(PN.split('/')[1])
 
     return (
         <div className='mainHomebg'>
@@ -23,10 +23,11 @@ const Main = () => {
                     <Outlet></Outlet>
                 <div className='absolute hidden md:block  top-[30vh] left-2 '>
                     <div className={`flex 
-                    ${PN === '/contact' && "bg-[#faeed8]"} 
+                    ${PN === '/contact' && "bg-[#FAEED8]"} 
                     ${PN ==='/blog' && "bg-[#FF644E]"} 
                     ${PN ==='/about' && "bg-[#35C3E3]"} 
                     ${PN ==='/projects' && "bg-[#0284C7]"} 
+                    ${PN.split('/')[1] === 'blog' && PN.split('/').length > 2 && "bg-[#C4FCD5]"} 
                     ${PN ==='/' && "bg-[#193841]"} 
                     hover:bg-transparent duration-300 rounded-full py-5 flex-col wrapper fixed text-2xl gap-y-3 text-white mt-7 justify-between md:justify-start`}>
                         <Link to={'/'} className='button'>

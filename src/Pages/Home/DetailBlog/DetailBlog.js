@@ -55,7 +55,7 @@ const DetailBlog = () => {
     }
 
     return (
-        <div className='py-20 mb-36 w-[85%] mx-auto'>
+        <div className='py-20 mb-36  mx-auto commentsbg'>
             <div className='mx-auto md:max-w-[1240px]'>
             
 
@@ -83,7 +83,7 @@ const DetailBlog = () => {
                     }
                     </div>
 
-            <div className='bg-[#183841] p-4 mt-20 rounded-md commentsbg '>
+            <div className='bg-[#1e4752] p-4 mt-20 rounded-md  commentsbg'>
             <div className='flex items-center p-2 '>
                 <img className='rounded-full w-10 border-[3px] border-white' src={adminimg} alt=""  />
                 <div className='ml-5'>
