@@ -9,19 +9,21 @@ import { TypeAnimation } from 'react-type-animation';
 import profileImg from '../../../assets/profiledp.jpg'
 
 const ProfileBio = () => {
+    // console.log(dot)
     // const {adminName } = useContext(ContentContext)
     // const [onMouse, setOnMouse] = useState(false)
     const [hoverOut, setHoverOut] = useState(true);
 
     return (
         <div >
+            <h1 className='bg-[#10301f] text-[#35e37d] text-center py-1'>Website update is in progress...</h1>
             <div className='flex min-h-screen pt-24 md:flex-row flex-col items-center md:py-[150px]'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
             {/* for left image */}
             <div data-aos="fade-right" data-aos-duration="1500">
                 <div className='flex justify-center items-center md:px-20 px-5'>
             <div className="avatar dbimageMain">
                 <div 
-                className={`w-80 md:mt-10 dbimage duration-500 rounded-full`}>
+                className={`w-80 md:mt-8 dbimage duration-500 rounded-full`}>
                     {/* <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' /> */}
                     <img src={profileImg} alt='' />
                 </div>
