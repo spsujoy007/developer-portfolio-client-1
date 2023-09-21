@@ -69,7 +69,7 @@ const DetailBlog = () => {
                 </div>
             </div>
 
-            <div className='w-[450px] p-3 mt-3 rounded-md bg-[#eaeaea]'>
+            <div className='md:w-[450px] p-3 mt-3 rounded-md bg-[#eaeaea]'>
             <div className="rounded-2xl">
                 <img className='rounded-md ' src={blogimg} alt={title} />
                 <p className='text-[#3f9ab3] text-center'>{title}</p>
