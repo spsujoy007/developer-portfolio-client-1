@@ -78,7 +78,7 @@ const ProfileBio = () => {
                 className={`flex items-center py-2 text-white px-3 gap-x-1 btn-info ${hoverOut ? `btnanim` : ''} hover:btn-outline mt-5 rounded-full text-center justify-center duration-200 text-sm font-bold w-full md:w-44 uppercase`}><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
             </a>
 
-            <div className='flex bg-[#153038] md:bg-transparent md:p-0 p-2 rounded-full  text-2xl text-white mt-7 justify-between md:justify-start '>
+            <div className='flex bg-[#153038] md:bg-transparent md:p-0 p-1 rounded-full  text-2xl text-white mt-7 justify-between md:justify-start '>
                 <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
                 <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.facebook.com/spsujoy07'><FaFacebook></FaFacebook></a>
                 <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin></FaLinkedin></a>

@@ -102,7 +102,7 @@ const DetailBlog = () => {
             <div className='px-3 mt-8 md:mt-0'>
                 <p className='text-white mb-2'>Comment's</p>
                 {
-                    blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>
+                    blogComments.length ? blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>
                         <div className='flex gap-2 items-end'>
                             <img className='w-[50px] h-[50px] rounded-full' src={`https://api.dicebear.com/7.x/thumbs/svg?seed=Mimi`} alt="user" />
                             <div className='chat chat-start w-full'>
@@ -110,6 +110,10 @@ const DetailBlog = () => {
                             </div>
                         </div>
                     </div>)
+                    :
+                    <div>
+                        <p className='text-gray-300 text-center'>No comment's yet. You can make a comment. 😀</p>
+                    </div>
                 }
             </div>
             </div>
