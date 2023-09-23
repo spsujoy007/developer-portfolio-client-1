@@ -1,6 +1,6 @@
 .mainCard{
     transition: all 0.6s;
-    box-shadow: 0px 0px 50px #35c3e345;
+    box-shadow: 0px 0px 50px #35c3e323;
     border-top: 1px solid #35C3E3;
 }
 
@@ -29,10 +29,6 @@
     background-color: rgba(6, 47, 48, 0.655);
     backdrop-filter: blur(30px);
     transition: all 0.6s;
-}
-
-.detailBtn:hover .cardOverFLowUp{
-    backdrop-filter: blur(0px);
 }
 
 .mainCard:hover .cardOverFLowUp {
