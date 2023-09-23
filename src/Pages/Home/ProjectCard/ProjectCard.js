@@ -7,7 +7,7 @@ const ProjectCard = ({project, handleDetailpage}) => {
     // const detailProject = {image, title, tools}
 
     return (
-        <div className='max-w-[550px] relative overflow-hidden bg-black mainCard z-[100]'>
+        <div className='max-w-[550px] relative overflow-hidden bg-black mainCard z-[50]'>
 
             <div className='h-full w-full absolute z-10 cardOverFLowUp  flex items-center justify-center'>
                 <div className=''>

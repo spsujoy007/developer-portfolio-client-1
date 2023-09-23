@@ -77,7 +77,7 @@ const Projects = () => {
             </div>
 
             {/* pagination start ///////////////////////////////// */}
-            <div className={`${Ptitle.pathname === '/' ? "hidden": 'flex justify-center mt-5'}`}>
+            <div className={`${Ptitle.pathname === '/' ? "hidden": 'flex justify-center pt-5'}`}>
             <div className='flex gap-1 '>
                 {
                     pages.map(({num}) => <button

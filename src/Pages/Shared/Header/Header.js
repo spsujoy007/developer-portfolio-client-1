@@ -20,7 +20,7 @@ const Header = () => {
             // backgroundColor: '#8f8f8f38',
             backdropFilter: 'blur(10px)',
             zIndex: '100'
-        }} className="navbar  fixed z-10 md:px-6 glass md:rounded-b-2xl myheading">
+        }} className="navbar  fixed  md:px-6 glass md:rounded-b-2xl myheading z-[1000]">
   <div className="navbar-start w-full md:w-[50%]">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { FaCheckCircle, FaThumbsUp } from 'react-icons/fa';
+import { /*FaCheckCircle, */ FaThumbsUp } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import './BlogCard.css'
 
 const BlogCard = ({blog, refetch}) => {
     // const [like, setLike] = useState(0);
     const [showDetail, setShowDetail] = useState(false)
-    const {title, _id, adminimg, adminName, blogimg, description, likes} = blog;
+    const {title, _id,/* adminimg, adminName,*/ blogimg, description, likes} = blog;
     const likevalue = localStorage.getItem(`${_id}`)
     const [ifLiked, setIfLiked] = useState(likevalue)
     const navigate= useNavigate()
@@ -56,7 +56,7 @@ const BlogCard = ({blog, refetch}) => {
   <div className="card-body min-h-[100px] max-w-[400px]">
        
 
-    <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
+    {/* <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
             <div className="avatar relative">
                 <div className="w-8 rounded-full">
                     <img src={adminimg} alt={adminName}/>
@@ -66,7 +66,7 @@ const BlogCard = ({blog, refetch}) => {
                  </div>
             </div>
             <h2 className='text-md uppercase'>{adminName}</h2>
-        </div>
+        </div> */}
 
     <figure>
         <div className='imgEffect rounded-xl overflow-hidden'>
@@ -85,7 +85,7 @@ const BlogCard = ({blog, refetch}) => {
             <p>{description}</p>
             </button></>
             :
-            <p className=' text-gray-800'>{description.length > 80 ? <span>{description.slice(0, 80)}...
+            <p className=' text-gray-800'>{description.length > 200 ? <span>{description.slice(0, 200)}...
             <button onClick={() => setShowDetail(!showDetail)} className="text-[#2B4B36] font-semibold">See more</button> </span> :
             <span>{description}</span>}
             </p>
