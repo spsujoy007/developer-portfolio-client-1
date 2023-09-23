@@ -2,6 +2,63 @@
   text-align: center;
 }
 
+.bglineleft{
+  background-image: url(../src//assets/linebg-left-top.png);
+  background-position: 400px -60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bglineleftbox{
+  background-image: url(../src//assets//bgboxleft.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.commentsbg{
+  background-image:  linear-gradient(0deg, #0e2025e7, #0e2025e7), url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg');
+  /* background-image:  url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg'); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainHomebg{
+  background-image: url(../src//assets/bgimgshape2.png);
+background-size: 100vw;
+background-repeat: no-repeat;
+}
+
+.contactBg{
+  background-image: url(../src//assets/bgcontact.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blogbgimg{
+  background-image: url(../src//assets/bgblog.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bglineleftround{
+  background-image: url(../src//assets/bground-bottom.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bglineleftskill{
+  background-image: url(../src//assets/linebg-right-down.png);
+  background-position: -50px -200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+}
+
 .pageBacgkround{
   background-image: linear-gradient(45deg green red );
 }

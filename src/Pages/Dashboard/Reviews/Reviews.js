@@ -12,7 +12,7 @@ const Reviews = () => {
     const {data: reviews = [], refetch} = useQuery({
         queryKey: ["reviews"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/getReviews`, {method: 'GET'})
+            const res = await fetch(`https://developer-portfolio-server.vercel.app/getReviews`, {method: 'GET'})
             const data = res.json()
             return data
         }

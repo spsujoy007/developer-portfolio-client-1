@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaThumbsUp } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './BlogCard.css'
 
 const BlogCard = ({blog, refetch}) => {
@@ -9,6 +9,7 @@ const BlogCard = ({blog, refetch}) => {
     const {title, _id, adminimg, adminName, blogimg, description, likes} = blog;
     const likevalue = localStorage.getItem(`${_id}`)
     const [ifLiked, setIfLiked] = useState(likevalue)
+    const navigate= useNavigate()
 
     const handleLike = () => {
         refetch()
@@ -76,7 +77,11 @@ const BlogCard = ({blog, refetch}) => {
         <div className='px-2 rounded-xl min-h-[40px]'>
     {
         showDetail ? <>
-        <button className='text-left hover:bg-slate-50 rounded-lg' onClick={() => setShowDetail(!showDetail)}>
+        <button className='text-left rounded-lg' onClick={() => {
+            // setShowDetail(!showDetail)
+            navigate(`/blog/${_id}`)
+        }
+        }>
             <p>{description}</p>
             </button></>
             :

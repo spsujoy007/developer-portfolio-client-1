@@ -71,8 +71,7 @@ const AddBlog = () => {
             .catch(err => console.error(err))
         }
         else{
-            
-                    const blogcontent = {
+            const blogcontent = {
                         title,
                         sourse,
                         blogimg: checkImage,
@@ -108,7 +107,10 @@ const AddBlog = () => {
                 
                 {/* left side input */}
                 <div>
-                <input type="checkbox" className="toggle toggle-lg" onClick={() => setSelectImg(!selectImg)} />
+                <div className='flex items-center gap-2'>
+                    <input type="checkbox" className="toggle toggle-lg" onClick={() => setSelectImg(!selectImg)} />
+                    <h2 className='text-white'>{selectImg ? 'Tap to add a link' : "Tap to select photo from file"}</h2>
+                </div>
                 {
                     selectImg ?
                     <div className="form-control">

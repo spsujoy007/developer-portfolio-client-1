@@ -1,56 +1,41 @@
-.bglineleft{
-    background-image: url(../../../assets//linebg-left-top.png);
-    background-position: 400px -60px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.mainCard{
+    transition: all 0.6s;
+    box-shadow: 0px 0px 50px #35c3e345;
+    border-top: 1px solid #35C3E3;
 }
 
-.bglineleftbox{
-    background-image: url(../../../assets//bgboxleft.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.cardOverFLowDown{
+    background-color: rgba(6, 47, 48, 0.655);
+    backdrop-filter: blur(3px);
+    transition: all 0.6s;
+    
 }
 
-.commentsbg{
-    background-image:  linear-gradient(0deg, #0e2025e7, #0e2025e7), url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg');
-    /* background-image:  url('https://i.ibb.co/hyHDm0B/6600392-3325712.jpg'); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.cardOverFLowDown .title {
+    color: #ffdc9a;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 0px 50px #ffdc9a;
+    text-transform: capitalize;
 }
 
-.mainHomebg{
-    background-image: url(../../../assets/bgimgshape2.png);
-  background-size: 100vw;
-  background-repeat: no-repeat;
+.mainCard:hover .cardOverFLowDown {
+    top: 270px;
+    color: wheat;
 }
 
-.contactBg{
-    background-image: url(../../../assets/bgcontact.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.cardOverFLowUp{
+    top: -270px;
+    background-color: rgba(6, 47, 48, 0.655);
+    backdrop-filter: blur(30px);
+    transition: all 0.6s;
 }
 
-.blogbgimg{
-    background-image: url(../../../assets/bgblog.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.detailBtn:hover .cardOverFLowUp{
+    backdrop-filter: blur(0px);
 }
 
-.bglineleftround{
-    background-image: url(../../../assets/bground-bottom.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.bglineleftskill{
-    background-image: url(../../../assets/linebg-right-down.png);
-    background-position: -50px -200px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(10px);
+.mainCard:hover .cardOverFLowUp {
+    top: 0px;
+    color: wheat;
 }

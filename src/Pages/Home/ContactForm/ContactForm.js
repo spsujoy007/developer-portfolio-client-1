@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     return (
         <div >
-          <div className='py-20 min-h-screen contactBg shadow-xl' id='contactform'>
+          <div className='py-20 min-h-screen contactBg ' id='contactform'>
             {/* <CommonHeading>Contact Form</CommonHeading> */}
             <div className="hero mt-6">
   <div className="hero-content flex-col py-[100px] lg:flex-row  rounded-xl w-full gap-10">
@@ -40,7 +40,7 @@ const ContactForm = () => {
       <h1 className="text-5xl font-bold text-[#e7a242] capitalize">Feel free to message</h1>
       <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
       <div className='flex items-center justify-center contactImg'>
-        <img className='w-80' src={emailimg} alt="email template" />
+        <img className='md:w-80' src={emailimg} alt="email template" />
       </div>
     </div>
 
