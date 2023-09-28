@@ -56,7 +56,7 @@ const DetailBlog = () => {
 
     return (
         <div className='py-20 mb-36  mx-auto commentsbg'>
-            <div className='mx-auto md:max-w-[1240px]'>
+            <div className='mx-auto md:max-w-[1240px] detailsBg'>
             
 
             <div className='mt-10 px-2 md-px-0'>

@@ -1,7 +1,7 @@
 .wrapper .button{
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     margin: 0 5px;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
 .wrapper .icon{
     color: white;
     margin-right: 10px;
-    padding: 8px;
+    padding: 6px;
 }
 
 .wrapper span{

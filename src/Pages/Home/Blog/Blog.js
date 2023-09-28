@@ -7,6 +7,8 @@ import Loader from '../../../Components/Loader/Loader';
 import useTitle from '../../../MyHooks/useTitle';
 import BlogCard from './BlogCard';
 import { useState } from 'react';
+import { usePagination } from '../../../Hooks/usePagination';
+import Pagination from '../../../Hooks/Pagination';
 
 const Blog = () => {
     const [waiting, setWaiting] = useState(false)
@@ -28,13 +30,14 @@ const Blog = () => {
     const [firstPage, setFirstPage] = useState(0);
     const [lastPage, setLastPage] = useState(6);
 
+    // const stateMent = {setFirstPage, setLastPage, firstPage, lastPage};
+
     const pages = [];
     const numofpage = Math.ceil(blogs.length / 6);
     for(let i = 0; i < numofpage; i++ )
     {
         pages.push({num: i+1})
     }
-
     
     if(isLoading || waiting){
         return <div className='mx-auto md:max-w-[500px] min-h-screen'>
@@ -95,7 +98,7 @@ const Blog = () => {
             </div>
             </div>
             {/* pagination end ////////////////////////////////////////////////////////// */}
-
+            {/* <Pagination onPage='6' datas={blogs.length} stateMent={stateMent}></Pagination> */}
 
             </div>
             </div>

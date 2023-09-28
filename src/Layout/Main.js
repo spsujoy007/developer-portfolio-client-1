@@ -30,7 +30,7 @@ const Main = () => {
                     ${PN ==='/projects' && "bg-[#0284C7]"} 
                     ${PN.split('/')[1] === 'blog' && PN.split('/').length > 2 && "bg-[#C4FCD5]"} 
                     ${PN ==='/' && "bg-[#193841]"} 
-                    hover:bg-transparent duration-300 rounded-full py-6 flex-col wrapper fixed text-2xl gap-y-5 text-white mt-7 justify-between md:justify-start`}>
+                    hover:bg-transparent duration-300 rounded-full py-3 flex-col wrapper fixed text-2xl gap-y-3 text-white mt-7 justify-between md:justify-start`}>
                         <Link to={'/'} className='button'>
                             <div className='icon'><RiHomeFill></RiHomeFill></div>
                             <span>Home</span>
