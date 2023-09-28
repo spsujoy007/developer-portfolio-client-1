@@ -19,24 +19,14 @@ const ProfileBio = () => {
             {/* <h1 className='bg-[#10301f] text-[#35e37d] text-center py-1'>Website update is in progress...</h1> */}
             <div className='flex min-h-screen pt-24 md:flex-row flex-col items-center md:py-[150px]'  style={{ backgroundImage: `url("../../../../public/Bgofport.png")` }}>
             {/* for left image */}
-            <div data-aos="fade-right" data-aos-duration="1500">
-                <div className='flex justify-center items-center md:px-20 px-5'>
-            <div className="avatar dbimageMain">
-                <div 
-                className={`w-80 md:mt-8 dbimage duration-500 rounded-full`}>
-                    {/* <img src="https://i.ibb.co/zm5y2Z1/275702359-154109040392904-2771545278164783547-n.jpg" alt='' /> */}
-                    <img src={profileImg} alt='' />
-                </div>
-            </div>
-            </div>
-            </div>
+            
 
         <div data-aos="fade-left" data-aos-duration="1500">
         <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0 px-2'>
             <div className='flex justify-end'>
                 <AutoMessage></AutoMessage>
             </div>
-            <h1 className='text-4xl font-semibold  text-white'>Hi! I am<br />
+            <h1 className='text-3xl font-semibold  text-white'>Hi! I am<br />
             <span className='text-info md:text-6xl uppercase text-5xl'>
                 <span className='nameAnim_1s'>s</span>
                 <span className='nameAnim_2s'>u</span>

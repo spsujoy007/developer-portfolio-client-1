@@ -24,7 +24,8 @@ const ProjectDetails = () => {
     
     <div>
         {alldetails.length && alldetails.map((detail, i) => <div key={i} className='flex mb-2 items-start gap-x-2'>
-            <FaDotCircle className='text-xl'></FaDotCircle>
+            {/* <FaDotCircle className='text-xl'></FaDotCircle> */}
+            <span className='text-xl'>{i+1}. </span>
             <h2 className=''> {detail}</h2>
         </div>)}
     </div>

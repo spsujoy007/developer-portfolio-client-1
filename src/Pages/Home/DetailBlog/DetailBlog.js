@@ -61,7 +61,8 @@ const DetailBlog = () => {
 
             <div className='mt-10 px-2 md-px-0'>
                 <div className='py-2'>
-                    <h1 className='text-xl text-base-200 py-2 uppercase border-b-[1px] border-gray-500'>About Blog</h1>
+                    <h1 className='text-xl text-base-200 uppercase  border-gray-500'>About Blog</h1>
+                    <p className='text-gray-300 text-xs border-b-[1px] pb-2'>Posted in: {date.split(',')[0]}</p>
                 </div>
                 <div className='mt-5'>
                     <h1 className={`${title.length < 50 ? 'md:text-6xl text-3xl' : 'md:text-3xl text-3xl'} text-white mb-5`}>{title}:</h1>
@@ -69,18 +70,17 @@ const DetailBlog = () => {
                 </div>
             </div>
 
-            <div className='md:w-[450px] p-3 mt-3 rounded-md bg-[#eaeaea]'>
-            <div className="rounded-2xl">
-                <img className='rounded-md ' src={blogimg} alt={title} />
-                <p className='text-[#3f9ab3] text-center'>{title}</p>
+            <div className=' mt-3 flex justify-start '>
+            <div className="rounded-2xl p-3 md:w-[450px] bg-[#eaeaea]">
+                <img className='rounded-2xl ' src={blogimg} alt={title} />
+                <p className='text-[#3f9ab3] py-3 text-center'></p>
             </div>
-
-            
             </div>
-                    <div className='my-4'>
+                    <div className='my-4 flex gap-2'>
                     {
-                        sourse && <a target='_blank' rel="noreferrer" className='font-normal underline px-5 py-3 gap-x-1 bg-[#152e35] text-sky-500 flex items-center text-lg' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
+                        sourse && <a target='_blank' rel="noreferrer" className='font-normal flex  gap-x-1 bg-[#152e35] text-sky-500  items-center text-sm px-2 justify-center py-1 rounded-full' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
                     }
+                    <a target='_blank' rel="noreferrer" className='font-normal flex   gap-x-1 bg-[#15351e] text-[#4ced7a] items-center text-sm px-2 justify-center py-1 rounded-full' href={sourse}>Open image <RiArrowRightUpLine></RiArrowRightUpLine> </a>
                     </div>
 
             <div className='bg-[#1e4752] p-4 mt-20 rounded-md  commentsbg'>
@@ -88,7 +88,7 @@ const DetailBlog = () => {
                 <img className='rounded-full w-10 border-[3px] border-white' src={adminimg} alt=""  />
                 <div className='ml-5'>
                     <h3 className='text-xl text-white uppercase my-0'>{adminName}</h3>
-                    <p className='text-gray-300 text-sm'>{date.split(',')[0]}</p>
+                    <p className='text-gray-300 text-xs'>What's in your mind?</p>
                 </div>
             </div>
 
