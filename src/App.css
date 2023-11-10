@@ -10,10 +10,10 @@
 }
 
 .bglineleftbox{
-  background-image: url(../src//assets//bgboxleft.png);
-  background-position: center;
+  /* background-image: url(../src//assets//bgboxleft.png);
+  background-position: left;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .commentsbg{

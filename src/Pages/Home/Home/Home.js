@@ -18,6 +18,7 @@ const Home = () => {
                 <Projects></Projects>
                 <GraphicSkill></GraphicSkill>
             </div>
+            
         </div>
     );
 };

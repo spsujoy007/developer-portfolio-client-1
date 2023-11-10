@@ -71,43 +71,43 @@ const DetailBlog = () => {
             </div>
 
             <div className=' mt-3 flex justify-start '>
-            <div className="rounded-2xl p-3 md:w-[450px] bg-[#eaeaea]">
+            <div className="rounded-t-2xl p-3 md:w-[450px] bg-[#eaeaea]">
                 <img className='rounded-2xl ' src={blogimg} alt={title} />
                 <p className='text-[#3f9ab3] py-3 text-center'></p>
             </div>
             </div>
-                    <div className='my-4 flex gap-2'>
+                    <div className=' flex md:w-[450px] justify-between gap-1 '>
                     {
-                        sourse && <a target='_blank' rel="noreferrer" className='font-normal flex  gap-x-1 bg-[#152e35] text-sky-500  items-center text-sm px-2 justify-center py-1 rounded-full' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
+                        sourse && <a target='_blank' rel="noreferrer" className='font-normal  flex gap-x-1 bg-[#152e35] text-sky-500  items-center text-sm px-2 justify-center w-full py-2' href={sourse}> Learn more <RiArrowRightUpLine></RiArrowRightUpLine> </a>
                     }
-                    <a target='_blank' rel="noreferrer" className='font-normal flex   gap-x-1 bg-[#15351e] text-[#4ced7a] items-center text-sm px-2 justify-center py-1 rounded-full' href={sourse}>Open image <RiArrowRightUpLine></RiArrowRightUpLine> </a>
+                    <a target='_blank' rel="noreferrer" className='font-normal flex gap-x-1 bg-[#15351e] text-[#4ced7a] items-center text-sm px-2 w-full justify-center py-2 ' href={blogimg}>View image <RiArrowRightUpLine></RiArrowRightUpLine> </a>
                     </div>
 
             <div className='bg-[#1e4752] p-4 mt-20 rounded-md  commentsbg'>
             <div className='flex items-center p-2 '>
-                <img className='rounded-full w-10 border-[3px] border-white' src={adminimg} alt=""  />
+                <img className='rounded-full w-10 border-[2px] border-white' src="https://api.dicebear.com/7.x/thumbs/svg?seed=Mimi" alt=""  />
                 <div className='ml-5'>
-                    <h3 className='text-xl text-white uppercase my-0'>{adminName}</h3>
+                    <h3 className='text-xl text-white uppercase my-0'>Dear visitor</h3>
                     <p className='text-gray-300 text-xs'>What's in your mind?</p>
                 </div>
             </div>
 
             <div className=' bg-[#ededed] rounded-md w-full p-2 '>
-                {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>"Name: John smith"</span></p>}
+                {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>name: John smith</span></p>}
                 <textarea 
                 value={commentBody}
                 onChange={(e) => {setCommentBody(e.target.value)}}
                 onKeyDown={() => setNameCondition(true)}
-                className='w-full min-h-[105px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
+                className='w-full min-h-[100px] max-h-[110px] rounded-md outline-none p-2 bg-[#ffffff]' name="" placeholder={`Share your opinion about ${title.slice(0, 30)}...`} id=""></textarea>
                 <div className='w-full flex justify-end items-end'>
-                    <button onClick={handleAddComment} className='bg-sky-500 w-full rounded-md px-5 py-1 uppercase text-white'>Post</button>
+                    <button onClick={handleAddComment} className='bg-sky-500 hover:bg-sky-600 w-full rounded-md px-5 py-1 uppercase text-white'>Comment</button>
                 </div>
             </div>
 
             
 
             <div className='px-3 mt-8 '>
-                <p className='text-white mb-2'>Comment's</p>
+                <p className='text-white mb-2'>Public comment's</p>
                 {
                     blogComments.length ? blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>
                         <div className='flex gap-2 items-end'>

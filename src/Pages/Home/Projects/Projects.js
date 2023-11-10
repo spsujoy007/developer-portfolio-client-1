@@ -12,7 +12,7 @@ const Projects = () => {
     useTitle('PROJECTS OF')
     const navigate = useNavigate()
     const [firstPage, setFirstPage] = useState(0);
-    const [lastPage, setLastPage] = useState(3);
+    const [lastPage, setLastPage] = useState(4);
 
     
     const Ptitle = useLocation()
@@ -82,11 +82,11 @@ const Projects = () => {
                 {
                     pages.map(({num}) => <button
                         onClick={() => {
-                            setFirstPage(num*3 - 3)
-                            setLastPage(3*num)
+                            setFirstPage(num*4 - 4)
+                            setLastPage(4*num)
                         }}
                         key={num} 
-                        className={`${firstPage/3+1 === num ? 'bg-black border-white':'bg-sky-500'} rounded-md border-2 border-sky-600 text-white py-2 px-4`}
+                        className={`${firstPage/4+1 === num ? 'bg-black border-white':'bg-sky-500'} rounded-md border-2 border-sky-600 text-white py-2 px-4`}
                      >
                         {num}
                      </button>)

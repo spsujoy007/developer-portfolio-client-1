@@ -8,6 +8,7 @@ import { AiFillInfoCircle } from 'react-icons/ai';
 import { MdWebStories } from 'react-icons/md';
 import { SiApostrophe } from 'react-icons/si';
 import './Main.css'
+import { FaGithub } from 'react-icons/fa';
 
 const Main = () => {
 
@@ -52,7 +53,19 @@ const Main = () => {
                             <span>Contact</span>
                         </Link>
                     </div>
+
+                <div className='absolute top-[48vh]  left-3 z-[80] '>
+                    <div className='fixed'>
+                    <div className='flex flex-col justify-center items-center gap-3'>
+                    <div>
+                    <a className=' rounded-full hover:text-sky-500 text-2xl shadow-xl shadow-sky-500 text-white' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
+                    </div>
+                    <div className='w-[1px] h-[180px] bg-white '></div>
+                    </div>
+                    </div>
                 </div>
+                </div>
+
                 </Container>
             <Footer></Footer>
         </div>
