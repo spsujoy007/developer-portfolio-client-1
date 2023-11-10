@@ -21,10 +21,13 @@ const AboutSection = () => {
         <ContainItem> 
         
         <div id='aboutsection' className={`px-5 mb-[100px] pt-10 md:pt-0 mx-auto md:max-w-[1240px] ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
-                    <div className='pt-12'>
+                    <div className='pt-12 relative'>
                     <CommonHeading>About</CommonHeading>
+                    <div className='w-full absolute  top-0 left-0'>
+                        <h1 className='text-[130px] uppercase   text-[#10252a]'>About</h1>
+                    </div>
 
-        <div className='md:flex gap-10 text-lg '>
+        <div className='md:flex gap-10 text-lg z-[100px] mt-10'>
             <div className='flex-1'>
                 <p className='text-gray-400 flex text-justify'>
                     Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone. Developing software for the world of intent is something I'm passionate about and I'm dedicated to making the world of intent easy and affordable for everyone.
@@ -48,8 +51,8 @@ const AboutSection = () => {
                     <span className="text-gray-300">email:</span> <span className='lowercase'>sujoypaul728@gmail.com</span>
                 </div>
                 <div>
-                    <span className="text-gray-300">phone:</span> (+88) 01859-342364 <br />
-                    <span className="text-gray-300">Github:</span> <a href="https://github.com/spsujoy007">spsujoy007</a> <br />
+                    <span className="text-gray-300" >phone:</span> <a href='tel:+8801859342364' tel="">(+88) 01859-342364</a>  <br />
+                    <span className="text-gray-300">Github:</span> <a className='text-sky-500 lowercase underline' href="https://github.com/spsujoy007">spsujoy007</a> <br />
                     <span className="text-gray-300">language:</span> bangla, english
                 </div>
                 

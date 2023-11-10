@@ -30,7 +30,7 @@ const Main = () => {
                     ${PN ==='/about' && "bg-[#35C3E3]"} 
                     ${PN ==='/projects' && "bg-[#0284C7]"} 
                     ${PN.split('/')[1] === 'blog' && PN.split('/').length > 2 && "bg-[#C4FCD5]"} 
-                    ${PN ==='/' && "bg-[#193841]"} 
+                    ${PN ==='/' && "bg-[#19384100]"} 
                     hover:bg-transparent duration-300 rounded-full py-3 flex-col wrapper fixed text-2xl gap-y-3 text-white mt-7 justify-between md:justify-start`}>
                         <Link to={'/'} className='button'>
                             <div className='icon'><RiHomeFill></RiHomeFill></div>
@@ -58,7 +58,7 @@ const Main = () => {
                     <div className='fixed'>
                     <div className='flex flex-col justify-center items-center gap-3'>
                     <div>
-                    <a className=' rounded-full hover:text-sky-500 text-2xl shadow-xl shadow-sky-500 text-white' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
+                    <a className=' rounded-full hover:text-sky-500 text-3xl shadow-xl shadow-sky-500 text-white' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
                     </div>
                     <div className='w-[1px] h-[180px] bg-white '></div>
                     </div>

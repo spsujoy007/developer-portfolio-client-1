@@ -42,9 +42,12 @@ const Skills = () => {
         <div data-aos="fade-up"
         data-aos-duration="1500">
             <ContainItem>
-            <div className='mx-6 bglineleftskill ' id='skills'>
+            <div className='mx-6 pt-12 bglineleftskill ' id='skills'>
             <CommonHeading>My Skills</CommonHeading>
-            <p className='text-xl text-white py-5'>Languages, framework and tools:</p>
+            <div className='w-full absolute  top-0 left-0'>
+                        <h1 className='text-[130px] uppercase   text-[#10252a]'>Skills</h1>
+            </div>
+            <p className='text-xl text-white py-5 mt-10'>Languages, framework and tools:</p>
             
             <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
             {

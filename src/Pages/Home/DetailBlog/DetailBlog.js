@@ -67,8 +67,8 @@ const DetailBlog = () => {
                         <h1 className='text-xl text-base-200 uppercase  border-gray-500'>About Blog</h1>
                         <p className='text-gray-300 text-xs '>Posted in: {date.split(',')[0]}</p>
                     </div>
-                    <span onClick={() => navigate('/blog')} className='p-2 cursor-pointer hover:text-sky-500'>
-                        <IoReturnUpBack className='text-white text-3xl hover:text-sky-500'></IoReturnUpBack>
+                    <span onClick={() => navigate('/blog')} className='p-2 cursor-pointer flex items-center gap-2 hover:text-sky-500 text-white'>
+                        Back<IoReturnUpBack className=' text-3xl hover:text-sky-500'></IoReturnUpBack>
                     </span>
                 </div>
                 <div className='mt-5'>
@@ -92,7 +92,7 @@ const DetailBlog = () => {
 
             <div className='bg-[#1e4752] p-4 mt-20 rounded-md  commentsbg'>
             <div className='flex items-center p-2 '>
-                <img className='rounded-full w-10 border-[2px] border-white' src="https://api.dicebear.com/7.x/thumbs/svg?seed=Mimi" alt=""  />
+                <img className='rounded-full w-10 border-[2px] border-white' src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bear" alt=""  />
                 <div className='ml-5'>
                     <h3 className='text-xl text-white uppercase my-0'>Dear visitor</h3>
                     <p className='text-gray-300 text-xs'>What's in your mind?</p>
@@ -118,7 +118,7 @@ const DetailBlog = () => {
                 {
                     blogComments.length ? blogComments.slice(0, 5).map(comment => <div className='mb-3 text-lg' key={comment._id}>
                         <div className='flex gap-2 items-end'>
-                            <img className='w-[50px] h-[50px] rounded-full' src={`https://api.dicebear.com/7.x/thumbs/svg?seed=Mimi`} alt="user" />
+                            <img className='w-[40px] h-[40px] bg-white rounded-full' src={`https://api.dicebear.com/7.x/avataaars/svg?seed=Bear`} alt="user" />
                             <div className='chat chat-start w-full'>
                                 <p className='bg-[#ffffff]   min-w-[130px] chat-bubble  text-black rounded-md'>
                                     {comment.comment.length > 300 ? <>{comment.comment.slice(0, 300)}...</> : comment.comment.split("from:")[0]}
