@@ -62,7 +62,7 @@ const ProfileBio = () => {
                     </h1>
                     
                     <p className='text-gray-300 mt-3 text-lg md:max-w-[90%] select-none'>
-                    I am a passionate full stack Web Developer. I have already created many Project with 1+ years of experience with modern technologies like React, Tailwind CSS, Node js, Mongo DB, Express JS, Bootstrap etc..
+                    I am a passionate full stack Web Developer. I have already created many Project with 2+ years of experience with modern technologies like React, Tailwind CSS, Node js, Mongo DB, Express JS, Bootstrap etc..
                     </p>
                     
                     {/* <a href={resume} download={resume}> */}
