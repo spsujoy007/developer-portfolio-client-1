@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import useTitle from '../../../MyHooks/useTitle';
 import { toast } from 'react-hot-toast';
 import { useQuery } from '@tanstack/react-query';
 // import userImg from '../../../assets/user.png'
 import { RiArrowRightUpLine } from "react-icons/ri";
+import { IoReturnUpBack } from "react-icons/io5";
+import moment from 'moment/moment';
 
 const DetailBlog = () => {
     const [commentBody, setCommentBody] = useState('')
     const [nameCondition, setNameCondition] = useState(false)
+    const navigate = useNavigate();
     const blog = useLoaderData();
     const {_id, title, description, adminName, adminimg, blogimg, date, sourse} = blog
     useTitle(title.slice(0, 15))
-    const currentdate = new Date()
 
 
     const {data: blogComments = [] , refetch} = useQuery({
@@ -32,7 +34,7 @@ const DetailBlog = () => {
             const comment = {
                 blog_id: _id,
                 comment: commentBody,
-                date: currentdate
+                date: moment(new Date()).format()
             }
     
             fetch(`https://developer-portfolio-server.vercel.app/addcommentblog`, {
@@ -57,12 +59,17 @@ const DetailBlog = () => {
     return (
         <div className='py-20 mb-36  mx-auto commentsbg'>
             <div className='mx-auto md:max-w-[1240px] detailsBg'>
-            
+             
 
             <div className='mt-10 px-2 md-px-0'>
-                <div className='py-2'>
-                    <h1 className='text-xl text-base-200 uppercase  border-gray-500'>About Blog</h1>
-                    <p className='text-gray-300 text-xs border-b-[1px] pb-2'>Posted in: {date.split(',')[0]}</p>
+                <div className='py-2 flex items-start justify-between border-b-[1px] pb-2'>
+                    <div className=''>
+                        <h1 className='text-xl text-base-200 uppercase  border-gray-500'>About Blog</h1>
+                        <p className='text-gray-300 text-xs '>Posted in: {date.split(',')[0]}</p>
+                    </div>
+                    <span onClick={() => navigate('/blog')} className='p-2 cursor-pointer hover:text-sky-500'>
+                        <IoReturnUpBack className='text-white text-3xl hover:text-sky-500'></IoReturnUpBack>
+                    </span>
                 </div>
                 <div className='mt-5'>
                     <h1 className={`${title.length < 50 ? 'md:text-6xl text-3xl' : 'md:text-3xl text-3xl'} text-white mb-5`}>{title}:</h1>
@@ -93,7 +100,7 @@ const DetailBlog = () => {
             </div>
 
             <div className=' bg-[#ededed] rounded-md w-full p-2 '>
-                {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>name: John smith</span></p>}
+                {nameCondition && <p className='mb-2'>You can type your name in the comment like <span className='font-bold'>from: John smith</span></p>}
                 <textarea 
                 value={commentBody}
                 onChange={(e) => {setCommentBody(e.target.value)}}
@@ -113,7 +120,17 @@ const DetailBlog = () => {
                         <div className='flex gap-2 items-end'>
                             <img className='w-[50px] h-[50px] rounded-full' src={`https://api.dicebear.com/7.x/thumbs/svg?seed=Mimi`} alt="user" />
                             <div className='chat chat-start w-full'>
-                                <p className='bg-[#ffffff]  min-w-[130px] chat-bubble  text-black rounded-md'>{comment.comment.length > 300 ? <>{comment.comment.slice(0, 300)}...</> : comment.comment}</p>
+                                <p className='bg-[#ffffff]   min-w-[130px] chat-bubble  text-black rounded-md'>
+                                    {comment.comment.length > 300 ? <>{comment.comment.slice(0, 300)}...</> : comment.comment.split("from:")[0]}
+                                    <div className='flex items-center gap-x-2'>
+                                        {
+                                            comment.comment.split("from:")[1] ? <p className='text-sm'>From: <span className='text-sky-500 font-bold capitalize'>{comment.comment.split("from:")[1]}</span></p>
+                                            :
+                                            <p className='text-sm'>From: <span className='text-sky-500 font-bold capitalize'>Honourable viewer</span></p>
+                                        }
+                                        <p className='text-sm'> - {moment(comment.date).startOf('minute').fromNow()}</p>
+                                    </div>
+                                </p>
                             </div>
                         </div>
                     </div>)
