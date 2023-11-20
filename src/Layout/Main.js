@@ -13,7 +13,6 @@ import { FaGithub } from 'react-icons/fa';
 const Main = () => {
 
     const PN = useLocation().pathname;
-    console.log(PN.split('/')[1])
 
     return (
         <div className='mainHomebg'>
@@ -36,10 +35,10 @@ const Main = () => {
                             <div className='icon'><RiHomeFill></RiHomeFill></div>
                             <span>Home</span>
                         </Link>
-                        <Link to={'/about'} className='button'>
+                        {/* <Link to={'/about'} className='button'>
                             <div className='icon'><AiFillInfoCircle></AiFillInfoCircle></div>
                             <span>About</span>
-                        </Link>
+                        </Link> */}
                         <Link to={'/projects'} className='button'>
                             <div className='icon'><MdWebStories></MdWebStories></div>
                             <span>Projects</span>

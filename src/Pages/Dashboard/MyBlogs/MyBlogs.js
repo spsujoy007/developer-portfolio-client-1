@@ -29,6 +29,7 @@ const MyBlogs = () => {
         .then(res => res.json())
         .then(data => {
             if(data.deletedCount > 0){
+                console.log(data)
                 toast.success('Blog deleted successful')
                 setLoading(false)
                 refetch();

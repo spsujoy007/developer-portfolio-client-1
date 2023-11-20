@@ -12,10 +12,10 @@ const Dashboard = () => {
   onInit={(typewriter) => {
       typewriter.typeString('Welcome to Admin Dashboard!')
       .callFunction(() => {
-          console.log('String typed out!');
+          // console.log('String typed out!');
         })
       .callFunction(() => {
-        console.log('All strings were deleted');
+        // console.log('All strings were deleted');
       })
       .start();
   }}

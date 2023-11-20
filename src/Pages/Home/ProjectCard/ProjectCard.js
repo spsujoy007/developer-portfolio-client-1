@@ -16,13 +16,13 @@ const ProjectCard = ({project, handleDetailpage}) => {
                         <p className='text-center'>{details.slice(0,60)}</p>
                     </div> */}
 
-                    <div className='flex items-center justify-center flex-wrap gap-5 mt-4 p-2 rounded-full bg-[#0E2126] w-full'>
+                    <div className='flex items-center justify-center flex-wrap gap-5 mt-4 px-1 py-2 rounded-md bg-[#0e2126b9] w-full '>
                         <div className='md:flex items-center justify-center flex-wrap gap-5 hidden'>
-                            <a target='_blank' rel="noreferrer" className='text-lg flex items-center gap-2 text-white hover:text-[#35C3E3] hover:border-[#35C3E3] duration-200 px-3 py-1 rounded-full border-[1px]' href={codelink}><FaCode></FaCode> Code link</a>
-                            <a target='_blank' rel="noreferrer" className='text-lg flex items-center gap-2 text-white px-3 py-1 rounded-full border-[1px] hover:text-[#35C3E3] hover:border-[#35C3E3] duration-200' href={demolink}><FaLaptop></FaLaptop> Live view</a>
+                            <a target='_blank' rel="noreferrer" className='text-md flex items-center gap-2 text-white hover:text-[#35C3E3] hover:border-[#35C3E3] duration-200 px-3 py-1 rounded-md border-[1px]' href={codelink}><FaCode></FaCode> Code link</a>
+                            <a target='_blank' rel="noreferrer" className='text-md flex items-center gap-2 text-white px-3 py-1 rounded-md border-[1px] hover:text-[#35C3E3] hover:border-[#35C3E3] duration-200' href={demolink}><FaLaptop></FaLaptop> Live view</a>
                         </div>
 
-                        <Link to={`/project/${_id}`} className='text-lg detailBtn flex items-center px-3 gap-2 text-white  py-1 rounded-full border-[1px] hover:text-[#35C3E3] hover:border-[#35C3E3] duration-200' href={codelink}><FaInfoCircle></FaInfoCircle><span>Detail</span></Link>
+                        <Link to={`/project/${_id}`} className='text-md detailBtn flex items-center px-3 gap-2 text-white  py-1 rounded-full border-[1px] hover:text-[#35C3E3] hover:border-[#35C3E3] duration-200' href={codelink}><FaInfoCircle></FaInfoCircle><span>Detail</span></Link>
                         
                     </div>
                 </div>
@@ -33,9 +33,9 @@ const ProjectCard = ({project, handleDetailpage}) => {
             </div>
 
             <div className='h-full w-full absolute z-10 md:top-5 top-0 cardOverFLowDown flex items-center justify-center'>
-                <div>
+                <div className='text-center'>
                     <h1 className='md:text-3xl text-2xl title'>{title}</h1>
-                    <p className='text-center text-white'>Let's explore the website with good experience.</p>
+                    {tools.map((t,i) => <span className={`text-center uppercase ${i%2===0 ? 'text-white': 'text-sky-500'}`}>{t.title}{i !==tools.length-1 && ','} </span>)}
                     <p className='text-center text-white text-sm mt-5 md:block hidden'>Hover to see</p>
                     <p className='text-center text-white text-sm mt-5 block md:hidden'>click to see</p>
                 </div>

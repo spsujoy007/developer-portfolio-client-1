@@ -1,11 +1,13 @@
 .mainCard{
     transition: all 0.6s;
-    box-shadow: 0px 0px 50px #35c3e323;
-    border-top: 1px solid #35C3E3;
+    box-shadow: 0px 0px 50px #081e2223;
+    border: 10px solid whitesmoke;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .cardOverFLowDown{
-    background-color: rgba(6, 47, 48, 0.655);
+    background-color: rgba(0, 0, 0, 0.777);
     backdrop-filter: blur(2px);
     transition: all 0.6s;
     

@@ -26,6 +26,22 @@
     animation: textanimation 1s steps(5) infinite;
 }
 
+.profilePic:hover{
+    animation: profileDancing 1s ease-in-out infinite
+}
+
+@keyframes profileDancing {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(1deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
 /* .hoverProfile{
     border-radius: 78% 22% 25% 25% / 75% 25% 25% 25%;
 } */

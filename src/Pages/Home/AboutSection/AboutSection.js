@@ -65,7 +65,7 @@ const AboutSection = () => {
         {/* right side items  */}
             <div className="card text-white flex ">
                 <div className="card-body">
-                    <h2 className="card-title"><span className='text-5xl'>1+</span> </h2><h2 className='text-2xl'> years of experience</h2>
+                    <h2 className="card-title"><span className='text-5xl'>3+</span> </h2><h2 className='text-2xl'> years of experience</h2>
                 </div>
             </div>
             <div className="card text-white  ">
