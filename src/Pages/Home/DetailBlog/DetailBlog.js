@@ -161,9 +161,9 @@ const DetailBlog = () => {
                                             </div>
                                         </p>
                                     </div>
-                                    <button
+                                    {/* <button
                                         onClick={handleDeleteComment}
-                                        className='text-red-500 px-3 py-1 text-2xl rounded-md bg-red-50 hover:bg-red-500 hover:text-white duration-200'><MdDelete /></button>
+                                        className='text-red-500 px-3 py-1 text-2xl rounded-md bg-red-50 hover:bg-red-500 hover:text-white duration-200'><MdDelete /></button> */}
                                 </div>
                             </div>)
                                 :

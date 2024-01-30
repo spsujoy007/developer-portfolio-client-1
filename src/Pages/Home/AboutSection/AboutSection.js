@@ -23,7 +23,7 @@ const AboutSection = () => {
         <div id='aboutsection' className={`px-5 mb-[100px] pt-10 md:pt-0 mx-auto md:max-w-[1240px] ${getPath === '/about' && 'min-h-screen py-10 flex items-center'} aboutHome`}>
                     <div className='pt-12 relative'>
                     <CommonHeading>About</CommonHeading>
-                    <div className='w-full absolute  top-0 left-0'>
+                    <div className='w-full absolute  top-0 left-0 md:block hidden'>
                         <h1 className='text-[130px] uppercase   text-[#10252a]'>About</h1>
                     </div>
 

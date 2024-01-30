@@ -46,17 +46,6 @@
     border-radius: 78% 22% 25% 25% / 75% 25% 25% 25%;
 } */
 
-@keyframes textanimation {
-	0%{
-		width: 0ch;
-	}
-	50%{
-		width: 15ch;
-	}
-	100%{
-		width: 0ch;
-	}
-}
 
 @keyframes btnbg {
     0%{
@@ -85,36 +74,32 @@
     }
 }
 
-.nameAnim_1{
-    animation: textOpacity 4s ease-in-out infinite;
+.animation-line{
+    position: absolute;
+    top: 100;
+    left: 0;
+    width: 100px;
+    background: #66caf1;
+    height: 0.1px;
+    animation: line_animate 8s  infinite ease-in-out;
 }
-.nameAnim_2{
-    animation: textOpacity 5s ease-in-out infinite;
-}
-.nameAnim_3{
-    animation: textOpacity 6s ease-in-out infinite;
-}
-.nameAnim_4{
-    animation: textOpacity 7s ease-in-out infinite;
-}
-.nameAnim_5{
-    animation: textOpacity 8s ease-in-out infinite;
-}
-
-@keyframes textOpacity {
+@keyframes line_animate {
     0%{
-        opacity: 80%;
-    }
-    25%{
-        opacity: 80%;
+        left: 0;
     }
     50%{
-        opacity: 80%;
+        box-shadow: 0px 0px 100px 20px #0db5f7;
+        left: 700px;
+        width: 100px;
+        opacity: 0;
     }
     75%{
-        opacity: 80%;
+        left: 700px;
+        width: 100px;
+        opacity: 0;
+        box-shadow: 0px 0px 300px 80px #0db5f7;
     }
     100%{
-        opacity: 0%;
+        left: 0;
     }
 }

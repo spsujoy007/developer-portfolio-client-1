@@ -57,7 +57,7 @@ const Main = () => {
                     <div className='fixed'>
                     <div className='flex flex-col justify-center items-center gap-3'>
                     <div>
-                    <a className=' rounded-full hover:text-sky-500 text-3xl shadow-xl shadow-sky-500 text-white' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
+                    <a className='rounded-full hover:text-sky-500 text-3xl shadow-xl github-bulb shadow-sky-500 text-white' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a>
                     </div>
                     <div className='w-[1px] h-[180px] bg-white '></div>
                     </div>

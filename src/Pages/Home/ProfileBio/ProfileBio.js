@@ -28,8 +28,9 @@ const ProfileBio = () => {
                  <AutoMessage></AutoMessage>
             </div>
             <div className='flex md:flex-row flex-col-reverse justify-center items-center'>
-                <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0 px-2 '>
-                    <h1 className='text-xl   text-white'>Hi, my name is<br />
+                <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0 px-2 relative'>
+                    
+                    <h1 className='text-xl   text-white md:mt-3'>Hi, my name is<br />
                     <span className='text-info font-[800] md:text-6xl uppercase text-5xl'>
                         <span className='nameAnim_1s'>s</span>
                         <span className='nameAnim_2s'>u</span>
@@ -73,7 +74,7 @@ const ProfileBio = () => {
                         className={`flex items-center py-2 text-white px-3 gap-x-1 btn-info ${hoverOut ? `btnanim` : ''}  mt-5 rounded-full hover:bg-sky-800 text-center justify-center duration-200 text-sm w-full md:w-44 uppercase`}><HiDocumentText className="mr-2 text-xl"></HiDocumentText> view Resume</button>
                     </a>
 
-                    <div className='flex bg-[#153038] md:bg-transparent md:p-0 p-1 rounded-full  text-2xl text-white mt-7 justify-between md:justify-start '>
+                    <div className='flex bg-[#153038] md:bg-transparent md:p-0 p-1 rounded-full  text-2xl text-white mt-7 justify-between md:justify-start mb-5'>
                         {/* <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://github.com/spsujoy007'><FaGithub></FaGithub></a> */}
                         <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.facebook.com/spsujoy07'><FaFacebook></FaFacebook></a>
                         <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://www.linkedin.com/in/spsujoy/'><FaLinkedin></FaLinkedin></a>
@@ -81,6 +82,7 @@ const ProfileBio = () => {
                         <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://twitter.com/spsujoy007'><FaTwitter></FaTwitter></a>
                         <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail></AiTwotoneMail></a>
                     </div>
+                    <div className='animation-line'></div>
 
                 </div>
                 <div className='flex justify-center'>
