@@ -11,7 +11,7 @@ const Home = () => {
     useTitle('Portfolio')
     return (
         <div id='home' className='relative'>
-            <div className='md:max-w-[1240px] mx-auto'>
+            <div className='md:max-w-[1240px] mx-auto -mt-2'>
                 <ProfileBio></ProfileBio>
                 <AboutSection></AboutSection>
                 <Skills></Skills>
