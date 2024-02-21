@@ -86,7 +86,7 @@ const ProfileBio = () => {
 
                 </div>
                 <div className='flex justify-center'>
-                    <img className='w-[65%] profilePic' src={profileImg} alt=''/>
+                    {/* <img className='w-[65%] profilePic' src={profileImg} alt=''/> */}
                 </div>
             </div>
         </div>

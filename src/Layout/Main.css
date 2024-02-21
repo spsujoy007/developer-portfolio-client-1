@@ -30,7 +30,7 @@
 
 .github-bulb{
     
-    animation: git_bulb 2s infinite ease-in-out ;
+    /* animation: git_bulb 2s infinite ease-in-out ; */
 }
 @keyframes git_bulb {
     0%{
@@ -38,8 +38,7 @@
     }
     0%{
         /* box-shadow: 0px 0px 10px 20px #23baf5; */
-        /* filter: drop-shadow(0px 0px  50px #23baf5); */
-        text-shadow: 0px 0px 10px 20px #23baf5;
+        filter: drop-shadow(0px 0px 50px #23baf5);
     }
     100%{
         filter: drop-shadow(0px 0px 0px black);
