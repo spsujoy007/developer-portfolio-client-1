@@ -82,11 +82,11 @@ const ProfileBio = () => {
                         <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='https://twitter.com/spsujoy007'><FaTwitter></FaTwitter></a>
                         <a className='commonbtn p-2 mx-1 rounded-full hover:text-sky-500' target='blank' href='mailto: sujoypaul728@gmail.com'><AiTwotoneMail></AiTwotoneMail></a>
                     </div>
-                    <div className='animation-line'></div>
+                    <div className='animation-line md:block hidden'></div>
 
                 </div>
                 <div className='flex justify-center'>
-                    {/* <img className='w-[65%] profilePic' src={profileImg} alt=''/> */}
+                    <img className='w-[90%] profilePic' src={profileImg} alt=''/>
                 </div>
             </div>
         </div>

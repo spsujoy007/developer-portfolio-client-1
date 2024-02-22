@@ -24,7 +24,7 @@ const AboutSection = () => {
                     <div className='pt-12 relative'>
                     <CommonHeading>About</CommonHeading>
                     <div className='w-full absolute  top-0 left-0 md:block hidden'>
-                        <h1 className='text-[130px] uppercase   text-[#10252a]'>About</h1>
+                        <h1 className='text-[130px] uppercase select-none  text-[#10252a]'>About</h1>
                     </div>
 
         <div className='md:flex gap-10 text-lg z-[100px] mt-10'>

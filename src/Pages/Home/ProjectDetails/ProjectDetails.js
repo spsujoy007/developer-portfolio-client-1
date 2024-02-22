@@ -15,7 +15,7 @@ const ProjectDetails = () => {
         <div className="py-20 px-2 ">
             <Fade bottom>
             <div className="card bg-white shadow-xl rounded-xl mx-auto md:max-w-[1240px]">
-  <figure><img className='md:w-full' src={image} alt="Shoes" /></figure>
+  <figure><img className='md:w-full' loading='lazy' src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
       {title}

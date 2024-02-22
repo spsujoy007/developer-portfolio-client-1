@@ -45,7 +45,7 @@ const Skills = () => {
             <div className='mx-6 pt-12 bglineleftskill ' id='skills'>
             <CommonHeading>My Skills</CommonHeading>
             <div className='w-full absolute  top-0 left-0'>
-                        <h1 className='text-[130px] uppercase md:block hidden text-[#10252a]'>Skills</h1>
+                        <h1 className='text-[130px] uppercase md:block select-none hidden text-[#10252a]'>Skills</h1>
             </div>
             <p className='text-xl text-white py-5 mt-10'>Languages, framework and tools:</p>
             

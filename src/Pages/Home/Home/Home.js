@@ -11,6 +11,9 @@ const Home = () => {
     useTitle('Portfolio')
     return (
         <div id='home' className='relative'>
+                <div className='bg-sky-900  w-full text-center'>
+                        <span className='text-xs text-white  rounded-full animate-pulse duration-300'>Dear viewer, some updates are in progress...</span>
+                </div>
             <div className='md:max-w-[1240px] mx-auto '>
                 <ProfileBio></ProfileBio>
                 <AboutSection></AboutSection>
