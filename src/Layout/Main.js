@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import Container from '../Components/Container/Container';
 import Footer from '../Pages/Shared/Footer/Footer';
@@ -13,10 +13,29 @@ import { FaGithub } from 'react-icons/fa';
 const Main = () => {
 
     const PN = useLocation().pathname;
+    const [loading, setLoading] = useState(true);
+    let count = 0;
+
+    setTimeout(() =>{
+        setLoading(false);
+    },3000 )
 
     return (
-        <div className='mainHomebg'>
-            <div className='md:hidden block'>
+        <div className='h-full'>
+            {
+                loading ?
+                <div className=' flex items-center justify-center h-screen'>
+                    <div className='flex md:flex-row flex-col items-center gap-10 h-[95vh]'>
+                        <div className='loader'></div> 
+                        <div>
+                            <h1 className='md:text-[150px] text-[100px]  ml-5 text-sky-500'>Dear</h1>
+                            <p className='text-xl md:-mt-12 ml-8 text-white'>viewer <span className='text-sky-500 font-bold'>welcome</span> to my portfolio 💐🌼💖 {count}</p>
+                        </div>
+                    </div>
+                </div>
+                :
+                    <div  className='mainHomebg'>
+                    <div className='md:hidden block'>
                 <Header></Header>
             </div>
                 <Container>
@@ -67,6 +86,8 @@ const Main = () => {
 
                 </Container>
             <Footer></Footer>
+                    </div>
+            }
         </div>
     );
 };

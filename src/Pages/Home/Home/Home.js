@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useTitle from '../../../MyHooks/useTitle';
 import AboutSection from '../AboutSection/AboutSection';
 import GraphicSkill from '../OtherWorks/GraphicSkill/GraphicSkill';
@@ -9,6 +9,7 @@ import Skills from '../Skills/Skills';
 
 const Home = () => {
     useTitle('Portfolio')
+
     return (
         <div id='home' className='relative'>
                 <div className='bg-sky-900  w-full text-center'>
