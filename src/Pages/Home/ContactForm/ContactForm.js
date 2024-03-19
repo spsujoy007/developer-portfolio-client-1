@@ -40,7 +40,7 @@ const ContactForm = () => {
       <h1 className="text-5xl font-bold text-[#e7a242] capitalize">Feel free to message</h1>
       <p className="py-6">Do you have any question or query? Please message me<br /> I will try to answer you. Thank you!</p>
       <div className='flex items-center justify-center contactImg'>
-        <img className='md:w-80' src={emailimg} alt="email template" />
+        <img className='md:w-80 w-full' src={emailimg} alt="email template" />
       </div>
     </div>
 

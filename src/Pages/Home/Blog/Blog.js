@@ -68,9 +68,9 @@ const Blog = () => {
             
             <div className='flex items-center mt-5 gap-2'>
                 <button onClick={() => {
-                        if(lastPage >6){
+                        if(lastPage > 6){
                             setFirstPage(firstPage-6)
-                        setLastPage(lastPage-6)
+                        setLastPage(lastPage - 6)
                         }
                 }} className='rounded-md border-2 bg-[#3e825e] border-[#2E4A3B] text-white py-2 px-4 '>Previous</button>
 
@@ -82,7 +82,7 @@ const Blog = () => {
                             setLastPage(6*num)
                         }}
                         key={num} 
-                        className={`${firstPage/6+1 === num ? 'bg-[#181818] border-black':'bg-[#3e825e] border-[#2E4A3B]'} rounded-md border-2  text-white py-2 px-4`}
+                        className={`${firstPage / 6+1 === num ? 'bg-[#181818] border-black':'bg-[#3e825e] border-[#2E4A3B]'} rounded-md border-2  text-white py-2 px-4`}
                      >
                         {num}
                      </button>)

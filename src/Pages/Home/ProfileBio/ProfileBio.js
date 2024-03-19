@@ -51,12 +51,12 @@ const ProfileBio = () => {
                             1000, 
                             'create frontend websites',
                             1000,
-                            'something is updating soon...',
+                            "let's talking about code",
                             3000,
                         ]}
                         wrapper="span"
                         speed={50}
-                        style={{ fontSize: '1.563rem', fontWeight: 'normal', display: 'inline-block' }}
+                        style={{ fontSize: '1.350rem', fontWeight: 'normal', display: 'inline-block' }}
                         repeat={Infinity}
                         />
                         </code>

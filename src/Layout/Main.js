@@ -14,22 +14,20 @@ const Main = () => {
 
     const PN = useLocation().pathname;
     const [loading, setLoading] = useState(true);
-    let count = 0;
 
     setTimeout(() =>{
         setLoading(false);
-    },3000 )
+    },1500 )
 
     return (
         <div className='h-full'>
             {
                 loading ?
                 <div className=' flex items-center justify-center h-screen'>
-                    <div className='flex md:flex-row flex-col items-center gap-10 h-[95vh]'>
+                    <div className='flex flex-col items-center justify-center h-[95vh]'>
                         <div className='loader'></div> 
-                        <div>
-                            <h1 className='md:text-[150px] text-[100px]  ml-5 text-sky-500'>Dear</h1>
-                            <p className='text-xl md:-mt-12 ml-8 text-white'>viewer <span className='text-sky-500 font-bold'>welcome</span> to my portfolio 💐🌼💖 {count}</p>
+                        <div className='mt-36'>
+                            <h1 className='text-white'>Greetings from <span className='uppercase text-sky-500 font-bold'>sujoy</span></h1>
                         </div>
                     </div>
                 </div>

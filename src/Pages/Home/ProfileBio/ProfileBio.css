@@ -91,13 +91,14 @@
         box-shadow: 0px 0px 100px 20px #0db5f7;
         left: 70%;
         width: 100px;
-        opacity: 0;
+        opacity: 70%;
     }
     75%{
-        left: 70%;
-        width: 100px;
-        opacity: 0;
-        box-shadow: 0px 0px 300px 80px #0db5f7;
+        /* left: 50%; */
+        /* width: 100px; */
+        opacity: 50%;
+        filter: blur(50%);
+        box-shadow: 0px 0px 120px 30px #0db5f7;
     }
     100%{
         left: 0;
