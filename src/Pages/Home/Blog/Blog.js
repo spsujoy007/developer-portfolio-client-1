@@ -66,7 +66,7 @@ const Blog = () => {
             {/* pagination start //////////////////////////////////////////////////////// */}
             <div className='flex justify-center'>
             
-            <div className='flex items-center mt-5 gap-2'>
+            <div className='flex items-center mt-5 gap-10'>
                 <button onClick={() => {
                         if(lastPage > 6){
                             setFirstPage(firstPage-6)

@@ -52,8 +52,9 @@ const BlogCard = ({blog, refetch}) => {
     }
 
     return (
-        <div className="card card-compact bg-[#fbf6e4] shadow-xl rounded-xl">
-  <div className="card-body min-h-[100px] max-w-[400px]">
+        // <div className="card card-compact bg-[#fbf6e4] shadow-xl rounded-xl">
+        <div className="card card-compact rounded-xl w-full" >
+  <div className="card-body min-h-[100px] ">
        
 
     {/* <div className='flex gap-2 items-center tooltip' data-tip={`Author & admin ${adminName}`}>
@@ -69,8 +70,8 @@ const BlogCard = ({blog, refetch}) => {
         </div> */}
 
     <figure>
-        <div className='imgEffect rounded-xl overflow-hidden'>
-            <img className='image ' loading='lazy' src={blogimg} alt={title.slice(0, 15)} />
+        <div className='imgEffect rounded-xl overflow-hidden w-full md:h-[500px]'>
+            <img className='image w-full ' loading='lazy' src={blogimg} alt={title.slice(0, 15)} />
         </div>
     </figure>
         <h2 className="card-title text-[#FE634E] py-2">{title.slice(0, 30)}</h2>

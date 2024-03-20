@@ -7,9 +7,9 @@ const ProjectCard = ({project, handleDetailpage}) => {
     // const detailProject = {image, title, tools}
 
     return (
-        <div className='max-w-[550px] relative overflow-hidden bg-black mainCard z-[50]'>
+        <div className='max-w-[550px] relative  overflow-hidden bg-white  mainCard z-[50]'>
 
-            <div className='w-full h-full absolute z-10 cardOverFLowUp  flex items-center justify-center'>
+            <div className='w-full h-full rounded-lg overflow-hidden absolute z-10 cardOverFLowUp  flex items-center justify-center'>
                 <div className='mt-[150px]'>
                     {/* <div className='w-[80%] mx-auto '>
                         <h1 className={`md:text-3xl text-2xl title text-center  text-white ${details.length < 1 && 'mb-10' }`}>{title}</h1>
@@ -28,11 +28,11 @@ const ProjectCard = ({project, handleDetailpage}) => {
                 </div>
             </div>
 
-            <div>
+            <div className='rounded-lg overflow-hidden'>
                 <img src={image} alt="" />
             </div>
 
-            <div className='h-full w-full absolute z-10 md:top-5 top-0 cardOverFLowDown flex items-center justify-center'>
+            <div className='h-full rounded-lg overflow-hidden w-full absolute z-10 md:top-5 top-0 cardOverFLowDown flex items-center justify-center'>
                 <div className='text-center'>
                     <h1 className='md:text-3xl text-2xl title'>{title}</h1>
                     {tools.map((t,i) => <span className={`text-center uppercase ${i%2===0 ? 'text-white': 'text-sky-500'}`}>{t.title}{i !==tools.length-1 && ','} </span>)}
