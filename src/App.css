@@ -37,17 +37,20 @@ background-repeat: no-repeat;
 }
 
 .contactBg{
-  background-image: url(../src//assets/bgcontact.jpg);
+  /* background-image: url(../src//assets/bgcontact.jpg);
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-color: #FCEDDA;
+
 }
 
 .blogbgimg{
-  background-image: url(../src//assets/bgblog.jpg);
+  /* background-image: url(../src//assets/bgblog.jpg); 
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-color: #E9E6DD;
 }
 
 .bglineleftround{

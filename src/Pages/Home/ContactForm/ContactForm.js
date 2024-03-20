@@ -47,14 +47,14 @@ const ContactForm = () => {
     <div className="card flex-shrink-0 w-full max-w-sm contactLetter">
       {/* <form action="https://formsubmit.co/54cffcd395c44072d62b9d1725fee82b" method="POST" className="card-body"> */}
       <form ref={form} onSubmit={sendEmail} className="h-[500px] ml-10">
-        <div className="pt-[115px] border-b-[1px] w-[90%] border-[#739E47] flex items-center mt-[8px] md:mt-0">
+        <div className="pt-[115px] w-[90%] flex items-center mt-[8px] md:mt-0">
           <span className='font-bold text-[#739E47]'>Name:</span>
           <input type="text" name='user_name' placeholder="type your name" className="  bg-transparent text-[18px] ml-2 border-none outline-none text-[#3E6B7E]" />
         </div>
 
-        <div className="border-b-[1px] w-[90%] border-[#739E47] flex items-center mt-[8px]">
+        <div className="w-[90%]  flex items-center mt-[8px]">
         <span className='font-bold text-[#739E47]'>Email:</span>
-          <input required type="email" name='user_email' placeholder="john@gmail.com" className="text-[18px] ml-2 text-[#3E6B7E] bg-transparent border-none outline-none " />
+          <input required type="email" name='user_email' placeholder="john@gmail.com" className="text-[18px] ml-2 text-[#3E6B7E]  bg-transparent border-none outline-none " />
         </div>
 
         <div className="pt-6">

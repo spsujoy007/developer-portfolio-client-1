@@ -30,13 +30,15 @@ const ProfileBio = () => {
             <div className='flex md:flex-row flex-col-reverse justify-center items-center'>
                 <div className='flex-1 mx-6 md:mx-0 mt-10 md:mt-0 px-2 relative'>
                     
-                    <h1 className='text-xl   text-white md:mt-3'>Hi, my name is<br />
+                    <h1 className='text-xl   text-white md:mt-3'>Hello, my name is<br />
                     <span className='text-info font-[800] md:text-6xl uppercase text-5xl'>
-                        <span className='nameAnim_1s'>s</span>
+                        {/* <span className='nameAnim_1s'>s</span>
                         <span className='nameAnim_2s'>u</span>
                         <span className='nameAnim_3s'>j</span>
                         <span className='nameAnim_4s'>o</span>
-                        <span className='nameAnim_5s'>y</span>
+                        <span className='nameAnim_5s'>y</span> */}
+                        <span className='my_name' title="sujoy">sujoy</span>
+                        
 
                         <span className=''> paul</span> 
                         </span><br />
@@ -63,7 +65,7 @@ const ProfileBio = () => {
                     </h1>
                     
                     <p className='text-gray-300 mt-3 text-lg md:max-w-[90%] select-none'>
-                    I am a passionate full stack Web Developer. I have already created many Project with 3+ years of experience with modern technologies like React, Tailwind CSS, Node js, Mongo DB, Express JS, Bootstrap etc..
+                    As a dedicated full-stack web developer, I’ve crafted numerous projects over 3+ years, harnessing cutting-edge technologies like React, Tailwind CSS, Node.js, MongoDB, Express.js, and Bootstrap to bring ideas to life.
                     </p>
                     
                     {/* <a href={resume} download={resume}> */}
