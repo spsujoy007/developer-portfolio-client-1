@@ -28,14 +28,14 @@ const ProjectCard = ({project, handleDetailpage}) => {
                 </div>
             </div>
 
-            <div className='rounded-lg overflow-hidden'>
+            <div className='rounded-lg overflow-hidden border-[1px] border-gray-500'>
                 <img src={image} alt="" />
             </div>
 
-            <div className='h-full rounded-lg overflow-hidden w-full absolute z-10 md:top-5 top-0 cardOverFLowDown flex items-center justify-center'>
+            <div className='h-full  w-full absolute z-10 md:top-5 top-0 cardOverFLowDown flex items-center justify-center'>
                 <div className='text-center'>
-                    <h1 className='md:text-3xl text-2xl title'>{title}</h1>
-                    {tools.map((t,i) => <span className={`text-center uppercase ${i%2===0 ? 'text-white': 'text-sky-500'}`}>{t.title}{i !==tools.length-1 && ','} </span>)}
+                    <h1 className='md:text-3xl text-2xl title mb-3'>{title}</h1>
+                    {tools.map((t,i) => <span className={`text-center uppercase ${i%2===0 ? 'text-black': 'text-[#104f60] font-bold'}`}>{t.title}{i !==tools.length-1 && ','} </span>)}
                     <p className='text-center text-white text-sm mt-5 md:block hidden'>Hover to see</p>
                     <p className='text-center text-white text-sm mt-5 block md:hidden'>click to see</p>
                 </div>

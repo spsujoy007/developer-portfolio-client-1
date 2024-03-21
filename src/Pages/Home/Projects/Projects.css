@@ -1,5 +1,5 @@
 .mainCard{
-    transition: all 0.6s;
+    transition: all 0.4s;
     box-shadow: 0px 0px 50px #081e2223;
     border: 10px solid whitesmoke;
     border-bottom-right-radius: 0px;
@@ -7,18 +7,18 @@
 }
 
 .cardOverFLowDown{
-    background-color: rgba(0, 0, 0, 0.777);
-    backdrop-filter: blur(2px);
-    transition: all 0.6s;
+    background-color: rgba(206, 206, 206, 0.777);
+    backdrop-filter: blur(5px);
+    transition: all 0.8s;
     
 }
 
 .cardOverFLowDown .title {
-    color: #ffdc9a;
+    color: #104f60;
     font-weight: bold;
     text-align: center;
-    text-shadow: 0px 0px 50px #ffdc9a;
-    text-transform: capitalize;
+    text-shadow: 0px 0px 50px #07c7fc;
+    text-transform: uppercase;
 }
 
 .mainCard:hover .cardOverFLowDown {
@@ -30,7 +30,7 @@
     top: -570px;
     /* background-color: rgba(6, 47, 48, 0.655); */
     backdrop-filter: blur(0px);
-    transition: all 0.6s;
+    transition: all 0.5s;
 }
 
 .mainCard:hover .cardOverFLowUp {

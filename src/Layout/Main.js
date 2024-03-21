@@ -41,7 +41,7 @@ const Main = () => {
                 <div className='absolute hidden md:block  top-[30vh] left-2 '>
                     <div className={`flex 
                     z-[100]
-                    ${PN === '/contact' && "bg-[#FAEED8]"} 
+                    ${PN === '/contact' && "bg-[#5C9F3E]"} 
                     ${PN ==='/blog' && "bg-[#FF644E]"} 
                     ${PN ==='/about' && "bg-[#35C3E3]"} 
                     ${PN ==='/projects' && "bg-[#0284C7]"} 
